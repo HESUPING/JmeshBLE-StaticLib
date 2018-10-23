@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="jmeshBLE" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/jmeshBLE" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/jmeshBLE" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="src/access/jmesh_access.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/access/jmesh_access.h" />
+		<Unit filename="src/access/jmesh_access_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/access/jmesh_access_callback.h" />
+		<Unit filename="src/access/jmesh_element.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/access/jmesh_element.h" />
+		<Unit filename="src/access/jmesh_message.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/access/jmesh_message.h" />
+		<Unit filename="src/access/jmesh_model.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/access/jmesh_model.h" />
+		<Unit filename="src/app/app_include.h" />
+		<Unit filename="src/app/light/light_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/light/light_client.h" />
+		<Unit filename="src/app/light/light_client_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/light/light_client_callback.h" />
+		<Unit filename="src/app/light/light_config.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/light/light_config.h" />
+		<Unit filename="src/app/light/light_config_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/light/light_config_callback.h" />
+		<Unit filename="src/app/light/light_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/light/light_server.c.mine" />
+		<Unit filename="src/app/light/light_server.c.r484" />
+		<Unit filename="src/app/light/light_server.c.r509" />
+		<Unit filename="src/app/light/light_server.h" />
+		<Unit filename="src/app/light/light_server_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/light/light_server_callback.h" />
+		<Unit filename="src/app/meter/meter_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/meter/meter_client.h" />
+		<Unit filename="src/app/meter/meter_client_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/meter/meter_client_callback.h" />
+		<Unit filename="src/app/meter/meter_config.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/meter/meter_config.h" />
+		<Unit filename="src/app/meter/meter_config_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/meter/meter_config_callback.h" />
+		<Unit filename="src/app/meter/meter_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/meter/meter_server.h" />
+		<Unit filename="src/app/meter/meter_server_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/meter/meter_server_callback.h" />
+		<Unit filename="src/app/meter/protocol_645.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/app/meter/protocol_645.h" />
+		<Unit filename="src/bearer/adv/jmesh_adv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/adv/jmesh_adv.h" />
+		<Unit filename="src/bearer/beacon/jmesh_beacon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/beacon/jmesh_beacon.h" />
+		<Unit filename="src/bearer/beacon/jmesh_beacon_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/beacon/jmesh_beacon_callback.h" />
+		<Unit filename="src/bearer/beacon/jmesh_device_beacon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/beacon/jmesh_device_beacon.h" />
+		<Unit filename="src/bearer/beacon/jmesh_routing_beacon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/beacon/jmesh_routing_beacon.h" />
+		<Unit filename="src/bearer/beacon/jmesh_secure_beacon.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/beacon/jmesh_secure_beacon.h" />
+		<Unit filename="src/bearer/gatt/jmesh_gatt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/gatt/jmesh_gatt.h" />
+		<Unit filename="src/bearer/gatt/jmesh_gatt_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/gatt/jmesh_gatt_callback.h" />
+		<Unit filename="src/bearer/gatt/jmesh_proxy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/gatt/jmesh_proxy.h" />
+		<Unit filename="src/bearer/gatt/jmesh_proxy_config.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/gatt/jmesh_proxy_config.h" />
+		<Unit filename="src/bearer/provisioning/jmesh_provisioning_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/provisioning/jmesh_provisioning_client.h" />
+		<Unit filename="src/bearer/provisioning/jmesh_provisioning_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/bearer/provisioning/jmesh_provisioning_server.h" />
+		<Unit filename="src/driver/bx2400/bx2400_ble.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/bx2400/bx2400_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/bx2400/bx2400_pwm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/bx2400/bx2400_save.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/bx2400/bx2400_system.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/bx2400/bx2400_uart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/jmesh_ble.h" />
+		<Unit filename="src/driver/jmesh_ble_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/jmesh_ble_callback.h" />
+		<Unit filename="src/driver/jmesh_driver_config.h" />
+		<Unit filename="src/driver/jmesh_driver_user_callback.h" />
+		<Unit filename="src/driver/jmesh_gpio.h" />
+		<Unit filename="src/driver/jmesh_gpio_int_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/jmesh_gpio_int_callback.h" />
+		<Unit filename="src/driver/jmesh_pwm.h" />
+		<Unit filename="src/driver/jmesh_save.h" />
+		<Unit filename="src/driver/jmesh_system.h" />
+		<Unit filename="src/driver/jmesh_uart.h" />
+		<Unit filename="src/driver/jmesh_uart_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/jmesh_uart_callback.h" />
+		<Unit filename="src/driver/x86/x86_ble.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/x86/x86_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/x86/x86_pwm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/x86/x86_save.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/x86/x86_system.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/driver/x86/x86_uart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/config/config_client.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/config/config_client.h" />
+		<Unit filename="src/foundation/config/config_client_app.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/config/config_client_app.h" />
+		<Unit filename="src/foundation/config/config_client_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/config/config_client_callback.h" />
+		<Unit filename="src/foundation/config/config_server.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/config/config_server.h" />
+		<Unit filename="src/foundation/config/config_server_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/config/config_server_callback.h" />
+		<Unit filename="src/foundation/config/configuration_cmd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/config/configuration_cmd.h" />
+		<Unit filename="src/foundation/state/jmesh_TTL.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/state/jmesh_TTL.h" />
+		<Unit filename="src/foundation/state/jmesh_appkey.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/state/jmesh_appkey.h" />
+		<Unit filename="src/foundation/state/jmesh_bind.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/state/jmesh_bind.h" />
+		<Unit filename="src/foundation/state/jmesh_state.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/state/jmesh_state.h" />
+		<Unit filename="src/foundation/state/jmesh_subscription_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/foundation/state/jmesh_subscription_list.h" />
+		<Unit filename="src/jmesh/jmesh_addr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/jmesh/jmesh_addr.h" />
+		<Unit filename="src/jmesh/jmesh_config.h" />
+		<Unit filename="src/jmesh/jmesh_device.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/jmesh/jmesh_device.h" />
+		<Unit filename="src/jmesh/jmesh_features.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/jmesh/jmesh_features.h" />
+		<Unit filename="src/jmesh/jmesh_pdu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/jmesh/jmesh_pdu.h" />
+		<Unit filename="src/jmesh/jmesh_print.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/jmesh/jmesh_print.h" />
+		<Unit filename="src/jmesh/jmesh_save.h" />
+		<Unit filename="src/jmesh/jmesh_save_define.h" />
+		<Unit filename="src/jmesh/jmesh_task.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/jmesh/jmesh_task.h" />
+		<Unit filename="src/jmesh/jmesh_types.h" />
+		<Unit filename="src/lower/jmesh_lower.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lower/jmesh_lower.h" />
+		<Unit filename="src/lower/jmesh_segment.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/lower/jmesh_segment.h" />
+		<Unit filename="src/network/jmesh_filter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/network/jmesh_filter.h" />
+		<Unit filename="src/network/jmesh_interface.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/network/jmesh_interface.h" />
+		<Unit filename="src/network/jmesh_netkey.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/network/jmesh_netkey.h" />
+		<Unit filename="src/network/jmesh_network.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/network/jmesh_network.h" />
+		<Unit filename="src/network/jmesh_relay.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/network/jmesh_relay.h" />
+		<Unit filename="src/network/jmesh_seq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/network/jmesh_seq.h" />
+		<Unit filename="src/onchip_system/os_callback.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_callback.h" />
+		<Unit filename="src/onchip_system/os_core.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_core.h" />
+		<Unit filename="src/onchip_system/os_demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_demo.h" />
+		<Unit filename="src/onchip_system/os_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_list.h" />
+		<Unit filename="src/onchip_system/os_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_main.h" />
+		<Unit filename="src/onchip_system/os_memb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_memb.h" />
+		<Unit filename="src/onchip_system/os_queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_queue.h" />
+		<Unit filename="src/onchip_system/os_ram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_ram.h" />
+		<Unit filename="src/onchip_system/os_time.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_time.h" />
+		<Unit filename="src/onchip_system/os_timer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_timer.h" />
+		<Unit filename="src/onchip_system/os_timer_event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/onchip_system/os_timer_event.h" />
+		<Unit filename="src/secure/AES_CMAC/base/aes128.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/secure/AES_CMAC/base/aes128.h" />
+		<Unit filename="src/secure/AES_CMAC/base/aes128_ccm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/secure/AES_CMAC/base/aes128_ccm.h" />
+		<Unit filename="src/secure/AES_CMAC/base/aes128_cmac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/secure/AES_CMAC/base/aes128_cmac.h" />
+		<Unit filename="src/secure/AES_CMAC/toolbox/security_kn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/secure/AES_CMAC/toolbox/security_kn.h" />
+		<Unit filename="src/secure/ECDH/curve-specific.h" />
+		<Unit filename="src/secure/ECDH/curve-specific.inc" />
+		<Unit filename="src/secure/ECDH/platform-specific.h" />
+		<Unit filename="src/secure/ECDH/platform-specific.inc" />
+		<Unit filename="src/secure/ECDH/types.h" />
+		<Unit filename="src/secure/ECDH/uECC.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/secure/ECDH/uECC.h" />
+		<Unit filename="src/secure/ECDH/uECC_vli.h" />
+		<Unit filename="src/secure/jmesh_security.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/secure/jmesh_security.h" />
+		<Unit filename="src/upper/control/jmesh_control.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/upper/control/jmesh_control.h" />
+		<Unit filename="src/upper/control/jmesh_heartbeat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/upper/control/jmesh_heartbeat.h" />
+		<Unit filename="src/upper/jmesh_upper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/upper/jmesh_upper.h" />
+		<Unit filename="src/upper/lowpower/jmesh_friendship.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/upper/lowpower/jmesh_friendship.h" />
+		<Unit filename="src/upper/routing/jmesh_routing.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/upper/routing/jmesh_routing.h" />
+		<Unit filename="src/upper/routing/jmesh_routing_neighbor_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/upper/routing/jmesh_routing_neighbor_table.h" />
+		<Unit filename="src/upper/routing/jmesh_routing_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/upper/routing/jmesh_routing_table.h" />
+		<Unit filename="test_main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

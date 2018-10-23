@@ -1,0 +1,2169 @@
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
+
+==============================================================================
+
+Loading Objects.
+
+Loading object boot_ram.o.
+              definition:  __ARM_asm.debug_abbrev.1
+              symbol visibility : __ARM_asm.debug_abbrev.1 set to STV_DEFAULT.
+              definition:  __asm___10_boot_ram_c_2094ca11____REV16
+              symbol visibility : __asm___10_boot_ram_c_2094ca11____REV16 set to STV_HIDDEN.
+              definition:  __asm___10_boot_ram_c_2094ca11____REVSH
+              symbol visibility : __asm___10_boot_ram_c_2094ca11____REVSH set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+              symbol visibility : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_base_addr.h$.2_QT0000_tNP0OCUoiWb_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_base_addr.h$.2_QT0000_tNP0OCUoiWb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$awo.h$.2_Qt0000_XL3Nxf0DcHf_300000
+              symbol visibility : __ARM_grp..debug_info$awo.h$.2_Qt0000_XL3Nxf0DcHf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$awo_2400.h$.2_Uk1000__r8QuOY$lq5_300000
+              symbol visibility : __ARM_grp..debug_info$awo_2400.h$.2_Uk1000__r8QuOY$lq5_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$boot_memory_map.h$.2_8C0000_Q6lJtA2oa81_300000
+              symbol visibility : __ARM_grp..debug_info$boot_memory_map.h$.2_8C0000_Q6lJtA2oa81_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$boot_ram.c$.2_Bm3000_UJ8H2fv6Nme_H00000
+              symbol visibility : __ARM_grp..debug_info$boot_ram.c$.2_Bm3000_UJ8H2fv6Nme_H00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$boot_typedef.h$.2_om1000_ZZLoEyHhbS0_e00000
+              symbol visibility : __ARM_grp..debug_info$boot_typedef.h$.2_om1000_ZZLoEyHhbS0_e00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$bx2400.h$.2_cF0000_wNU4Z913dca_300000
+              symbol visibility : __ARM_grp..debug_info$bx2400.h$.2_cF0000_wNU4Z913dca_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$bx_config.h$.2_wY0000_$lDoBf_xMdb_300000
+              symbol visibility : __ARM_grp..debug_info$bx_config.h$.2_wY0000_$lDoBf_xMdb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$cmsis_armcc.h$.2_EB1000_W2L2cd6IY$6_E00000
+              symbol visibility : __ARM_grp..debug_info$cmsis_armcc.h$.2_EB1000_W2L2cd6IY$6_E00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$co_math.h$.2_ss1000_TA4Q03qQTk2_o00000
+              symbol visibility : __ARM_grp..debug_info$co_math.h$.2_ss1000_TA4Q03qQTk2_o00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$compiler.h$.2_0z0000_mjJMdnhNXT5_300000
+              symbol visibility : __ARM_grp..debug_info$compiler.h$.2_0z0000_mjJMdnhNXT5_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$core_cm0plus.h$.2_k84000_SlXYefcL1vc_S00000
+              symbol visibility : __ARM_grp..debug_info$core_cm0plus.h$.2_k84000_SlXYefcL1vc_S00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$core_cmFunc.h$.2_Ut0000_AZYW2voX9_1_300000
+              symbol visibility : __ARM_grp..debug_info$core_cmFunc.h$.2_Ut0000_AZYW2voX9_1_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$core_cmInstr.h$.2_4u0000_0RLtCEYG5w6_300000
+              symbol visibility : __ARM_grp..debug_info$core_cmInstr.h$.2_4u0000_0RLtCEYG5w6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$flash.h$.2_8o1000_72$7LVbI6Tf_800000
+              symbol visibility : __ARM_grp..debug_info$flash.h$.2_8o1000_72$7LVbI6Tf_800000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$flash_cache.h$.2_cx0000_YQLZ5nEI14a_300000
+              symbol visibility : __ARM_grp..debug_info$flash_cache.h$.2_cx0000_YQLZ5nEI14a_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$jump_table.h$.2_xf1000_ECxEueLC7L8_700000
+              symbol visibility : __ARM_grp..debug_info$jump_table.h$.2_xf1000_ECxEueLC7L8_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$nvds_in_ram.h$.2_gz1000_ffi7E3yofU9_r00000
+              symbol visibility : __ARM_grp..debug_info$nvds_in_ram.h$.2_gz1000_ffi7E3yofU9_r00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$nvds_typedef.h$.2_E02000_Z0ZArPmFuFb_700000
+              symbol visibility : __ARM_grp..debug_info$nvds_typedef.h$.2_E02000_Z0ZArPmFuFb_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$plf.h$.2_cC0000_WOKGNy6iP92_300000
+              symbol visibility : __ARM_grp..debug_info$plf.h$.2_cC0000_WOKGNy6iP92_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$qspi.h$.2_ED0000_$fnaiD1gyP3_300000
+              symbol visibility : __ARM_grp..debug_info$qspi.h$.2_ED0000_$fnaiD1gyP3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_cpu.h$.2_8w0000_6UAq_KRu$_b_300000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_cpu.h$.2_8w0000_6UAq_KRu$_b_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_kw5000_6gnyCPZERs8_Y60000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_kw5000_6gnyCPZERs8_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_per.h$.2_8w0000_$MrRScQAtVe_300000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_per.h$.2_8w0000_$MrRScQAtVe_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_per_2400.h$.2_ot3000__WySfAz1pxc_040000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_per_2400.h$.2_ot3000__WySfAz1pxc_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$rwapp_config.h$.2_Ex0000_Nq92aHeChvd_300000
+              symbol visibility : __ARM_grp..debug_info$rwapp_config.h$.2_Ex0000_Nq92aHeChvd_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$rwble_config.h$.2_Eb2000_g$NLTxogax9_300000
+              symbol visibility : __ARM_grp..debug_info$rwble_config.h$.2_Eb2000_g$NLTxogax9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$rwble_hl_config.h$.2_cc1000_Xf3qRTrEfZ9_300000
+              symbol visibility : __ARM_grp..debug_info$rwble_hl_config.h$.2_cc1000_Xf3qRTrEfZ9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$rwble_hl_error.h$.2_YI1000_yKVaX9dU6M3_300000
+              symbol visibility : __ARM_grp..debug_info$rwble_hl_error.h$.2_YI1000_yKVaX9dU6M3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$rwip_config.h$.2_8i2000_9m5HoMKZF06_300000
+              symbol visibility : __ARM_grp..debug_info$rwip_config.h$.2_8i2000_9m5HoMKZF06_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$rwprf_config.h$.2_M_0000_qW2VPiNIonb_300000
+              symbol visibility : __ARM_grp..debug_info$rwprf_config.h$.2_M_0000_qW2VPiNIonb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stdbool.h$.2_wu0000_3B7mGpzn3b3_300000
+              symbol visibility : __ARM_grp..debug_info$stdbool.h$.2_wu0000_3B7mGpzn3b3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stdlib.h$.2_wV0000_ByxF03Va60b_300000
+              symbol visibility : __ARM_grp..debug_info$stdlib.h$.2_wV0000_ByxF03Va60b_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$system_bx2400.h$.2_yr2000_zq85SxGt4t7_f00000
+              symbol visibility : __ARM_grp..debug_info$system_bx2400.h$.2_yr2000_zq85SxGt4t7_f00000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_base_addr.h.2_QT0000_tNP0OCUoiWb_300000
+              symbol visibility : __ARM_grp._reg_base_addr.h.2_QT0000_tNP0OCUoiWb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.awo.h.2_Qt0000_XL3Nxf0DcHf_300000
+              symbol visibility : __ARM_grp.awo.h.2_Qt0000_XL3Nxf0DcHf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.awo_2400.h.2_Uk1000__r8QuOY$lq5_300000
+              symbol visibility : __ARM_grp.awo_2400.h.2_Uk1000__r8QuOY$lq5_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.boot_memory_map.h.2_8C0000_Q6lJtA2oa81_300000
+              symbol visibility : __ARM_grp.boot_memory_map.h.2_8C0000_Q6lJtA2oa81_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.boot_ram.c.2_Bm3000_UJ8H2fv6Nme_H00000
+              symbol visibility : __ARM_grp.boot_ram.c.2_Bm3000_UJ8H2fv6Nme_H00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.boot_typedef.h.2_om1000_ZZLoEyHhbS0_e00000
+              symbol visibility : __ARM_grp.boot_typedef.h.2_om1000_ZZLoEyHhbS0_e00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.bx2400.h.2_cF0000_wNU4Z913dca_300000
+              symbol visibility : __ARM_grp.bx2400.h.2_cF0000_wNU4Z913dca_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.bx_config.h.2_wY0000_$lDoBf_xMdb_300000
+              symbol visibility : __ARM_grp.bx_config.h.2_wY0000_$lDoBf_xMdb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.cmsis_armcc.h.2_EB1000_W2L2cd6IY$6_E00000
+              symbol visibility : __ARM_grp.cmsis_armcc.h.2_EB1000_W2L2cd6IY$6_E00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.co_math.h.2_ss1000_TA4Q03qQTk2_o00000
+              symbol visibility : __ARM_grp.co_math.h.2_ss1000_TA4Q03qQTk2_o00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.compiler.h.2_0z0000_mjJMdnhNXT5_300000
+              symbol visibility : __ARM_grp.compiler.h.2_0z0000_mjJMdnhNXT5_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.core_cm0plus.h.2_k84000_SlXYefcL1vc_S00000
+              symbol visibility : __ARM_grp.core_cm0plus.h.2_k84000_SlXYefcL1vc_S00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.core_cmFunc.h.2_Ut0000_AZYW2voX9_1_300000
+              symbol visibility : __ARM_grp.core_cmFunc.h.2_Ut0000_AZYW2voX9_1_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.core_cmInstr.h.2_4u0000_0RLtCEYG5w6_300000
+              symbol visibility : __ARM_grp.core_cmInstr.h.2_4u0000_0RLtCEYG5w6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.flash.h.2_8o1000_72$7LVbI6Tf_800000
+              symbol visibility : __ARM_grp.flash.h.2_8o1000_72$7LVbI6Tf_800000 set to STV_HIDDEN.
+              definition:  __ARM_grp.flash_cache.h.2_cx0000_YQLZ5nEI14a_300000
+              symbol visibility : __ARM_grp.flash_cache.h.2_cx0000_YQLZ5nEI14a_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.jump_table.h.2_xf1000_ECxEueLC7L8_700000
+              symbol visibility : __ARM_grp.jump_table.h.2_xf1000_ECxEueLC7L8_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp.nvds_in_ram.h.2_gz1000_ffi7E3yofU9_r00000
+              symbol visibility : __ARM_grp.nvds_in_ram.h.2_gz1000_ffi7E3yofU9_r00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.nvds_typedef.h.2_E02000_Z0ZArPmFuFb_700000
+              symbol visibility : __ARM_grp.nvds_typedef.h.2_E02000_Z0ZArPmFuFb_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp.plf.h.2_cC0000_WOKGNy6iP92_300000
+              symbol visibility : __ARM_grp.plf.h.2_cC0000_WOKGNy6iP92_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.qspi.h.2_ED0000_$fnaiD1gyP3_300000
+              symbol visibility : __ARM_grp.qspi.h.2_ED0000_$fnaiD1gyP3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_cpu.h.2_8w0000_6UAq_KRu$_b_300000
+              symbol visibility : __ARM_grp.reg_sysc_cpu.h.2_8w0000_6UAq_KRu$_b_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_cpu_2400.h.2_kw5000_6gnyCPZERs8_Y60000
+              symbol visibility : __ARM_grp.reg_sysc_cpu_2400.h.2_kw5000_6gnyCPZERs8_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_per.h.2_8w0000_$MrRScQAtVe_300000
+              symbol visibility : __ARM_grp.reg_sysc_per.h.2_8w0000_$MrRScQAtVe_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_per_2400.h.2_ot3000__WySfAz1pxc_040000
+              symbol visibility : __ARM_grp.reg_sysc_per_2400.h.2_ot3000__WySfAz1pxc_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp.rwapp_config.h.2_Ex0000_Nq92aHeChvd_300000
+              symbol visibility : __ARM_grp.rwapp_config.h.2_Ex0000_Nq92aHeChvd_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.rwble_config.h.2_Eb2000_g$NLTxogax9_300000
+              symbol visibility : __ARM_grp.rwble_config.h.2_Eb2000_g$NLTxogax9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.rwble_hl_config.h.2_cc1000_Xf3qRTrEfZ9_300000
+              symbol visibility : __ARM_grp.rwble_hl_config.h.2_cc1000_Xf3qRTrEfZ9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.rwble_hl_error.h.2_YI1000_yKVaX9dU6M3_300000
+              symbol visibility : __ARM_grp.rwble_hl_error.h.2_YI1000_yKVaX9dU6M3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.rwip_config.h.2_8i2000_9m5HoMKZF06_300000
+              symbol visibility : __ARM_grp.rwip_config.h.2_8i2000_9m5HoMKZF06_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.rwprf_config.h.2_M_0000_qW2VPiNIonb_300000
+              symbol visibility : __ARM_grp.rwprf_config.h.2_M_0000_qW2VPiNIonb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stdbool.h.2_wu0000_3B7mGpzn3b3_300000
+              symbol visibility : __ARM_grp.stdbool.h.2_wu0000_3B7mGpzn3b3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stdint.h.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp.stdint.h.2_YF1000_JA78u4stX79_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stdlib.h.2_wV0000_ByxF03Va60b_300000
+              symbol visibility : __ARM_grp.stdlib.h.2_wV0000_ByxF03Va60b_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.system_bx2400.h.2_yr2000_zq85SxGt4t7_f00000
+              symbol visibility : __ARM_grp.system_bx2400.h.2_yr2000_zq85SxGt4t7_f00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_base_addr.h$.2_QT0000_tNP0OCUoiWb_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_base_addr.h$.2_QT0000_tNP0OCUoiWb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$awo.h$.2_Qt0000_XL3Nxf0DcHf_300000
+              symbol visibility : __ARM_grp..debug_line$awo.h$.2_Qt0000_XL3Nxf0DcHf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$awo_2400.h$.2_Uk1000__r8QuOY$lq5_300000
+              symbol visibility : __ARM_grp..debug_line$awo_2400.h$.2_Uk1000__r8QuOY$lq5_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$boot_memory_map.h$.2_8C0000_Q6lJtA2oa81_300000
+              symbol visibility : __ARM_grp..debug_line$boot_memory_map.h$.2_8C0000_Q6lJtA2oa81_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$boot_ram.c$.2_Bm3000_UJ8H2fv6Nme_H00000
+              symbol visibility : __ARM_grp..debug_line$boot_ram.c$.2_Bm3000_UJ8H2fv6Nme_H00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$boot_typedef.h$.2_om1000_ZZLoEyHhbS0_e00000
+              symbol visibility : __ARM_grp..debug_line$boot_typedef.h$.2_om1000_ZZLoEyHhbS0_e00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$bx2400.h$.2_cF0000_wNU4Z913dca_300000
+              symbol visibility : __ARM_grp..debug_line$bx2400.h$.2_cF0000_wNU4Z913dca_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$bx_config.h$.2_wY0000_$lDoBf_xMdb_300000
+              symbol visibility : __ARM_grp..debug_line$bx_config.h$.2_wY0000_$lDoBf_xMdb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$cmsis_armcc.h$.2_EB1000_W2L2cd6IY$6_E00000
+              symbol visibility : __ARM_grp..debug_line$cmsis_armcc.h$.2_EB1000_W2L2cd6IY$6_E00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$co_math.h$.2_ss1000_TA4Q03qQTk2_o00000
+              symbol visibility : __ARM_grp..debug_line$co_math.h$.2_ss1000_TA4Q03qQTk2_o00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$compiler.h$.2_0z0000_mjJMdnhNXT5_300000
+              symbol visibility : __ARM_grp..debug_line$compiler.h$.2_0z0000_mjJMdnhNXT5_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$core_cm0plus.h$.2_k84000_SlXYefcL1vc_S00000
+              symbol visibility : __ARM_grp..debug_line$core_cm0plus.h$.2_k84000_SlXYefcL1vc_S00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$core_cmFunc.h$.2_Ut0000_AZYW2voX9_1_300000
+              symbol visibility : __ARM_grp..debug_line$core_cmFunc.h$.2_Ut0000_AZYW2voX9_1_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$core_cmInstr.h$.2_4u0000_0RLtCEYG5w6_300000
+              symbol visibility : __ARM_grp..debug_line$core_cmInstr.h$.2_4u0000_0RLtCEYG5w6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$flash.h$.2_8o1000_72$7LVbI6Tf_800000
+              symbol visibility : __ARM_grp..debug_line$flash.h$.2_8o1000_72$7LVbI6Tf_800000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$flash_cache.h$.2_cx0000_YQLZ5nEI14a_300000
+              symbol visibility : __ARM_grp..debug_line$flash_cache.h$.2_cx0000_YQLZ5nEI14a_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$jump_table.h$.2_xf1000_ECxEueLC7L8_700000
+              symbol visibility : __ARM_grp..debug_line$jump_table.h$.2_xf1000_ECxEueLC7L8_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$nvds_in_ram.h$.2_gz1000_ffi7E3yofU9_r00000
+              symbol visibility : __ARM_grp..debug_line$nvds_in_ram.h$.2_gz1000_ffi7E3yofU9_r00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$nvds_typedef.h$.2_E02000_Z0ZArPmFuFb_700000
+              symbol visibility : __ARM_grp..debug_line$nvds_typedef.h$.2_E02000_Z0ZArPmFuFb_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$plf.h$.2_cC0000_WOKGNy6iP92_300000
+              symbol visibility : __ARM_grp..debug_line$plf.h$.2_cC0000_WOKGNy6iP92_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$qspi.h$.2_ED0000_$fnaiD1gyP3_300000
+              symbol visibility : __ARM_grp..debug_line$qspi.h$.2_ED0000_$fnaiD1gyP3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_cpu.h$.2_8w0000_6UAq_KRu$_b_300000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_cpu.h$.2_8w0000_6UAq_KRu$_b_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_kw5000_6gnyCPZERs8_Y60000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_kw5000_6gnyCPZERs8_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_per.h$.2_8w0000_$MrRScQAtVe_300000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_per.h$.2_8w0000_$MrRScQAtVe_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_per_2400.h$.2_ot3000__WySfAz1pxc_040000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_per_2400.h$.2_ot3000__WySfAz1pxc_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$rwapp_config.h$.2_Ex0000_Nq92aHeChvd_300000
+              symbol visibility : __ARM_grp..debug_line$rwapp_config.h$.2_Ex0000_Nq92aHeChvd_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$rwble_config.h$.2_Eb2000_g$NLTxogax9_300000
+              symbol visibility : __ARM_grp..debug_line$rwble_config.h$.2_Eb2000_g$NLTxogax9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$rwble_hl_config.h$.2_cc1000_Xf3qRTrEfZ9_300000
+              symbol visibility : __ARM_grp..debug_line$rwble_hl_config.h$.2_cc1000_Xf3qRTrEfZ9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$rwble_hl_error.h$.2_YI1000_yKVaX9dU6M3_300000
+              symbol visibility : __ARM_grp..debug_line$rwble_hl_error.h$.2_YI1000_yKVaX9dU6M3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$rwip_config.h$.2_8i2000_9m5HoMKZF06_300000
+              symbol visibility : __ARM_grp..debug_line$rwip_config.h$.2_8i2000_9m5HoMKZF06_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$rwprf_config.h$.2_M_0000_qW2VPiNIonb_300000
+              symbol visibility : __ARM_grp..debug_line$rwprf_config.h$.2_M_0000_qW2VPiNIonb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stdbool.h$.2_wu0000_3B7mGpzn3b3_300000
+              symbol visibility : __ARM_grp..debug_line$stdbool.h$.2_wu0000_3B7mGpzn3b3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_line$stdint.h$.2_YF1000_JA78u4stX79_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stdlib.h$.2_wV0000_ByxF03Va60b_300000
+              symbol visibility : __ARM_grp..debug_line$stdlib.h$.2_wV0000_ByxF03Va60b_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$system_bx2400.h$.2_yr2000_zq85SxGt4t7_f00000
+              symbol visibility : __ARM_grp..debug_line$system_bx2400.h$.2_yr2000_zq85SxGt4t7_f00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_base_addr.h$.2_QT0000_tNP0OCUoiWb_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_base_addr.h$.2_QT0000_tNP0OCUoiWb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$awo.h$.2_Qt0000_XL3Nxf0DcHf_300000
+              symbol visibility : __ARM_grp..debug_macinfo$awo.h$.2_Qt0000_XL3Nxf0DcHf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$awo_2400.h$.2_Uk1000__r8QuOY$lq5_300000
+              symbol visibility : __ARM_grp..debug_macinfo$awo_2400.h$.2_Uk1000__r8QuOY$lq5_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$boot_memory_map.h$.2_8C0000_Q6lJtA2oa81_300000
+              symbol visibility : __ARM_grp..debug_macinfo$boot_memory_map.h$.2_8C0000_Q6lJtA2oa81_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$boot_ram.c$.2_Bm3000_UJ8H2fv6Nme_H00000
+              symbol visibility : __ARM_grp..debug_macinfo$boot_ram.c$.2_Bm3000_UJ8H2fv6Nme_H00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$boot_typedef.h$.2_om1000_ZZLoEyHhbS0_e00000
+              symbol visibility : __ARM_grp..debug_macinfo$boot_typedef.h$.2_om1000_ZZLoEyHhbS0_e00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$bx2400.h$.2_cF0000_wNU4Z913dca_300000
+              symbol visibility : __ARM_grp..debug_macinfo$bx2400.h$.2_cF0000_wNU4Z913dca_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$bx_config.h$.2_wY0000_$lDoBf_xMdb_300000
+              symbol visibility : __ARM_grp..debug_macinfo$bx_config.h$.2_wY0000_$lDoBf_xMdb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$cmsis_armcc.h$.2_EB1000_W2L2cd6IY$6_E00000
+              symbol visibility : __ARM_grp..debug_macinfo$cmsis_armcc.h$.2_EB1000_W2L2cd6IY$6_E00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$co_math.h$.2_ss1000_TA4Q03qQTk2_o00000
+              symbol visibility : __ARM_grp..debug_macinfo$co_math.h$.2_ss1000_TA4Q03qQTk2_o00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$compiler.h$.2_0z0000_mjJMdnhNXT5_300000
+              symbol visibility : __ARM_grp..debug_macinfo$compiler.h$.2_0z0000_mjJMdnhNXT5_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$core_cm0plus.h$.2_k84000_SlXYefcL1vc_S00000
+              symbol visibility : __ARM_grp..debug_macinfo$core_cm0plus.h$.2_k84000_SlXYefcL1vc_S00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$core_cmFunc.h$.2_Ut0000_AZYW2voX9_1_300000
+              symbol visibility : __ARM_grp..debug_macinfo$core_cmFunc.h$.2_Ut0000_AZYW2voX9_1_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$core_cmInstr.h$.2_4u0000_0RLtCEYG5w6_300000
+              symbol visibility : __ARM_grp..debug_macinfo$core_cmInstr.h$.2_4u0000_0RLtCEYG5w6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$flash.h$.2_8o1000_72$7LVbI6Tf_800000
+              symbol visibility : __ARM_grp..debug_macinfo$flash.h$.2_8o1000_72$7LVbI6Tf_800000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$flash_cache.h$.2_cx0000_YQLZ5nEI14a_300000
+              symbol visibility : __ARM_grp..debug_macinfo$flash_cache.h$.2_cx0000_YQLZ5nEI14a_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$jump_table.h$.2_xf1000_ECxEueLC7L8_700000
+              symbol visibility : __ARM_grp..debug_macinfo$jump_table.h$.2_xf1000_ECxEueLC7L8_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$nvds_in_ram.h$.2_gz1000_ffi7E3yofU9_r00000
+              symbol visibility : __ARM_grp..debug_macinfo$nvds_in_ram.h$.2_gz1000_ffi7E3yofU9_r00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$nvds_typedef.h$.2_E02000_Z0ZArPmFuFb_700000
+              symbol visibility : __ARM_grp..debug_macinfo$nvds_typedef.h$.2_E02000_Z0ZArPmFuFb_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$plf.h$.2_cC0000_WOKGNy6iP92_300000
+              symbol visibility : __ARM_grp..debug_macinfo$plf.h$.2_cC0000_WOKGNy6iP92_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$qspi.h$.2_ED0000_$fnaiD1gyP3_300000
+              symbol visibility : __ARM_grp..debug_macinfo$qspi.h$.2_ED0000_$fnaiD1gyP3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_cpu.h$.2_8w0000_6UAq_KRu$_b_300000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_cpu.h$.2_8w0000_6UAq_KRu$_b_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_kw5000_6gnyCPZERs8_Y60000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_kw5000_6gnyCPZERs8_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_per.h$.2_8w0000_$MrRScQAtVe_300000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_per.h$.2_8w0000_$MrRScQAtVe_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_per_2400.h$.2_ot3000__WySfAz1pxc_040000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_per_2400.h$.2_ot3000__WySfAz1pxc_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$rwapp_config.h$.2_Ex0000_Nq92aHeChvd_300000
+              symbol visibility : __ARM_grp..debug_macinfo$rwapp_config.h$.2_Ex0000_Nq92aHeChvd_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$rwble_config.h$.2_Eb2000_g$NLTxogax9_300000
+              symbol visibility : __ARM_grp..debug_macinfo$rwble_config.h$.2_Eb2000_g$NLTxogax9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$rwble_hl_config.h$.2_cc1000_Xf3qRTrEfZ9_300000
+              symbol visibility : __ARM_grp..debug_macinfo$rwble_hl_config.h$.2_cc1000_Xf3qRTrEfZ9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$rwble_hl_error.h$.2_YI1000_yKVaX9dU6M3_300000
+              symbol visibility : __ARM_grp..debug_macinfo$rwble_hl_error.h$.2_YI1000_yKVaX9dU6M3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$rwip_config.h$.2_8i2000_9m5HoMKZF06_300000
+              symbol visibility : __ARM_grp..debug_macinfo$rwip_config.h$.2_8i2000_9m5HoMKZF06_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$rwprf_config.h$.2_M_0000_qW2VPiNIonb_300000
+              symbol visibility : __ARM_grp..debug_macinfo$rwprf_config.h$.2_M_0000_qW2VPiNIonb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stdbool.h$.2_wu0000_3B7mGpzn3b3_300000
+              symbol visibility : __ARM_grp..debug_macinfo$stdbool.h$.2_wu0000_3B7mGpzn3b3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_macinfo$stdint.h$.2_YF1000_JA78u4stX79_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stdlib.h$.2_wV0000_ByxF03Va60b_300000
+              symbol visibility : __ARM_grp..debug_macinfo$stdlib.h$.2_wV0000_ByxF03Va60b_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$system_bx2400.h$.2_yr2000_zq85SxGt4t7_f00000
+              symbol visibility : __ARM_grp..debug_macinfo$system_bx2400.h$.2_yr2000_zq85SxGt4t7_f00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_pubnames$boot_ram.c$.2_Bm3000_UJ8H2fv6Nme_H00000
+              symbol visibility : __ARM_grp..debug_pubnames$boot_ram.c$.2_Bm3000_UJ8H2fv6Nme_H00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_pubnames$jump_table.h$.2_xf1000_ECxEueLC7L8_700000
+              symbol visibility : __ARM_grp..debug_pubnames$jump_table.h$.2_xf1000_ECxEueLC7L8_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_pubnames$system_bx2400.h$.2_yr2000_zq85SxGt4t7_f00000
+              symbol visibility : __ARM_grp..debug_pubnames$system_bx2400.h$.2_yr2000_zq85SxGt4t7_f00000 set to STV_HIDDEN.
+              definition:  boot_info
+              symbol visibility : boot_info set to STV_HIDDEN.
+              definition:  boot_ram_entry
+              symbol visibility : boot_ram_entry set to STV_HIDDEN.
+              definition:  dmac_qspi_gate
+              symbol visibility : dmac_qspi_gate set to STV_HIDDEN.
+              definition:  image_read
+              symbol visibility : image_read set to STV_HIDDEN.
+              definition:  peri_gate
+              symbol visibility : peri_gate set to STV_HIDDEN.
+              reference :  Load$$LR$$LOAD_SECTION$$Length
+              symbol visibility : Load$$LR$$LOAD_SECTION$$Length set to STV_HIDDEN.
+              reference :  awo_bootram_init
+              symbol visibility : awo_bootram_init set to STV_HIDDEN.
+              reference :  flash_cache_init
+              symbol visibility : flash_cache_init set to STV_HIDDEN.
+              reference :  flash_quad_read
+              symbol visibility : flash_quad_read set to STV_HIDDEN.
+              reference :  flash_read
+              symbol visibility : flash_read set to STV_HIDDEN.
+Object boot_ram.o has not been built for exceptions.
+Loading object awo_2400.o.
+              definition:  __asm___10_awo_2400_c_awo_init____REV16
+              symbol visibility : __asm___10_awo_2400_c_awo_init____REV16 set to STV_HIDDEN.
+              definition:  __asm___10_awo_2400_c_awo_init____REVSH
+              symbol visibility : __asm___10_awo_2400_c_awo_init____REVSH set to STV_HIDDEN.
+              definition:  __ARM_grp_.debug_frame$__ARM_common_switch8
+              symbol visibility : __ARM_grp_.debug_frame$__ARM_common_switch8 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_cs.h$.2_0w0000_RFcIkr5zY10_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_cs.h$.2_0w0000_RFcIkr5zY10_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_ral.h$.2_8w0000_AUbJ5mL$CA9_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_ral.h$.2_8w0000_AUbJ5mL$CA9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_rx_buffer.h$.2_0x0000_1j8AkIz7ED0_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_rx_buffer.h$.2_0x0000_1j8AkIz7ED0_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_rx_desc.h$.2_Iw0000_8B2Oi73HZx2_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_rx_desc.h$.2_Iw0000_8B2Oi73HZx2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_tx_buffer_cntl.h$.2_Ix0000_eEGTQ8uq8S7_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_tx_buffer_cntl.h$.2_Ix0000_eEGTQ8uq8S7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_tx_buffer_data.h$.2_Qx0000_T_35q4bHiea_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_tx_buffer_data.h$.2_Qx0000_T_35q4bHiea_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_tx_desc.h$.2_Iw0000_XEpFJ2lu$Ef_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_tx_desc.h$.2_Iw0000_XEpFJ2lu$Ef_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_wpb.h$.2_8w0000_TqC7I3rUW$1_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_wpb.h$.2_8w0000_TqC7I3rUW$1_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_ble_em_wpv.h$.2_8w0000_4BfryRpNVsc_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_ble_em_wpv.h$.2_8w0000_4BfryRpNVsc_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_blecore.h$.2_Mv0000_jWIw4mCTCpf_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_blecore.h$.2_Mv0000_jWIw4mCTCpf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$_reg_common_em_et.h$.2_kw0000_NtUWLKiMY81_300000
+              symbol visibility : __ARM_grp..debug_info$_reg_common_em_et.h$.2_kw0000_NtUWLKiMY81_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$arch.h$.2_cJ1000_4L_IUdEYU0a_700000
+              symbol visibility : __ARM_grp..debug_info$arch.h$.2_cJ1000_4L_IUdEYU0a_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$assert.h$.2_Ey0000_xwCPx3NDRrf_300000
+              symbol visibility : __ARM_grp..debug_info$assert.h$.2_Ey0000_xwCPx3NDRrf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$awo_2400.c$.2_wr1000_WOl_ITKK5H3_700000
+              symbol visibility : __ARM_grp..debug_info$awo_2400.c$.2_wr1000_WOl_ITKK5H3_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$bx_dbg.h$.2_Ax1000__xpcP6cjRN1_900000
+              symbol visibility : __ARM_grp..debug_info$bx_dbg.h$.2_Ax1000__xpcP6cjRN1_900000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$cmsis_armcc.h$.2_EB1000_1EJVqkuErRd_E00000
+              symbol visibility : __ARM_grp..debug_info$cmsis_armcc.h$.2_EB1000_1EJVqkuErRd_E00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$co_bt.h$.2_Ax0000_II3Dm7pDKGf_300000
+              symbol visibility : __ARM_grp..debug_info$co_bt.h$.2_Ax0000_II3Dm7pDKGf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$co_bt_defines.h$.2_EZf000_Ra0C6JcJ_Y4_X00000
+              symbol visibility : __ARM_grp..debug_info$co_bt_defines.h$.2_EZf000_Ra0C6JcJ_Y4_X00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$co_error.h$.2_gY0000_DrRRcgcHto4_300000
+              symbol visibility : __ARM_grp..debug_info$co_error.h$.2_gY0000_DrRRcgcHto4_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$co_hci.h$.2_4Ek000_ctqNZcA_rv6_xg0000
+              symbol visibility : __ARM_grp..debug_info$co_hci.h$.2_4Ek000_ctqNZcA_rv6_xg0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$co_lmp.h$.2_Yvd000_5Naz4Gc3Kh2_N40000
+              symbol visibility : __ARM_grp..debug_info$co_lmp.h$.2_Yvd000_5Naz4Gc3Kh2_N40000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$co_utils.h$.2_Xuk000_IM8ikUbP6b7_J20000
+              symbol visibility : __ARM_grp..debug_info$co_utils.h$.2_Xuk000_IM8ikUbP6b7_J20000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$em_map.h$.2_461000_HXWX0do$tB6_300000
+              symbol visibility : __ARM_grp..debug_info$em_map.h$.2_461000_HXWX0do$tB6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$em_map_ble.h$.2_ot1000_rSrJ9oOkto2_300000
+              symbol visibility : __ARM_grp..debug_info$em_map_ble.h$.2_ot1000_rSrJ9oOkto2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$ll.h$.2_cE0000_3TuYiI6fNs3_300000
+              symbol visibility : __ARM_grp..debug_info$ll.h$.2_cE0000_3TuYiI6fNs3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_access.h$.2_EM1000_E9ujf1EnMV0_r00000
+              symbol visibility : __ARM_grp..debug_info$reg_access.h$.2_EM1000_E9ujf1EnMV0_r00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_blecore.h$.2_kAD000_uDEaerOdQGb_7s0000
+              symbol visibility : __ARM_grp..debug_info$reg_blecore.h$.2_kAD000_uDEaerOdQGb_7s0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_awo.h$.2_8w0000_cznoEXm6bP8_300000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_awo.h$.2_8w0000_cznoEXm6bP8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_awo_2400.h$.2_gha000_qjADPrF9Bo5_Yd0000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_awo_2400.h$.2_gha000_qjADPrF9Bo5_Yd0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_kw5000_eCOnuaOkaQ7_Y60000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_kw5000_eCOnuaOkaQ7_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stddef.h$.2_8z0000_rmJmTB4zBb2_300000
+              symbol visibility : __ARM_grp..debug_info$stddef.h$.2_8z0000_rmJmTB4zBb2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$string.h$.2_ww0000_Lh8d2vqQAM3_300000
+              symbol visibility : __ARM_grp..debug_info$string.h$.2_ww0000_Lh8d2vqQAM3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_cs.h.2_0w0000_RFcIkr5zY10_300000
+              symbol visibility : __ARM_grp._reg_ble_em_cs.h.2_0w0000_RFcIkr5zY10_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_ral.h.2_8w0000_AUbJ5mL$CA9_300000
+              symbol visibility : __ARM_grp._reg_ble_em_ral.h.2_8w0000_AUbJ5mL$CA9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_rx_buffer.h.2_0x0000_1j8AkIz7ED0_300000
+              symbol visibility : __ARM_grp._reg_ble_em_rx_buffer.h.2_0x0000_1j8AkIz7ED0_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_rx_desc.h.2_Iw0000_8B2Oi73HZx2_300000
+              symbol visibility : __ARM_grp._reg_ble_em_rx_desc.h.2_Iw0000_8B2Oi73HZx2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_tx_buffer_cntl.h.2_Ix0000_eEGTQ8uq8S7_300000
+              symbol visibility : __ARM_grp._reg_ble_em_tx_buffer_cntl.h.2_Ix0000_eEGTQ8uq8S7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_tx_buffer_data.h.2_Qx0000_T_35q4bHiea_300000
+              symbol visibility : __ARM_grp._reg_ble_em_tx_buffer_data.h.2_Qx0000_T_35q4bHiea_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_tx_desc.h.2_Iw0000_XEpFJ2lu$Ef_300000
+              symbol visibility : __ARM_grp._reg_ble_em_tx_desc.h.2_Iw0000_XEpFJ2lu$Ef_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_wpb.h.2_8w0000_TqC7I3rUW$1_300000
+              symbol visibility : __ARM_grp._reg_ble_em_wpb.h.2_8w0000_TqC7I3rUW$1_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_ble_em_wpv.h.2_8w0000_4BfryRpNVsc_300000
+              symbol visibility : __ARM_grp._reg_ble_em_wpv.h.2_8w0000_4BfryRpNVsc_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_blecore.h.2_Mv0000_jWIw4mCTCpf_300000
+              symbol visibility : __ARM_grp._reg_blecore.h.2_Mv0000_jWIw4mCTCpf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp._reg_common_em_et.h.2_kw0000_NtUWLKiMY81_300000
+              symbol visibility : __ARM_grp._reg_common_em_et.h.2_kw0000_NtUWLKiMY81_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.arch.h.2_cJ1000_4L_IUdEYU0a_700000
+              symbol visibility : __ARM_grp.arch.h.2_cJ1000_4L_IUdEYU0a_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp.assert.h.2_Ey0000_xwCPx3NDRrf_300000
+              symbol visibility : __ARM_grp.assert.h.2_Ey0000_xwCPx3NDRrf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.awo_2400.c.2_wr1000_WOl_ITKK5H3_700000
+              symbol visibility : __ARM_grp.awo_2400.c.2_wr1000_WOl_ITKK5H3_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp.bx_dbg.h.2_Ax1000__xpcP6cjRN1_900000
+              symbol visibility : __ARM_grp.bx_dbg.h.2_Ax1000__xpcP6cjRN1_900000 set to STV_HIDDEN.
+              definition:  __ARM_grp.cmsis_armcc.h.2_EB1000_1EJVqkuErRd_E00000
+              symbol visibility : __ARM_grp.cmsis_armcc.h.2_EB1000_1EJVqkuErRd_E00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.co_bt.h.2_Ax0000_II3Dm7pDKGf_300000
+              symbol visibility : __ARM_grp.co_bt.h.2_Ax0000_II3Dm7pDKGf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.co_bt_defines.h.2_EZf000_Ra0C6JcJ_Y4_X00000
+              symbol visibility : __ARM_grp.co_bt_defines.h.2_EZf000_Ra0C6JcJ_Y4_X00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.co_error.h.2_gY0000_DrRRcgcHto4_300000
+              symbol visibility : __ARM_grp.co_error.h.2_gY0000_DrRRcgcHto4_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.co_hci.h.2_4Ek000_ctqNZcA_rv6_xg0000
+              symbol visibility : __ARM_grp.co_hci.h.2_4Ek000_ctqNZcA_rv6_xg0000 set to STV_HIDDEN.
+              definition:  __ARM_grp.co_lmp.h.2_Yvd000_5Naz4Gc3Kh2_N40000
+              symbol visibility : __ARM_grp.co_lmp.h.2_Yvd000_5Naz4Gc3Kh2_N40000 set to STV_HIDDEN.
+              definition:  __ARM_grp.co_utils.h.2_Xuk000_IM8ikUbP6b7_J20000
+              symbol visibility : __ARM_grp.co_utils.h.2_Xuk000_IM8ikUbP6b7_J20000 set to STV_HIDDEN.
+              definition:  __ARM_grp.em_map.h.2_461000_HXWX0do$tB6_300000
+              symbol visibility : __ARM_grp.em_map.h.2_461000_HXWX0do$tB6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.em_map_ble.h.2_ot1000_rSrJ9oOkto2_300000
+              symbol visibility : __ARM_grp.em_map_ble.h.2_ot1000_rSrJ9oOkto2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.ll.h.2_cE0000_3TuYiI6fNs3_300000
+              symbol visibility : __ARM_grp.ll.h.2_cE0000_3TuYiI6fNs3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_access.h.2_EM1000_E9ujf1EnMV0_r00000
+              symbol visibility : __ARM_grp.reg_access.h.2_EM1000_E9ujf1EnMV0_r00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_blecore.h.2_kAD000_uDEaerOdQGb_7s0000
+              symbol visibility : __ARM_grp.reg_blecore.h.2_kAD000_uDEaerOdQGb_7s0000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_awo.h.2_8w0000_cznoEXm6bP8_300000
+              symbol visibility : __ARM_grp.reg_sysc_awo.h.2_8w0000_cznoEXm6bP8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_awo_2400.h.2_gha000_qjADPrF9Bo5_Yd0000
+              symbol visibility : __ARM_grp.reg_sysc_awo_2400.h.2_gha000_qjADPrF9Bo5_Yd0000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_cpu_2400.h.2_kw5000_eCOnuaOkaQ7_Y60000
+              symbol visibility : __ARM_grp.reg_sysc_cpu_2400.h.2_kw5000_eCOnuaOkaQ7_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stddef.h.2_8z0000_rmJmTB4zBb2_300000
+              symbol visibility : __ARM_grp.stddef.h.2_8z0000_rmJmTB4zBb2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.string.h.2_ww0000_Lh8d2vqQAM3_300000
+              symbol visibility : __ARM_grp.string.h.2_ww0000_Lh8d2vqQAM3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_cs.h$.2_0w0000_RFcIkr5zY10_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_cs.h$.2_0w0000_RFcIkr5zY10_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_ral.h$.2_8w0000_AUbJ5mL$CA9_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_ral.h$.2_8w0000_AUbJ5mL$CA9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_rx_buffer.h$.2_0x0000_1j8AkIz7ED0_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_rx_buffer.h$.2_0x0000_1j8AkIz7ED0_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_rx_desc.h$.2_Iw0000_8B2Oi73HZx2_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_rx_desc.h$.2_Iw0000_8B2Oi73HZx2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_tx_buffer_cntl.h$.2_Ix0000_eEGTQ8uq8S7_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_tx_buffer_cntl.h$.2_Ix0000_eEGTQ8uq8S7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_tx_buffer_data.h$.2_Qx0000_T_35q4bHiea_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_tx_buffer_data.h$.2_Qx0000_T_35q4bHiea_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_tx_desc.h$.2_Iw0000_XEpFJ2lu$Ef_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_tx_desc.h$.2_Iw0000_XEpFJ2lu$Ef_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_wpb.h$.2_8w0000_TqC7I3rUW$1_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_wpb.h$.2_8w0000_TqC7I3rUW$1_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_ble_em_wpv.h$.2_8w0000_4BfryRpNVsc_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_ble_em_wpv.h$.2_8w0000_4BfryRpNVsc_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_blecore.h$.2_Mv0000_jWIw4mCTCpf_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_blecore.h$.2_Mv0000_jWIw4mCTCpf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$_reg_common_em_et.h$.2_kw0000_NtUWLKiMY81_300000
+              symbol visibility : __ARM_grp..debug_line$_reg_common_em_et.h$.2_kw0000_NtUWLKiMY81_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$arch.h$.2_cJ1000_4L_IUdEYU0a_700000
+              symbol visibility : __ARM_grp..debug_line$arch.h$.2_cJ1000_4L_IUdEYU0a_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$assert.h$.2_Ey0000_xwCPx3NDRrf_300000
+              symbol visibility : __ARM_grp..debug_line$assert.h$.2_Ey0000_xwCPx3NDRrf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$awo_2400.c$.2_wr1000_WOl_ITKK5H3_700000
+              symbol visibility : __ARM_grp..debug_line$awo_2400.c$.2_wr1000_WOl_ITKK5H3_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$bx_dbg.h$.2_Ax1000__xpcP6cjRN1_900000
+              symbol visibility : __ARM_grp..debug_line$bx_dbg.h$.2_Ax1000__xpcP6cjRN1_900000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$cmsis_armcc.h$.2_EB1000_1EJVqkuErRd_E00000
+              symbol visibility : __ARM_grp..debug_line$cmsis_armcc.h$.2_EB1000_1EJVqkuErRd_E00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$co_bt.h$.2_Ax0000_II3Dm7pDKGf_300000
+              symbol visibility : __ARM_grp..debug_line$co_bt.h$.2_Ax0000_II3Dm7pDKGf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$co_bt_defines.h$.2_EZf000_Ra0C6JcJ_Y4_X00000
+              symbol visibility : __ARM_grp..debug_line$co_bt_defines.h$.2_EZf000_Ra0C6JcJ_Y4_X00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$co_error.h$.2_gY0000_DrRRcgcHto4_300000
+              symbol visibility : __ARM_grp..debug_line$co_error.h$.2_gY0000_DrRRcgcHto4_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$co_hci.h$.2_4Ek000_ctqNZcA_rv6_xg0000
+              symbol visibility : __ARM_grp..debug_line$co_hci.h$.2_4Ek000_ctqNZcA_rv6_xg0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$co_lmp.h$.2_Yvd000_5Naz4Gc3Kh2_N40000
+              symbol visibility : __ARM_grp..debug_line$co_lmp.h$.2_Yvd000_5Naz4Gc3Kh2_N40000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$co_utils.h$.2_Xuk000_IM8ikUbP6b7_J20000
+              symbol visibility : __ARM_grp..debug_line$co_utils.h$.2_Xuk000_IM8ikUbP6b7_J20000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$em_map.h$.2_461000_HXWX0do$tB6_300000
+              symbol visibility : __ARM_grp..debug_line$em_map.h$.2_461000_HXWX0do$tB6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$em_map_ble.h$.2_ot1000_rSrJ9oOkto2_300000
+              symbol visibility : __ARM_grp..debug_line$em_map_ble.h$.2_ot1000_rSrJ9oOkto2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$ll.h$.2_cE0000_3TuYiI6fNs3_300000
+              symbol visibility : __ARM_grp..debug_line$ll.h$.2_cE0000_3TuYiI6fNs3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_access.h$.2_EM1000_E9ujf1EnMV0_r00000
+              symbol visibility : __ARM_grp..debug_line$reg_access.h$.2_EM1000_E9ujf1EnMV0_r00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_blecore.h$.2_kAD000_uDEaerOdQGb_7s0000
+              symbol visibility : __ARM_grp..debug_line$reg_blecore.h$.2_kAD000_uDEaerOdQGb_7s0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_awo.h$.2_8w0000_cznoEXm6bP8_300000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_awo.h$.2_8w0000_cznoEXm6bP8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_awo_2400.h$.2_gha000_qjADPrF9Bo5_Yd0000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_awo_2400.h$.2_gha000_qjADPrF9Bo5_Yd0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_kw5000_eCOnuaOkaQ7_Y60000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_kw5000_eCOnuaOkaQ7_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stddef.h$.2_8z0000_rmJmTB4zBb2_300000
+              symbol visibility : __ARM_grp..debug_line$stddef.h$.2_8z0000_rmJmTB4zBb2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$string.h$.2_ww0000_Lh8d2vqQAM3_300000
+              symbol visibility : __ARM_grp..debug_line$string.h$.2_ww0000_Lh8d2vqQAM3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_cs.h$.2_0w0000_RFcIkr5zY10_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_cs.h$.2_0w0000_RFcIkr5zY10_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_ral.h$.2_8w0000_AUbJ5mL$CA9_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_ral.h$.2_8w0000_AUbJ5mL$CA9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_rx_buffer.h$.2_0x0000_1j8AkIz7ED0_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_rx_buffer.h$.2_0x0000_1j8AkIz7ED0_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_rx_desc.h$.2_Iw0000_8B2Oi73HZx2_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_rx_desc.h$.2_Iw0000_8B2Oi73HZx2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_tx_buffer_cntl.h$.2_Ix0000_eEGTQ8uq8S7_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_tx_buffer_cntl.h$.2_Ix0000_eEGTQ8uq8S7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_tx_buffer_data.h$.2_Qx0000_T_35q4bHiea_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_tx_buffer_data.h$.2_Qx0000_T_35q4bHiea_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_tx_desc.h$.2_Iw0000_XEpFJ2lu$Ef_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_tx_desc.h$.2_Iw0000_XEpFJ2lu$Ef_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_wpb.h$.2_8w0000_TqC7I3rUW$1_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_wpb.h$.2_8w0000_TqC7I3rUW$1_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_ble_em_wpv.h$.2_8w0000_4BfryRpNVsc_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_ble_em_wpv.h$.2_8w0000_4BfryRpNVsc_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_blecore.h$.2_Mv0000_jWIw4mCTCpf_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_blecore.h$.2_Mv0000_jWIw4mCTCpf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$_reg_common_em_et.h$.2_kw0000_NtUWLKiMY81_300000
+              symbol visibility : __ARM_grp..debug_macinfo$_reg_common_em_et.h$.2_kw0000_NtUWLKiMY81_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$arch.h$.2_cJ1000_4L_IUdEYU0a_700000
+              symbol visibility : __ARM_grp..debug_macinfo$arch.h$.2_cJ1000_4L_IUdEYU0a_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$assert.h$.2_Ey0000_xwCPx3NDRrf_300000
+              symbol visibility : __ARM_grp..debug_macinfo$assert.h$.2_Ey0000_xwCPx3NDRrf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$awo_2400.c$.2_wr1000_WOl_ITKK5H3_700000
+              symbol visibility : __ARM_grp..debug_macinfo$awo_2400.c$.2_wr1000_WOl_ITKK5H3_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$bx_dbg.h$.2_Ax1000__xpcP6cjRN1_900000
+              symbol visibility : __ARM_grp..debug_macinfo$bx_dbg.h$.2_Ax1000__xpcP6cjRN1_900000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$cmsis_armcc.h$.2_EB1000_1EJVqkuErRd_E00000
+              symbol visibility : __ARM_grp..debug_macinfo$cmsis_armcc.h$.2_EB1000_1EJVqkuErRd_E00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$co_bt.h$.2_Ax0000_II3Dm7pDKGf_300000
+              symbol visibility : __ARM_grp..debug_macinfo$co_bt.h$.2_Ax0000_II3Dm7pDKGf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$co_bt_defines.h$.2_EZf000_Ra0C6JcJ_Y4_X00000
+              symbol visibility : __ARM_grp..debug_macinfo$co_bt_defines.h$.2_EZf000_Ra0C6JcJ_Y4_X00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$co_error.h$.2_gY0000_DrRRcgcHto4_300000
+              symbol visibility : __ARM_grp..debug_macinfo$co_error.h$.2_gY0000_DrRRcgcHto4_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$co_hci.h$.2_4Ek000_ctqNZcA_rv6_xg0000
+              symbol visibility : __ARM_grp..debug_macinfo$co_hci.h$.2_4Ek000_ctqNZcA_rv6_xg0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$co_lmp.h$.2_Yvd000_5Naz4Gc3Kh2_N40000
+              symbol visibility : __ARM_grp..debug_macinfo$co_lmp.h$.2_Yvd000_5Naz4Gc3Kh2_N40000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$co_utils.h$.2_Xuk000_IM8ikUbP6b7_J20000
+              symbol visibility : __ARM_grp..debug_macinfo$co_utils.h$.2_Xuk000_IM8ikUbP6b7_J20000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$em_map.h$.2_461000_HXWX0do$tB6_300000
+              symbol visibility : __ARM_grp..debug_macinfo$em_map.h$.2_461000_HXWX0do$tB6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$em_map_ble.h$.2_ot1000_rSrJ9oOkto2_300000
+              symbol visibility : __ARM_grp..debug_macinfo$em_map_ble.h$.2_ot1000_rSrJ9oOkto2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$ll.h$.2_cE0000_3TuYiI6fNs3_300000
+              symbol visibility : __ARM_grp..debug_macinfo$ll.h$.2_cE0000_3TuYiI6fNs3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_access.h$.2_EM1000_E9ujf1EnMV0_r00000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_access.h$.2_EM1000_E9ujf1EnMV0_r00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_blecore.h$.2_kAD000_uDEaerOdQGb_7s0000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_blecore.h$.2_kAD000_uDEaerOdQGb_7s0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_awo.h$.2_8w0000_cznoEXm6bP8_300000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_awo.h$.2_8w0000_cznoEXm6bP8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_awo_2400.h$.2_gha000_qjADPrF9Bo5_Yd0000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_awo_2400.h$.2_gha000_qjADPrF9Bo5_Yd0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_kw5000_eCOnuaOkaQ7_Y60000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_kw5000_eCOnuaOkaQ7_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stddef.h$.2_8z0000_rmJmTB4zBb2_300000
+              symbol visibility : __ARM_grp..debug_macinfo$stddef.h$.2_8z0000_rmJmTB4zBb2_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$string.h$.2_ww0000_Lh8d2vqQAM3_300000
+              symbol visibility : __ARM_grp..debug_macinfo$string.h$.2_ww0000_Lh8d2vqQAM3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_pubnames$co_utils.h$.2_Xuk000_IM8ikUbP6b7_J20000
+              symbol visibility : __ARM_grp..debug_pubnames$co_utils.h$.2_Xuk000_IM8ikUbP6b7_J20000 set to STV_HIDDEN.
+              definition:  __ARM_common_switch8
+              symbol visibility : __ARM_common_switch8 set to STV_HIDDEN.
+              definition:  awo_16m_xtal_en
+              symbol visibility : awo_16m_xtal_en set to STV_HIDDEN.
+              definition:  awo_32k_rcosc_en
+              symbol visibility : awo_32k_rcosc_en set to STV_HIDDEN.
+              definition:  awo_32k_xtal_en
+              symbol visibility : awo_32k_xtal_en set to STV_HIDDEN.
+              definition:  awo_after_sleep
+              symbol visibility : awo_after_sleep set to STV_HIDDEN.
+              definition:  awo_ana_16m_selrc
+              symbol visibility : awo_ana_16m_selrc set to STV_HIDDEN.
+              definition:  awo_ana_32k_selxtal
+              symbol visibility : awo_ana_32k_selxtal set to STV_HIDDEN.
+              definition:  awo_before_sleep
+              symbol visibility : awo_before_sleep set to STV_HIDDEN.
+              definition:  awo_ble_lp_intclr
+              symbol visibility : awo_ble_lp_intclr set to STV_HIDDEN.
+              definition:  awo_blefreq_set
+              symbol visibility : awo_blefreq_set set to STV_HIDDEN.
+              definition:  awo_blelp_inrp_value_r
+              symbol visibility : awo_blelp_inrp_value_r set to STV_HIDDEN.
+              definition:  awo_blelp_intrp_en
+              symbol visibility : awo_blelp_intrp_en set to STV_HIDDEN.
+              definition:  awo_blelp_rawinrp_value
+              symbol visibility : awo_blelp_rawinrp_value set to STV_HIDDEN.
+              definition:  awo_bootram_init
+              symbol visibility : awo_bootram_init merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  awo_change_clock
+              symbol visibility : awo_change_clock set to STV_HIDDEN.
+              definition:  awo_clk_div_ble_mac_para0_m1
+              symbol visibility : awo_clk_div_ble_mac_para0_m1 set to STV_HIDDEN.
+              definition:  awo_clk_div_ble_mac_para1_m1
+              symbol visibility : awo_clk_div_ble_mac_para1_m1 set to STV_HIDDEN.
+              definition:  awo_clk_div_ble_mac_para_up
+              symbol visibility : awo_clk_div_ble_mac_para_up set to STV_HIDDEN.
+              definition:  awo_clk_div_ble_mdm_rx_para_m1
+              symbol visibility : awo_clk_div_ble_mdm_rx_para_m1 set to STV_HIDDEN.
+              definition:  awo_clk_div_hbus_para_set
+              symbol visibility : awo_clk_div_hbus_para_set set to STV_HIDDEN.
+              definition:  awo_clk_div_pbus_para_m1
+              symbol visibility : awo_clk_div_pbus_para_m1 set to STV_HIDDEN.
+              definition:  awo_clk_div_pbus_para_up
+              symbol visibility : awo_clk_div_pbus_para_up set to STV_HIDDEN.
+              definition:  awo_clk_gen_init
+              symbol visibility : awo_clk_gen_init set to STV_HIDDEN.
+              definition:  awo_clk_ldo_sel
+              symbol visibility : awo_clk_ldo_sel set to STV_HIDDEN.
+              definition:  awo_clk_sel_ble_mac
+              symbol visibility : awo_clk_sel_ble_mac set to STV_HIDDEN.
+              definition:  awo_clk_sel_ble_mac_by_hw
+              symbol visibility : awo_clk_sel_ble_mac_by_hw set to STV_HIDDEN.
+              definition:  awo_clk_sel_ble_mdm_rx_by_hw
+              symbol visibility : awo_clk_sel_ble_mdm_rx_by_hw set to STV_HIDDEN.
+              definition:  awo_clk_sel_ble_mdm_rx_sw
+              symbol visibility : awo_clk_sel_ble_mdm_rx_sw set to STV_HIDDEN.
+              definition:  awo_clk_swc_dly
+              symbol visibility : awo_clk_swc_dly set to STV_HIDDEN.
+              definition:  awo_clkgate_en
+              symbol visibility : awo_clkgate_en set to STV_HIDDEN.
+              definition:  awo_close_pll
+              symbol visibility : awo_close_pll set to STV_HIDDEN.
+              definition:  awo_ext_inrp_value_r
+              symbol visibility : awo_ext_inrp_value_r set to STV_HIDDEN.
+              definition:  awo_ext_isr
+              symbol visibility : awo_ext_isr set to STV_HIDDEN.
+              definition:  awo_ext_rawinrp_value
+              symbol visibility : awo_ext_rawinrp_value set to STV_HIDDEN.
+              definition:  awo_external_int_trig
+              symbol visibility : awo_external_int_trig set to STV_HIDDEN.
+              definition:  awo_external_intclr
+              symbol visibility : awo_external_intclr set to STV_HIDDEN.
+              definition:  awo_external_inten
+              symbol visibility : awo_external_inten set to STV_HIDDEN.
+              definition:  awo_external_pinisint
+              symbol visibility : awo_external_pinisint set to STV_HIDDEN.
+              definition:  awo_get_gpio_input_state
+              symbol visibility : awo_get_gpio_input_state set to STV_HIDDEN.
+              definition:  awo_get_gpio_pullen_state
+              symbol visibility : awo_get_gpio_pullen_state set to STV_HIDDEN.
+              definition:  awo_get_gpio_pullsel_state
+              symbol visibility : awo_get_gpio_pullsel_state set to STV_HIDDEN.
+              definition:  awo_get_gpio_schmitt_state
+              symbol visibility : awo_get_gpio_schmitt_state set to STV_HIDDEN.
+              definition:  awo_gpio_drive_strength
+              symbol visibility : awo_gpio_drive_strength set to STV_HIDDEN.
+              definition:  awo_gpio_input_en
+              symbol visibility : awo_gpio_input_en set to STV_HIDDEN.
+              definition:  awo_gpio_pull_en
+              symbol visibility : awo_gpio_pull_en set to STV_HIDDEN.
+              definition:  awo_gpio_pull_sel
+              symbol visibility : awo_gpio_pull_sel set to STV_HIDDEN.
+              definition:  awo_gpio_schmitt_en
+              symbol visibility : awo_gpio_schmitt_en set to STV_HIDDEN.
+              definition:  awo_hbus0_clksel
+              symbol visibility : awo_hbus0_clksel set to STV_HIDDEN.
+              definition:  awo_hbus1_clksel
+              symbol visibility : awo_hbus1_clksel set to STV_HIDDEN.
+              definition:  awo_init
+              symbol visibility : awo_init set to STV_HIDDEN.
+              definition:  awo_io_ctrl_set
+              symbol visibility : awo_io_ctrl_set set to STV_HIDDEN.
+              definition:  awo_io_state_set
+              symbol visibility : awo_io_state_set set to STV_HIDDEN.
+              definition:  awo_ldo_setup_time
+              symbol visibility : awo_ldo_setup_time set to STV_HIDDEN.
+              definition:  awo_ldo_stb_dly
+              symbol visibility : awo_ldo_stb_dly set to STV_HIDDEN.
+              definition:  awo_ldo_swc_dly
+              symbol visibility : awo_ldo_swc_dly set to STV_HIDDEN.
+              definition:  awo_open_pll
+              symbol visibility : awo_open_pll set to STV_HIDDEN.
+              definition:  awo_osc_stb_dly
+              symbol visibility : awo_osc_stb_dly set to STV_HIDDEN.
+              definition:  awo_pad_setup
+              symbol visibility : awo_pad_setup set to STV_HIDDEN.
+              definition:  awo_pd_onoff_sw
+              symbol visibility : awo_pd_onoff_sw set to STV_HIDDEN.
+              definition:  awo_pmu_en
+              symbol visibility : awo_pmu_en set to STV_HIDDEN.
+              definition:  awo_pmu_io_retention
+              symbol visibility : awo_pmu_io_retention set to STV_HIDDEN.
+              definition:  awo_pmu_seq_time
+              symbol visibility : awo_pmu_seq_time set to STV_HIDDEN.
+              definition:  awo_ram_param_read
+              symbol visibility : awo_ram_param_read set to STV_HIDDEN.
+              definition:  awo_ram_param_write
+              symbol visibility : awo_ram_param_write set to STV_HIDDEN.
+              definition:  awo_read_pd_state
+              symbol visibility : awo_read_pd_state set to STV_HIDDEN.
+              definition:  awo_read_wicenack
+              symbol visibility : awo_read_wicenack set to STV_HIDDEN.
+              definition:  awo_reset_signal
+              symbol visibility : awo_reset_signal set to STV_HIDDEN.
+              definition:  awo_rf_reg
+              symbol visibility : awo_rf_reg set to STV_HIDDEN.
+              definition:  awo_rf_reg_ro
+              symbol visibility : awo_rf_reg_ro set to STV_HIDDEN.
+              definition:  awo_set_parameter
+              symbol visibility : awo_set_parameter set to STV_HIDDEN.
+              definition:  awo_set_pmu_timer
+              symbol visibility : awo_set_pmu_timer set to STV_HIDDEN.
+              definition:  awo_set_pwr_pwm0
+              symbol visibility : awo_set_pwr_pwm0 set to STV_HIDDEN.
+              definition:  awo_set_pwr_pwm1
+              symbol visibility : awo_set_pwr_pwm1 set to STV_HIDDEN.
+              definition:  awo_set_pwr_pwm2
+              symbol visibility : awo_set_pwr_pwm2 set to STV_HIDDEN.
+              definition:  awo_sram_ls_en
+              symbol visibility : awo_sram_ls_en set to STV_HIDDEN.
+              definition:  awo_sram_retention_req
+              symbol visibility : awo_sram_retention_req set to STV_HIDDEN.
+              definition:  awo_sram_vdd_set
+              symbol visibility : awo_sram_vdd_set set to STV_HIDDEN.
+              definition:  awo_start_cap_io
+              symbol visibility : awo_start_cap_io set to STV_HIDDEN.
+              definition:  awo_sw_powerdown_start
+              symbol visibility : awo_sw_powerdown_start set to STV_HIDDEN.
+              definition:  awo_sw_poweron_start
+              symbol visibility : awo_sw_poweron_start set to STV_HIDDEN.
+              definition:  awo_touch_init
+              symbol visibility : awo_touch_init set to STV_HIDDEN.
+              definition:  awo_touch_ldo_stb_dly
+              symbol visibility : awo_touch_ldo_stb_dly set to STV_HIDDEN.
+              definition:  awo_touch_start
+              symbol visibility : awo_touch_start set to STV_HIDDEN.
+              definition:  awo_touch_test
+              symbol visibility : awo_touch_test set to STV_HIDDEN.
+              definition:  awo_vdd_value_read
+              symbol visibility : awo_vdd_value_read set to STV_HIDDEN.
+              definition:  awo_vdd_value_set
+              symbol visibility : awo_vdd_value_set set to STV_HIDDEN.
+              definition:  awo_wait_pll_stable
+              symbol visibility : awo_wait_pll_stable set to STV_HIDDEN.
+              definition:  rf_settings
+              symbol visibility : rf_settings set to STV_HIDDEN.
+              reference :  __aeabi_idivmod
+              symbol visibility : __aeabi_idivmod set to STV_HIDDEN.
+              reference :  __aeabi_uidivmod
+              symbol visibility : __aeabi_uidivmod set to STV_HIDDEN.
+              reference :  __ARM_asm.debug_abbrev.1
+              reference :  __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+              symbol visibility : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+Object awo_2400.o has not been built for exceptions.
+Loading object awo_2401.o.
+              definition:  __ARM_grp..debug_info$awo_2401.c$.2_Eu0000_$fB4$Jl$0g4_300000
+              symbol visibility : __ARM_grp..debug_info$awo_2401.c$.2_Eu0000_$fB4$Jl$0g4_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.awo_2401.c.2_Eu0000_$fB4$Jl$0g4_300000
+              symbol visibility : __ARM_grp.awo_2401.c.2_Eu0000_$fB4$Jl$0g4_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$awo_2401.c$.2_Eu0000_$fB4$Jl$0g4_300000
+              symbol visibility : __ARM_grp..debug_line$awo_2401.c$.2_Eu0000_$fB4$Jl$0g4_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$awo_2401.c$.2_Eu0000_$fB4$Jl$0g4_300000
+              symbol visibility : __ARM_grp..debug_macinfo$awo_2401.c$.2_Eu0000_$fB4$Jl$0g4_300000 set to STV_HIDDEN.
+              reference :  __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+              symbol visibility : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+Object awo_2401.o has not been built for exceptions.
+Loading object flash.o.
+              definition:  fbuf
+              symbol visibility : fbuf set to STV_HIDDEN.
+              definition:  fsrc
+              symbol visibility : fsrc set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$SEGGER_RTT.h$.2_ab2000_XNXe$QG4WH2_700000
+              symbol visibility : __ARM_grp..debug_info$SEGGER_RTT.h$.2_ab2000_XNXe$QG4WH2_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$SEGGER_RTT_Conf.h$.2_4C0000_I5Y1gbrLk4a_300000
+              symbol visibility : __ARM_grp..debug_info$SEGGER_RTT_Conf.h$.2_4C0000_I5Y1gbrLk4a_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$flash.c$.2_AE1000_lqPPCjsdO73_g00000
+              symbol visibility : __ARM_grp..debug_info$flash.c$.2_AE1000_lqPPCjsdO73_g00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$gd25q64c_typedef.h$.2_EB0000_yDCaH$iyfp8_300000
+              symbol visibility : __ARM_grp..debug_info$gd25q64c_typedef.h$.2_EB0000_yDCaH$iyfp8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$log.h$.2_EH0000_wkwBTgyiTeb_300000
+              symbol visibility : __ARM_grp..debug_info$log.h$.2_EH0000_wkwBTgyiTeb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stdarg.h$.2_YA0000_OkDyhfVWta3_300000
+              symbol visibility : __ARM_grp..debug_info$stdarg.h$.2_YA0000_OkDyhfVWta3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stdio.h$.2_AJ1000_ygbv3$_80Lf_f00000
+              symbol visibility : __ARM_grp..debug_info$stdio.h$.2_AJ1000_ygbv3$_80Lf_f00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stdlib.h$.2_UV0000_4sp1LI8aT$f_300000
+              symbol visibility : __ARM_grp..debug_info$stdlib.h$.2_UV0000_4sp1LI8aT$f_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$string.h$.2_8w0000_NS5JysZ4zE0_300000
+              symbol visibility : __ARM_grp..debug_info$string.h$.2_8w0000_NS5JysZ4zE0_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.SEGGER_RTT.h.2_ab2000_XNXe$QG4WH2_700000
+              symbol visibility : __ARM_grp.SEGGER_RTT.h.2_ab2000_XNXe$QG4WH2_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp.SEGGER_RTT_Conf.h.2_4C0000_I5Y1gbrLk4a_300000
+              symbol visibility : __ARM_grp.SEGGER_RTT_Conf.h.2_4C0000_I5Y1gbrLk4a_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.flash.c.2_AE1000_lqPPCjsdO73_g00000
+              symbol visibility : __ARM_grp.flash.c.2_AE1000_lqPPCjsdO73_g00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.gd25q64c_typedef.h.2_EB0000_yDCaH$iyfp8_300000
+              symbol visibility : __ARM_grp.gd25q64c_typedef.h.2_EB0000_yDCaH$iyfp8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.log.h.2_EH0000_wkwBTgyiTeb_300000
+              symbol visibility : __ARM_grp.log.h.2_EH0000_wkwBTgyiTeb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stdarg.h.2_YA0000_OkDyhfVWta3_300000
+              symbol visibility : __ARM_grp.stdarg.h.2_YA0000_OkDyhfVWta3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stdio.h.2_AJ1000_ygbv3$_80Lf_f00000
+              symbol visibility : __ARM_grp.stdio.h.2_AJ1000_ygbv3$_80Lf_f00000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stdlib.h.2_UV0000_4sp1LI8aT$f_300000
+              symbol visibility : __ARM_grp.stdlib.h.2_UV0000_4sp1LI8aT$f_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.string.h.2_8w0000_NS5JysZ4zE0_300000
+              symbol visibility : __ARM_grp.string.h.2_8w0000_NS5JysZ4zE0_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$SEGGER_RTT.h$.2_ab2000_XNXe$QG4WH2_700000
+              symbol visibility : __ARM_grp..debug_line$SEGGER_RTT.h$.2_ab2000_XNXe$QG4WH2_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$SEGGER_RTT_Conf.h$.2_4C0000_I5Y1gbrLk4a_300000
+              symbol visibility : __ARM_grp..debug_line$SEGGER_RTT_Conf.h$.2_4C0000_I5Y1gbrLk4a_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$flash.c$.2_AE1000_lqPPCjsdO73_g00000
+              symbol visibility : __ARM_grp..debug_line$flash.c$.2_AE1000_lqPPCjsdO73_g00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$gd25q64c_typedef.h$.2_EB0000_yDCaH$iyfp8_300000
+              symbol visibility : __ARM_grp..debug_line$gd25q64c_typedef.h$.2_EB0000_yDCaH$iyfp8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$log.h$.2_EH0000_wkwBTgyiTeb_300000
+              symbol visibility : __ARM_grp..debug_line$log.h$.2_EH0000_wkwBTgyiTeb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stdarg.h$.2_YA0000_OkDyhfVWta3_300000
+              symbol visibility : __ARM_grp..debug_line$stdarg.h$.2_YA0000_OkDyhfVWta3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stdio.h$.2_AJ1000_ygbv3$_80Lf_f00000
+              symbol visibility : __ARM_grp..debug_line$stdio.h$.2_AJ1000_ygbv3$_80Lf_f00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stdlib.h$.2_UV0000_4sp1LI8aT$f_300000
+              symbol visibility : __ARM_grp..debug_line$stdlib.h$.2_UV0000_4sp1LI8aT$f_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$string.h$.2_8w0000_NS5JysZ4zE0_300000
+              symbol visibility : __ARM_grp..debug_line$string.h$.2_8w0000_NS5JysZ4zE0_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$SEGGER_RTT.h$.2_ab2000_XNXe$QG4WH2_700000
+              symbol visibility : __ARM_grp..debug_macinfo$SEGGER_RTT.h$.2_ab2000_XNXe$QG4WH2_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$SEGGER_RTT_Conf.h$.2_4C0000_I5Y1gbrLk4a_300000
+              symbol visibility : __ARM_grp..debug_macinfo$SEGGER_RTT_Conf.h$.2_4C0000_I5Y1gbrLk4a_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$flash.c$.2_AE1000_lqPPCjsdO73_g00000
+              symbol visibility : __ARM_grp..debug_macinfo$flash.c$.2_AE1000_lqPPCjsdO73_g00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$gd25q64c_typedef.h$.2_EB0000_yDCaH$iyfp8_300000
+              symbol visibility : __ARM_grp..debug_macinfo$gd25q64c_typedef.h$.2_EB0000_yDCaH$iyfp8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$log.h$.2_EH0000_wkwBTgyiTeb_300000
+              symbol visibility : __ARM_grp..debug_macinfo$log.h$.2_EH0000_wkwBTgyiTeb_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stdarg.h$.2_YA0000_OkDyhfVWta3_300000
+              symbol visibility : __ARM_grp..debug_macinfo$stdarg.h$.2_YA0000_OkDyhfVWta3_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stdio.h$.2_AJ1000_ygbv3$_80Lf_f00000
+              symbol visibility : __ARM_grp..debug_macinfo$stdio.h$.2_AJ1000_ygbv3$_80Lf_f00000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stdlib.h$.2_UV0000_4sp1LI8aT$f_300000
+              symbol visibility : __ARM_grp..debug_macinfo$stdlib.h$.2_UV0000_4sp1LI8aT$f_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$string.h$.2_8w0000_NS5JysZ4zE0_300000
+              symbol visibility : __ARM_grp..debug_macinfo$string.h$.2_8w0000_NS5JysZ4zE0_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_pubnames$SEGGER_RTT.h$.2_ab2000_XNXe$QG4WH2_700000
+              symbol visibility : __ARM_grp..debug_pubnames$SEGGER_RTT.h$.2_ab2000_XNXe$QG4WH2_700000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_pubnames$stdio.h$.2_AJ1000_ygbv3$_80Lf_f00000
+              symbol visibility : __ARM_grp..debug_pubnames$stdio.h$.2_AJ1000_ygbv3$_80Lf_f00000 set to STV_HIDDEN.
+              definition:  flash_copy
+              symbol visibility : flash_copy set to STV_HIDDEN.
+              definition:  flash_erase
+              symbol visibility : flash_erase set to STV_HIDDEN.
+              definition:  flash_init
+              symbol visibility : flash_init set to STV_HIDDEN.
+              definition:  flash_program
+              symbol visibility : flash_program set to STV_HIDDEN.
+              definition:  flash_program_jflash
+              symbol visibility : flash_program_jflash set to STV_HIDDEN.
+              definition:  flash_quad_enable
+              symbol visibility : flash_quad_enable set to STV_HIDDEN.
+              definition:  flash_quad_read
+              symbol visibility : flash_quad_read merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  flash_read
+              symbol visibility : flash_read merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  flash_test
+              symbol visibility : flash_test set to STV_HIDDEN.
+              reference :  __aeabi_memcpy
+              symbol visibility : __aeabi_memcpy set to STV_HIDDEN.
+              reference :  qspi_flash_quad_read_data
+              symbol visibility : qspi_flash_quad_read_data set to STV_HIDDEN.
+              reference :  qspi_flash_read_data
+              symbol visibility : qspi_flash_read_data set to STV_HIDDEN.
+              reference :  qspi_init
+              symbol visibility : qspi_init set to STV_HIDDEN.
+              reference :  qspi_read
+              symbol visibility : qspi_read set to STV_HIDDEN.
+              reference :  qspi_write
+              symbol visibility : qspi_write set to STV_HIDDEN.
+              reference :  rand
+              symbol visibility : rand set to STV_HIDDEN.
+              reference :  __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+              symbol visibility : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_grp..debug_info$flash.h$.2_8o1000_72$7LVbI6Tf_800000
+              symbol visibility : __ARM_grp..debug_info$flash.h$.2_8o1000_72$7LVbI6Tf_800000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+Object flash.o has not been built for exceptions.
+Loading object dma_for_qspi.o.
+              definition:  __asm___14_dma_for_qspi_c_d330a991____REV16
+              symbol visibility : __asm___14_dma_for_qspi_c_d330a991____REV16 set to STV_HIDDEN.
+              definition:  __asm___14_dma_for_qspi_c_d330a991____REVSH
+              symbol visibility : __asm___14_dma_for_qspi_c_d330a991____REVSH set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$clk_gate.h$.2_Iv1000_5nRaUZPXRG8_300000
+              symbol visibility : __ARM_grp..debug_info$clk_gate.h$.2_Iv1000_5nRaUZPXRG8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$dma_for_qspi.c$.2_Ey0000__e1jP7keRbf_300000
+              symbol visibility : __ARM_grp..debug_info$dma_for_qspi.c$.2_Ey0000__e1jP7keRbf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$dmac_typedef.h$.2_0W0000_aT1uRqRjBZ9_300000
+              symbol visibility : __ARM_grp..debug_info$dmac_typedef.h$.2_0W0000_aT1uRqRjBZ9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_dmac.h$.2_skc000_waYsUr67aM6_Ph0000
+              symbol visibility : __ARM_grp..debug_info$reg_dmac.h$.2_skc000_waYsUr67aM6_Ph0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_gw5000_GDY_7ChFT6e_Y60000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_gw5000_GDY_7ChFT6e_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_per_2400.h$.2_ot3000_Bvihmv6nMBb_040000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_per_2400.h$.2_ot3000_Bvihmv6nMBb_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp.clk_gate.h.2_Iv1000_5nRaUZPXRG8_300000
+              symbol visibility : __ARM_grp.clk_gate.h.2_Iv1000_5nRaUZPXRG8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.dma_for_qspi.c.2_Ey0000__e1jP7keRbf_300000
+              symbol visibility : __ARM_grp.dma_for_qspi.c.2_Ey0000__e1jP7keRbf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.dmac_typedef.h.2_0W0000_aT1uRqRjBZ9_300000
+              symbol visibility : __ARM_grp.dmac_typedef.h.2_0W0000_aT1uRqRjBZ9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_dmac.h.2_skc000_waYsUr67aM6_Ph0000
+              symbol visibility : __ARM_grp.reg_dmac.h.2_skc000_waYsUr67aM6_Ph0000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_cpu_2400.h.2_gw5000_GDY_7ChFT6e_Y60000
+              symbol visibility : __ARM_grp.reg_sysc_cpu_2400.h.2_gw5000_GDY_7ChFT6e_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_per_2400.h.2_ot3000_Bvihmv6nMBb_040000
+              symbol visibility : __ARM_grp.reg_sysc_per_2400.h.2_ot3000_Bvihmv6nMBb_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$clk_gate.h$.2_Iv1000_5nRaUZPXRG8_300000
+              symbol visibility : __ARM_grp..debug_line$clk_gate.h$.2_Iv1000_5nRaUZPXRG8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$dma_for_qspi.c$.2_Ey0000__e1jP7keRbf_300000
+              symbol visibility : __ARM_grp..debug_line$dma_for_qspi.c$.2_Ey0000__e1jP7keRbf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$dmac_typedef.h$.2_0W0000_aT1uRqRjBZ9_300000
+              symbol visibility : __ARM_grp..debug_line$dmac_typedef.h$.2_0W0000_aT1uRqRjBZ9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_dmac.h$.2_skc000_waYsUr67aM6_Ph0000
+              symbol visibility : __ARM_grp..debug_line$reg_dmac.h$.2_skc000_waYsUr67aM6_Ph0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_gw5000_GDY_7ChFT6e_Y60000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_gw5000_GDY_7ChFT6e_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_per_2400.h$.2_ot3000_Bvihmv6nMBb_040000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_per_2400.h$.2_ot3000_Bvihmv6nMBb_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$clk_gate.h$.2_Iv1000_5nRaUZPXRG8_300000
+              symbol visibility : __ARM_grp..debug_macinfo$clk_gate.h$.2_Iv1000_5nRaUZPXRG8_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$dma_for_qspi.c$.2_Ey0000__e1jP7keRbf_300000
+              symbol visibility : __ARM_grp..debug_macinfo$dma_for_qspi.c$.2_Ey0000__e1jP7keRbf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$dmac_typedef.h$.2_0W0000_aT1uRqRjBZ9_300000
+              symbol visibility : __ARM_grp..debug_macinfo$dmac_typedef.h$.2_0W0000_aT1uRqRjBZ9_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_dmac.h$.2_skc000_waYsUr67aM6_Ph0000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_dmac.h$.2_skc000_waYsUr67aM6_Ph0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_gw5000_GDY_7ChFT6e_Y60000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_gw5000_GDY_7ChFT6e_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_per_2400.h$.2_ot3000_Bvihmv6nMBb_040000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_per_2400.h$.2_ot3000_Bvihmv6nMBb_040000 set to STV_HIDDEN.
+              definition:  dmac_transfer_QSPI_RX
+              symbol visibility : dmac_transfer_QSPI_RX set to STV_HIDDEN.
+              definition:  dmac_transfer_QSPI_RX_32Bit
+              symbol visibility : dmac_transfer_QSPI_RX_32Bit set to STV_HIDDEN.
+              definition:  dmac_transfer_QSPI_TX
+              symbol visibility : dmac_transfer_QSPI_TX set to STV_HIDDEN.
+              definition:  dmac_transfer_qspi_init
+              symbol visibility : dmac_transfer_qspi_init set to STV_HIDDEN.
+              reference :  clk_gate_dmac_clr
+              symbol visibility : clk_gate_dmac_clr set to STV_HIDDEN.
+              reference :  clk_gate_dmac_set
+              symbol visibility : clk_gate_dmac_set set to STV_HIDDEN.
+              reference :  __ARM_asm.debug_abbrev.1
+              reference :  __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+              symbol visibility : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+Object dma_for_qspi.o has not been built for exceptions.
+Loading object qspi.o.
+              definition:  __asm___6_qspi_c_bdeeb880____REV16
+              symbol visibility : __asm___6_qspi_c_bdeeb880____REV16 set to STV_HIDDEN.
+              definition:  __asm___6_qspi_c_bdeeb880____REVSH
+              symbol visibility : __asm___6_qspi_c_bdeeb880____REVSH set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$dma_for_qspi.h$.2_4w0000_bmOn53j5HF6_300000
+              symbol visibility : __ARM_grp..debug_info$dma_for_qspi.h$.2_4w0000_bmOn53j5HF6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$dw_apb_ssi_typedef.h$.2_cj1000_zKXHOmumOl7_300000
+              symbol visibility : __ARM_grp..debug_info$dw_apb_ssi_typedef.h$.2_cj1000_zKXHOmumOl7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$qspi.c$.2_Qt1000_6YR$wm7gG32_800000
+              symbol visibility : __ARM_grp..debug_info$qspi.c$.2_Qt1000_6YR$wm7gG32_800000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_qspi.h$.2_Qj4000_DmeNedPrKE3_360000
+              symbol visibility : __ARM_grp..debug_info$reg_qspi.h$.2_Qj4000_DmeNedPrKE3_360000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stddef.h$.2_My0000_jMyhHsZS7Mf_300000
+              symbol visibility : __ARM_grp..debug_info$stddef.h$.2_My0000_jMyhHsZS7Mf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$stdlib.h$.2_UV0000_rfbsQiZakHf_300000
+              symbol visibility : __ARM_grp..debug_info$stdlib.h$.2_UV0000_rfbsQiZakHf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.dma_for_qspi.h.2_4w0000_bmOn53j5HF6_300000
+              symbol visibility : __ARM_grp.dma_for_qspi.h.2_4w0000_bmOn53j5HF6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.dw_apb_ssi_typedef.h.2_cj1000_zKXHOmumOl7_300000
+              symbol visibility : __ARM_grp.dw_apb_ssi_typedef.h.2_cj1000_zKXHOmumOl7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.qspi.c.2_Qt1000_6YR$wm7gG32_800000
+              symbol visibility : __ARM_grp.qspi.c.2_Qt1000_6YR$wm7gG32_800000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_qspi.h.2_Qj4000_DmeNedPrKE3_360000
+              symbol visibility : __ARM_grp.reg_qspi.h.2_Qj4000_DmeNedPrKE3_360000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stddef.h.2_My0000_jMyhHsZS7Mf_300000
+              symbol visibility : __ARM_grp.stddef.h.2_My0000_jMyhHsZS7Mf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.stdlib.h.2_UV0000_rfbsQiZakHf_300000
+              symbol visibility : __ARM_grp.stdlib.h.2_UV0000_rfbsQiZakHf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$dma_for_qspi.h$.2_4w0000_bmOn53j5HF6_300000
+              symbol visibility : __ARM_grp..debug_line$dma_for_qspi.h$.2_4w0000_bmOn53j5HF6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$dw_apb_ssi_typedef.h$.2_cj1000_zKXHOmumOl7_300000
+              symbol visibility : __ARM_grp..debug_line$dw_apb_ssi_typedef.h$.2_cj1000_zKXHOmumOl7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$qspi.c$.2_Qt1000_6YR$wm7gG32_800000
+              symbol visibility : __ARM_grp..debug_line$qspi.c$.2_Qt1000_6YR$wm7gG32_800000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_qspi.h$.2_Qj4000_DmeNedPrKE3_360000
+              symbol visibility : __ARM_grp..debug_line$reg_qspi.h$.2_Qj4000_DmeNedPrKE3_360000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stddef.h$.2_My0000_jMyhHsZS7Mf_300000
+              symbol visibility : __ARM_grp..debug_line$stddef.h$.2_My0000_jMyhHsZS7Mf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$stdlib.h$.2_UV0000_rfbsQiZakHf_300000
+              symbol visibility : __ARM_grp..debug_line$stdlib.h$.2_UV0000_rfbsQiZakHf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$dma_for_qspi.h$.2_4w0000_bmOn53j5HF6_300000
+              symbol visibility : __ARM_grp..debug_macinfo$dma_for_qspi.h$.2_4w0000_bmOn53j5HF6_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$dw_apb_ssi_typedef.h$.2_cj1000_zKXHOmumOl7_300000
+              symbol visibility : __ARM_grp..debug_macinfo$dw_apb_ssi_typedef.h$.2_cj1000_zKXHOmumOl7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$qspi.c$.2_Qt1000_6YR$wm7gG32_800000
+              symbol visibility : __ARM_grp..debug_macinfo$qspi.c$.2_Qt1000_6YR$wm7gG32_800000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_qspi.h$.2_Qj4000_DmeNedPrKE3_360000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_qspi.h$.2_Qj4000_DmeNedPrKE3_360000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stddef.h$.2_My0000_jMyhHsZS7Mf_300000
+              symbol visibility : __ARM_grp..debug_macinfo$stddef.h$.2_My0000_jMyhHsZS7Mf_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$stdlib.h$.2_UV0000_rfbsQiZakHf_300000
+              symbol visibility : __ARM_grp..debug_macinfo$stdlib.h$.2_UV0000_rfbsQiZakHf_300000 set to STV_HIDDEN.
+              definition:  qspi_flash_quad_program
+              symbol visibility : qspi_flash_quad_program set to STV_HIDDEN.
+              definition:  qspi_flash_quad_read_data
+              symbol visibility : qspi_flash_quad_read_data merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  qspi_flash_read_data
+              symbol visibility : qspi_flash_read_data merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  qspi_init
+              symbol visibility : qspi_init merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  qspi_read
+              symbol visibility : qspi_read merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  qspi_set_rx_sample_dly
+              symbol visibility : qspi_set_rx_sample_dly set to STV_HIDDEN.
+              definition:  qspi_write
+              symbol visibility : qspi_write merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __aeabi_uidivmod
+              symbol visibility : __aeabi_uidivmod merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  clk_gate_cpu_g1
+              symbol visibility : clk_gate_cpu_g1 set to STV_HIDDEN.
+              reference :  dmac_transfer_QSPI_RX
+              symbol visibility : dmac_transfer_QSPI_RX merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  dmac_transfer_QSPI_RX_32Bit
+              symbol visibility : dmac_transfer_QSPI_RX_32Bit merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  dmac_transfer_QSPI_TX
+              symbol visibility : dmac_transfer_QSPI_TX merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  dmac_transfer_qspi_init
+              symbol visibility : dmac_transfer_qspi_init merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_asm.debug_abbrev.1
+              reference :  __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+              symbol visibility : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+Object qspi.o has not been built for exceptions.
+Loading object flash_cache.o.
+              definition:  __asm___13_flash_cache_c_c0eb7ce5____REV16
+              symbol visibility : __asm___13_flash_cache_c_c0eb7ce5____REV16 set to STV_HIDDEN.
+              definition:  __asm___13_flash_cache_c_c0eb7ce5____REVSH
+              symbol visibility : __asm___13_flash_cache_c_c0eb7ce5____REVSH set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$flash_cache.c$.2_AL0000_eLFoeN2fxC7_300000
+              symbol visibility : __ARM_grp..debug_info$flash_cache.c$.2_AL0000_eLFoeN2fxC7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_cache.h$.2_sn2000_Sfz92ToEGz1_G10000
+              symbol visibility : __ARM_grp..debug_info$reg_cache.h$.2_sn2000_Sfz92ToEGz1_G10000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_qspi.h$.2_4o4000_r8SovomKY4a_c60000
+              symbol visibility : __ARM_grp..debug_info$reg_qspi.h$.2_4o4000_r8SovomKY4a_c60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_kw5000_YZkt26$GPz6_Y60000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_kw5000_YZkt26$GPz6_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp.flash_cache.c.2_AL0000_eLFoeN2fxC7_300000
+              symbol visibility : __ARM_grp.flash_cache.c.2_AL0000_eLFoeN2fxC7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_cache.h.2_sn2000_Sfz92ToEGz1_G10000
+              symbol visibility : __ARM_grp.reg_cache.h.2_sn2000_Sfz92ToEGz1_G10000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_qspi.h.2_4o4000_r8SovomKY4a_c60000
+              symbol visibility : __ARM_grp.reg_qspi.h.2_4o4000_r8SovomKY4a_c60000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_cpu_2400.h.2_kw5000_YZkt26$GPz6_Y60000
+              symbol visibility : __ARM_grp.reg_sysc_cpu_2400.h.2_kw5000_YZkt26$GPz6_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$flash_cache.c$.2_AL0000_eLFoeN2fxC7_300000
+              symbol visibility : __ARM_grp..debug_line$flash_cache.c$.2_AL0000_eLFoeN2fxC7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_cache.h$.2_sn2000_Sfz92ToEGz1_G10000
+              symbol visibility : __ARM_grp..debug_line$reg_cache.h$.2_sn2000_Sfz92ToEGz1_G10000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_qspi.h$.2_4o4000_r8SovomKY4a_c60000
+              symbol visibility : __ARM_grp..debug_line$reg_qspi.h$.2_4o4000_r8SovomKY4a_c60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_kw5000_YZkt26$GPz6_Y60000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_kw5000_YZkt26$GPz6_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$flash_cache.c$.2_AL0000_eLFoeN2fxC7_300000
+              symbol visibility : __ARM_grp..debug_macinfo$flash_cache.c$.2_AL0000_eLFoeN2fxC7_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_cache.h$.2_sn2000_Sfz92ToEGz1_G10000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_cache.h$.2_sn2000_Sfz92ToEGz1_G10000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_qspi.h$.2_4o4000_r8SovomKY4a_c60000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_qspi.h$.2_4o4000_r8SovomKY4a_c60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_kw5000_YZkt26$GPz6_Y60000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_kw5000_YZkt26$GPz6_Y60000 set to STV_HIDDEN.
+              definition:  flash_cache_disable
+              symbol visibility : flash_cache_disable set to STV_HIDDEN.
+              definition:  flash_cache_flush
+              symbol visibility : flash_cache_flush set to STV_HIDDEN.
+              definition:  flash_cache_init
+              symbol visibility : flash_cache_init merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  clk_gate_cpu_g1
+              symbol visibility : clk_gate_cpu_g1 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_asm.debug_abbrev.1
+              reference :  __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+              symbol visibility : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+Object flash_cache.o has not been built for exceptions.
+Loading object clk_gate.o.
+              definition:  __asm___10_clk_gate_c_d23de2fe____REV16
+              symbol visibility : __asm___10_clk_gate_c_d23de2fe____REV16 set to STV_HIDDEN.
+              definition:  __asm___10_clk_gate_c_d23de2fe____REVSH
+              symbol visibility : __asm___10_clk_gate_c_d23de2fe____REVSH set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$clk_gate.c$.2_QD0000_V6Z0nMeR$Oc_300000
+              symbol visibility : __ARM_grp..debug_info$clk_gate.c$.2_QD0000_V6Z0nMeR$Oc_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_dmac.h$.2_Imc000_jYn3lMpVlT1_Xh0000
+              symbol visibility : __ARM_grp..debug_info$reg_dmac.h$.2_Imc000_jYn3lMpVlT1_Xh0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_ow5000_t4ruAT3Z7h1_Y60000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_cpu_2400.h$.2_ow5000_t4ruAT3Z7h1_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_info$reg_sysc_per_2400.h$.2_st3000_$xtGuZ7W0o3_040000
+              symbol visibility : __ARM_grp..debug_info$reg_sysc_per_2400.h$.2_st3000_$xtGuZ7W0o3_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp.clk_gate.c.2_QD0000_V6Z0nMeR$Oc_300000
+              symbol visibility : __ARM_grp.clk_gate.c.2_QD0000_V6Z0nMeR$Oc_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_dmac.h.2_Imc000_jYn3lMpVlT1_Xh0000
+              symbol visibility : __ARM_grp.reg_dmac.h.2_Imc000_jYn3lMpVlT1_Xh0000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_cpu_2400.h.2_ow5000_t4ruAT3Z7h1_Y60000
+              symbol visibility : __ARM_grp.reg_sysc_cpu_2400.h.2_ow5000_t4ruAT3Z7h1_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp.reg_sysc_per_2400.h.2_st3000_$xtGuZ7W0o3_040000
+              symbol visibility : __ARM_grp.reg_sysc_per_2400.h.2_st3000_$xtGuZ7W0o3_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$clk_gate.c$.2_QD0000_V6Z0nMeR$Oc_300000
+              symbol visibility : __ARM_grp..debug_line$clk_gate.c$.2_QD0000_V6Z0nMeR$Oc_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_dmac.h$.2_Imc000_jYn3lMpVlT1_Xh0000
+              symbol visibility : __ARM_grp..debug_line$reg_dmac.h$.2_Imc000_jYn3lMpVlT1_Xh0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_ow5000_t4ruAT3Z7h1_Y60000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_cpu_2400.h$.2_ow5000_t4ruAT3Z7h1_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_line$reg_sysc_per_2400.h$.2_st3000_$xtGuZ7W0o3_040000
+              symbol visibility : __ARM_grp..debug_line$reg_sysc_per_2400.h$.2_st3000_$xtGuZ7W0o3_040000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$clk_gate.c$.2_QD0000_V6Z0nMeR$Oc_300000
+              symbol visibility : __ARM_grp..debug_macinfo$clk_gate.c$.2_QD0000_V6Z0nMeR$Oc_300000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_dmac.h$.2_Imc000_jYn3lMpVlT1_Xh0000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_dmac.h$.2_Imc000_jYn3lMpVlT1_Xh0000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_ow5000_t4ruAT3Z7h1_Y60000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_cpu_2400.h$.2_ow5000_t4ruAT3Z7h1_Y60000 set to STV_HIDDEN.
+              definition:  __ARM_grp..debug_macinfo$reg_sysc_per_2400.h$.2_st3000_$xtGuZ7W0o3_040000
+              symbol visibility : __ARM_grp..debug_macinfo$reg_sysc_per_2400.h$.2_st3000_$xtGuZ7W0o3_040000 set to STV_HIDDEN.
+              definition:  clk_gate_cpu_g0
+              symbol visibility : clk_gate_cpu_g0 set to STV_HIDDEN.
+              definition:  clk_gate_cpu_g1
+              symbol visibility : clk_gate_cpu_g1 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  clk_gate_dmac_clr
+              symbol visibility : clk_gate_dmac_clr merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  clk_gate_dmac_set
+              symbol visibility : clk_gate_dmac_set merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              definition:  clk_gate_per_g0
+              symbol visibility : clk_gate_per_g0 set to STV_HIDDEN.
+              definition:  clk_gate_per_g1
+              symbol visibility : clk_gate_per_g1 set to STV_HIDDEN.
+              reference :  __ARM_asm.debug_abbrev.1
+              reference :  __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000
+              symbol visibility : __ARM_grp..debug_abbrev.group.2_Am0000_lbphKItke$2_000000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+              reference :  __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000
+              symbol visibility : __ARM_grp..debug_info$stdint.h$.2_YF1000_JA78u4stX79_300000 merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+Object clk_gate.o has not been built for exceptions.
+
+==============================================================================
+
+Loading System Libraries.
+
+Searching for ARM libraries in directory C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\
+Searching for ARM libraries in directory C:\Keil_v5\ARM\ARMCC\bin\..\lib\libcxx\
+Selecting library C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\h_p.l.
+C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\h_p.l
+Selecting library C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\m_ps.l.
+C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\m_ps.l
+Selecting library C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\mc_p.l.
+C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\mc_p.l
+Selecting library C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\mf_p.l.
+C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\mf_p.l
+Selecting library C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\vfpsupport.l.
+C:\Keil_v5\ARM\ARMCC\bin\..\lib\armlib\vfpsupport.l
+Selecting member idiv.o(mc_p.l) to define __aeabi_idivmod.
+Running selection script in mc_p.l to resolve __aeabi_uidivmod.
+Selecting member uidiv.o(mc_p.l) to define __aeabi_uidivmod.
+Running selection script in mc_p.l to resolve __aeabi_memcpy.
+Selecting member memcpya.o(mc_p.l) to define __aeabi_memcpy.
+Selecting member memcpyb.o(mc_p.l) to define ___aeabi_memcpy$small.
+Selecting member rand.o(mc_p.l) to define rand.
+Loading member uidiv.o from mc_p.l.
+              definition:  __aeabi_uidiv
+              symbol visibility : __aeabi_uidiv set to STV_HIDDEN.
+              definition:  __aeabi_uidivmod
+              symbol visibility : __aeabi_uidivmod set to STV_HIDDEN.
+Loading member idiv.o from mc_p.l.
+              definition:  __aeabi_idiv
+              symbol visibility : __aeabi_idiv set to STV_HIDDEN.
+              definition:  __aeabi_idivmod
+              symbol visibility : __aeabi_idivmod set to STV_HIDDEN.
+              reference :  __aeabi_uidivmod
+              symbol visibility : __aeabi_uidivmod merged to STV_HIDDEN from existing STV_HIDDEN and new STV_HIDDEN.
+Loading member rand.o from mc_p.l.
+              definition:  rand
+              symbol visibility : rand set to STV_HIDDEN.
+              definition:  srand
+              symbol visibility : srand set to STV_HIDDEN.
+Loading member memcpya.o from mc_p.l.
+              definition:  __aeabi_memcpy
+              symbol visibility : __aeabi_memcpy set to STV_HIDDEN.
+              definition:  __aeabi_memcpy4
+              symbol visibility : __aeabi_memcpy4 set to STV_HIDDEN.
+              definition:  __aeabi_memcpy8
+              symbol visibility : __aeabi_memcpy8 set to STV_HIDDEN.
+Loading member memcpyb.o from mc_p.l.
+              definition:  ___aeabi_memcpy$small
+              symbol visibility : ___aeabi_memcpy$small set to STV_HIDDEN.
+              definition:  ___aeabi_memcpy4$small
+              symbol visibility : ___aeabi_memcpy4$small set to STV_HIDDEN.
+              definition:  ___aeabi_memcpy8$small
+              symbol visibility : ___aeabi_memcpy8$small set to STV_HIDDEN.
+Running selection script in mc_p.l to resolve __aeabi_uidivmod.
+
+==============================================================================
+
+Image Architecture Summary:
+
+Thumb Architecture version: 3.
+Image byte order: Little Endian.
+              definition:  BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2
+              symbol visibility : BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 set to STV_HIDDEN.
+Building image.
+Cleaning up Comdat Group Sections
+
+==============================================================================
+
+Small function inlining results
+
+Inlined total of 0 calls.
+Finding section cross-references
+
+==============================================================================
+
+Section Cross References
+
+    boot_ram.o(i.boot_ram_entry) refers to awo_2400.o(i.awo_bootram_init) for awo_bootram_init
+    boot_ram.o(i.boot_ram_entry) refers to boot_ram.o(i.peri_gate) for peri_gate
+    boot_ram.o(i.boot_ram_entry) refers to boot_ram.o(i.sysc_cpu_qspi_en_setf) for sysc_cpu_qspi_en_setf
+    boot_ram.o(i.boot_ram_entry) refers to boot_ram.o(i.image_read) for image_read
+    boot_ram.o(i.boot_ram_entry) refers to boot_ram.o(i.dmac_qspi_gate) for dmac_qspi_gate
+    boot_ram.o(i.boot_ram_entry) refers to boot_ram.o(i.sysc_cpu_clkg1_set) for sysc_cpu_clkg1_set
+    boot_ram.o(i.boot_ram_entry) refers to flash_cache.o(i.flash_cache_init) for flash_cache_init
+    boot_ram.o(i.boot_ram_entry) refers to boot_ram.o(boot_header_area) for boot_info
+    boot_ram.o(i.boot_ram_entry) refers to flash.o(i.flash_quad_read) for flash_quad_read
+    boot_ram.o(i.boot_ram_entry) refers to flash.o(i.flash_read) for flash_read
+    boot_ram.o(i.dmac_qspi_gate) refers to boot_ram.o(i.sysc_cpu_clkg1_set) for sysc_cpu_clkg1_set
+    boot_ram.o(i.peri_gate) refers to boot_ram.o(i.sysc_cpu_clkg1_set) for sysc_cpu_clkg1_set
+    boot_ram.o(boot_header_area) refers to boot_ram.o(i.boot_ram_entry) for boot_ram_entry
+    awo_2400.o(i.awo_16m_xtal_en) refers to awo_2400.o(i.sysc_awo_o_16m_xtal_en_setf) for sysc_awo_o_16m_xtal_en_setf
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(i.sysc_awo_o_16m_xtal_en_setf) for sysc_awo_o_16m_xtal_en_setf
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(i.sysc_awo_o_ana_16m_selrc_setf) for sysc_awo_o_ana_16m_selrc_setf
+    awo_2400.o(i.awo_after_sleep) refers to uidiv.o(.text) for __aeabi_uidivmod
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(i.awo_open_pll) for awo_open_pll
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(i.awo_wait_pll_stable) for awo_wait_pll_stable
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(i.awo_clkgate_en) for awo_clkgate_en
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(i.awo_hbus0_clksel) for awo_hbus0_clksel
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(i.sysc_awo_dr_16m_rcosc_en_setf) for sysc_awo_dr_16m_rcosc_en_setf
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(i.sysc_awo_reg_16m_rcosc_en_setf) for sysc_awo_reg_16m_rcosc_en_setf
+    awo_2400.o(i.awo_after_sleep) refers to awo_2400.o(.data) for wakeup_pll
+    awo_2400.o(i.awo_ana_16m_selrc) refers to awo_2400.o(i.sysc_awo_o_ana_16m_selrc_setf) for sysc_awo_o_ana_16m_selrc_setf
+    awo_2400.o(i.awo_before_sleep) refers to awo_2400.o(i.awo_pd_onoff_sw) for awo_pd_onoff_sw
+    awo_2400.o(i.awo_before_sleep) refers to awo_2400.o(i.sysc_awo_dr_16m_rcosc_en_setf) for sysc_awo_dr_16m_rcosc_en_setf
+    awo_2400.o(i.awo_before_sleep) refers to awo_2400.o(i.sysc_awo_reg_16m_rcosc_en_setf) for sysc_awo_reg_16m_rcosc_en_setf
+    awo_2400.o(i.awo_before_sleep) refers to awo_2400.o(i.awo_clkgate_en) for awo_clkgate_en
+    awo_2400.o(i.awo_before_sleep) refers to awo_2400.o(i.sysc_awo_o_ana_16m_selrc_setf) for sysc_awo_o_ana_16m_selrc_setf
+    awo_2400.o(i.awo_before_sleep) refers to awo_2400.o(i.sysc_awo_o_16m_xtal_en_setf) for sysc_awo_o_16m_xtal_en_setf
+    awo_2400.o(i.awo_before_sleep) refers to awo_2400.o(i.awo_hbus0_clksel) for awo_hbus0_clksel
+    awo_2400.o(i.awo_before_sleep) refers to awo_2400.o(i.awo_close_pll) for awo_close_pll
+    awo_2400.o(i.awo_blefreq_set) refers to awo_2400.o(i.sysc_cpu_ble_freq0_setf) for sysc_cpu_ble_freq0_setf
+    awo_2400.o(i.awo_blefreq_set) refers to idiv.o(.text) for __aeabi_idivmod
+    awo_2400.o(i.awo_blefreq_set) refers to awo_2400.o(i.sysc_awo_clk_div_ble_mac_para0_m1_setf) for sysc_awo_clk_div_ble_mac_para0_m1_setf
+    awo_2400.o(i.awo_blefreq_set) refers to awo_2400.o(i.sysc_awo_clk_div_ble_mac_para1_m1_setf) for sysc_awo_clk_div_ble_mac_para1_m1_setf
+    awo_2400.o(i.awo_blefreq_set) refers to awo_2400.o(i.sysc_awo_clk_sel_ble_mac_by_hw_setf) for sysc_awo_clk_sel_ble_mac_by_hw_setf
+    awo_2400.o(i.awo_blefreq_set) refers to awo_2400.o(i.sysc_awo_clk_sel_ble_mac_setf) for sysc_awo_clk_sel_ble_mac_setf
+    awo_2400.o(i.awo_blefreq_set) refers to awo_2400.o(i.awo_clk_div_ble_mac_para_up) for awo_clk_div_ble_mac_para_up
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.sysc_awo_dr_16m_rcosc_en_setf) for sysc_awo_dr_16m_rcosc_en_setf
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.sysc_awo_reg_16m_rcosc_en_setf) for sysc_awo_reg_16m_rcosc_en_setf
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.awo_clk_div_pbus_para_m1) for awo_clk_div_pbus_para_m1
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.awo_clk_div_pbus_para_up) for awo_clk_div_pbus_para_up
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.awo_clkgate_en) for awo_clkgate_en
+    awo_2400.o(i.awo_bootram_init) refers to uidiv.o(.text) for __aeabi_uidivmod
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.awo_open_pll) for awo_open_pll
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.awo_hbus1_clksel) for awo_hbus1_clksel
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.awo_hbus0_clksel) for awo_hbus0_clksel
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(i.awo_set_parameter) for awo_set_parameter
+    awo_2400.o(i.awo_bootram_init) refers to awo_2400.o(.data) for wakeup_pll
+    awo_2400.o(i.awo_change_clock) refers to awo_2400.o(.data) for wakeup_pll
+    awo_2400.o(i.awo_clk_div_ble_mac_para0_m1) refers to awo_2400.o(i.sysc_awo_clk_div_ble_mac_para0_m1_setf) for sysc_awo_clk_div_ble_mac_para0_m1_setf
+    awo_2400.o(i.awo_clk_div_ble_mac_para1_m1) refers to awo_2400.o(i.sysc_awo_clk_div_ble_mac_para1_m1_setf) for sysc_awo_clk_div_ble_mac_para1_m1_setf
+    awo_2400.o(i.awo_clk_div_ble_mac_para_up) refers to awo_2400.o(i.sysc_awo_clkgen_awo_signal_1_set) for sysc_awo_clkgen_awo_signal_1_set
+    awo_2400.o(i.awo_clk_div_pbus_para_up) refers to awo_2400.o(i.sysc_awo_clkgen_awo_signal_1_set) for sysc_awo_clkgen_awo_signal_1_set
+    awo_2400.o(i.awo_clk_gen_init) refers to awo_2400.o(i.awo_blelp_intrp_en) for awo_blelp_intrp_en
+    awo_2400.o(i.awo_clk_gen_init) refers to awo_2400.o(i.awo_clkgate_en) for awo_clkgate_en
+    awo_2400.o(i.awo_clk_gen_init) refers to awo_2400.o(i.awo_blefreq_set) for awo_blefreq_set
+    awo_2400.o(i.awo_clk_gen_init) refers to awo_2400.o(i.awo_clk_div_ble_mdm_rx_para_m1) for awo_clk_div_ble_mdm_rx_para_m1
+    awo_2400.o(i.awo_clk_gen_init) refers to awo_2400.o(i.awo_clk_sel_ble_mdm_rx_by_hw) for awo_clk_sel_ble_mdm_rx_by_hw
+    awo_2400.o(i.awo_clk_gen_init) refers to awo_2400.o(i.awo_read_wicenack) for awo_read_wicenack
+    awo_2400.o(i.awo_clk_ldo_sel) refers to awo_2400.o(i.sysc_awo_reg_clk_ldo_sel_set) for sysc_awo_reg_clk_ldo_sel_set
+    awo_2400.o(i.awo_clk_sel_ble_mac) refers to awo_2400.o(i.sysc_awo_clk_sel_ble_mac_setf) for sysc_awo_clk_sel_ble_mac_setf
+    awo_2400.o(i.awo_clk_sel_ble_mac_by_hw) refers to awo_2400.o(i.sysc_awo_clk_sel_ble_mac_by_hw_setf) for sysc_awo_clk_sel_ble_mac_by_hw_setf
+    awo_2400.o(i.awo_close_pll) refers to awo_2400.o(i.sysc_awo_rf_reg_0_get) for sysc_awo_rf_reg_0_get
+    awo_2400.o(i.awo_close_pll) refers to awo_2400.o(i.sysc_awo_rf_reg_0_set) for sysc_awo_rf_reg_0_set
+    awo_2400.o(i.awo_ext_isr) refers to awo_2400.o(i.awo_external_intclr) for awo_external_intclr
+    awo_2400.o(i.awo_init) refers to awo_2400.o(i.awo_clk_gen_init) for awo_clk_gen_init
+    awo_2400.o(i.awo_init) refers to awo_2400.o(i.awo_set_parameter) for awo_set_parameter
+    awo_2400.o(i.awo_init) refers to awo_2400.o(i.awo_pad_setup) for awo_pad_setup
+    awo_2400.o(i.awo_init) refers to awo_2400.o(i.awo_pd_onoff_sw) for awo_pd_onoff_sw
+    awo_2400.o(i.awo_init) refers to awo_2400.o(i.awo_reset_signal) for awo_reset_signal
+    awo_2400.o(i.awo_init) refers to awo_2400.o(i.awo_external_intclr) for awo_external_intclr
+    awo_2400.o(i.awo_init) refers to awo_2400.o(i.awo_ble_lp_intclr) for awo_ble_lp_intclr
+    awo_2400.o(i.awo_io_state_set) refers to awo_2400.o(i.sysc_awo_io_stat_ret_pmu_setf) for sysc_awo_io_stat_ret_pmu_setf
+    awo_2400.o(i.awo_io_state_set) refers to awo_2400.o(i.sysc_awo_io_stat_unret_pmu_setf) for sysc_awo_io_stat_unret_pmu_setf
+    awo_2400.o(i.awo_open_pll) refers to awo_2400.o(i.sysc_awo_rf_reg_0_get) for sysc_awo_rf_reg_0_get
+    awo_2400.o(i.awo_open_pll) refers to awo_2400.o(i.sysc_awo_rf_reg_0_set) for sysc_awo_rf_reg_0_set
+    awo_2400.o(i.awo_pd_onoff_sw) refers to awo_2400.o(i.sysc_awo_reg_pd_onoff_get) for sysc_awo_reg_pd_onoff_get
+    awo_2400.o(i.awo_pd_onoff_sw) refers to awo_2400.o(i.sysc_awo_reg_pd_onoff_set) for sysc_awo_reg_pd_onoff_set
+    awo_2400.o(i.awo_pmu_io_retention) refers to awo_2400.o(i.sysc_awo_io_stat_ret_pmu_setf) for sysc_awo_io_stat_ret_pmu_setf
+    awo_2400.o(i.awo_pmu_io_retention) refers to awo_2400.o(i.sysc_awo_io_stat_unret_pmu_setf) for sysc_awo_io_stat_unret_pmu_setf
+    awo_2400.o(i.awo_rf_reg) refers to awo_2400.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    awo_2400.o(i.awo_rf_reg) refers to awo_2400.o(i.sysc_awo_rf_reg_0_set) for sysc_awo_rf_reg_0_set
+    awo_2400.o(i.awo_rf_reg) refers to awo_2400.o(i.sysc_awo_rf_reg_2_set) for sysc_awo_rf_reg_2_set
+    awo_2400.o(i.awo_set_parameter) refers to awo_2400.o(i.awo_ldo_setup_time) for awo_ldo_setup_time
+    awo_2400.o(i.awo_set_pwr_pwm0) refers to awo_2400.o(i.sysc_awo_pwm0_fc_h_setf) for sysc_awo_pwm0_fc_h_setf
+    awo_2400.o(i.awo_set_pwr_pwm0) refers to awo_2400.o(i.sysc_awo_pwm0_en_setf) for sysc_awo_pwm0_en_setf
+    awo_2400.o(i.awo_set_pwr_pwm1) refers to awo_2400.o(i.sysc_awo_pwm1_fc_h_setf) for sysc_awo_pwm1_fc_h_setf
+    awo_2400.o(i.awo_set_pwr_pwm1) refers to awo_2400.o(i.sysc_awo_pwm1_en_setf) for sysc_awo_pwm1_en_setf
+    awo_2400.o(i.awo_set_pwr_pwm2) refers to awo_2400.o(i.sysc_awo_pwm2_fc_h_setf) for sysc_awo_pwm2_fc_h_setf
+    awo_2400.o(i.awo_set_pwr_pwm2) refers to awo_2400.o(i.sysc_awo_pwm2_en_setf) for sysc_awo_pwm2_en_setf
+    awo_2400.o(i.awo_sw_powerdown_start) refers to awo_2400.o(i.sysc_awo_reg_pd_onoff_get) for sysc_awo_reg_pd_onoff_get
+    awo_2400.o(i.awo_sw_powerdown_start) refers to awo_2400.o(i.sysc_awo_reg_pd_onoff_set) for sysc_awo_reg_pd_onoff_set
+    awo_2400.o(i.awo_sw_poweron_start) refers to awo_2400.o(i.sysc_awo_reg_pd_onoff_get) for sysc_awo_reg_pd_onoff_get
+    awo_2400.o(i.awo_sw_poweron_start) refers to awo_2400.o(i.sysc_awo_reg_pd_onoff_set) for sysc_awo_reg_pd_onoff_set
+    awo_2400.o(i.awo_touch_init) refers to awo_2400.o(i.sysc_awo_rf_reg_2_set) for sysc_awo_rf_reg_2_set
+    awo_2400.o(i.awo_touch_start) refers to awo_2400.o(i.awo_external_int_trig) for awo_external_int_trig
+    awo_2400.o(i.awo_touch_start) refers to awo_2400.o(i.awo_external_inten) for awo_external_inten
+    awo_2400.o(i.awo_touch_test) refers to awo_2400.o(i.awo_touch_init) for awo_touch_init
+    awo_2400.o(i.awo_touch_test) refers to awo_2400.o(i.awo_touch_start) for awo_touch_start
+    awo_2400.o(i.rf_settings) refers to awo_2400.o(i.awo_rf_reg) for awo_rf_reg
+    flash.o(i.flash_copy) refers to flash.o(i.flash_quad_read) for flash_quad_read
+    flash.o(i.flash_copy) refers to flash.o(i.content_substitute) for content_substitute
+    flash.o(i.flash_copy) refers to flash.o(i.flash_program) for flash_program
+    flash.o(i.flash_erase) refers to qspi.o(i.qspi_write) for qspi_write
+    flash.o(i.flash_erase) refers to flash.o(i.co_bswap32) for co_bswap32
+    flash.o(i.flash_erase) refers to flash.o(i.flash_operation_wait) for flash_operation_wait
+    flash.o(i.flash_init) refers to qspi.o(i.qspi_init) for qspi_init
+    flash.o(i.flash_operation_wait) refers to qspi.o(i.qspi_read) for qspi_read
+    flash.o(i.flash_program) refers to flash.o(i.flash_program_base) for flash_program_base
+    flash.o(i.flash_program_base) refers to memcpya.o(.text) for __aeabi_memcpy
+    flash.o(i.flash_program_base) refers to qspi.o(i.qspi_write) for qspi_write
+    flash.o(i.flash_program_base) refers to flash.o(i.co_bswap32) for co_bswap32
+    flash.o(i.flash_program_base) refers to flash.o(i.flash_operation_wait) for flash_operation_wait
+    flash.o(i.flash_program_jflash) refers to memcpya.o(.text) for __aeabi_memcpy
+    flash.o(i.flash_program_jflash) refers to qspi.o(i.qspi_write) for qspi_write
+    flash.o(i.flash_program_jflash) refers to flash.o(i.co_bswap32) for co_bswap32
+    flash.o(i.flash_program_jflash) refers to flash.o(i.flash_operation_wait) for flash_operation_wait
+    flash.o(i.flash_quad_enable) refers to qspi.o(i.qspi_write) for qspi_write
+    flash.o(i.flash_quad_enable) refers to flash.o(i.flash_operation_wait) for flash_operation_wait
+    flash.o(i.flash_quad_enable) refers to qspi.o(i.qspi_read) for qspi_read
+    flash.o(i.flash_quad_read) refers to qspi.o(i.qspi_flash_quad_read_data) for qspi_flash_quad_read_data
+    flash.o(i.flash_quad_read) refers to qspi.o(i.qspi_read) for qspi_read
+    flash.o(i.flash_read) refers to qspi.o(i.qspi_flash_read_data) for qspi_flash_read_data
+    flash.o(i.flash_read) refers to qspi.o(i.qspi_read) for qspi_read
+    flash.o(i.flash_test) refers to flash.o(i.flash_erase) for flash_erase
+    flash.o(i.flash_test) refers to flash.o(i.flash_read) for flash_read
+    flash.o(i.flash_test) refers to rand.o(.text) for rand
+    flash.o(i.flash_test) refers to flash.o(i.flash_program) for flash_program
+    flash.o(i.flash_test) refers to flash.o(.bss) for fbuf
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX) refers to clk_gate.o(i.clk_gate_dmac_set) for clk_gate_dmac_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX) refers to dma_for_qspi.o(i.dmac_ch0_sar_l_set) for dmac_ch0_sar_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX) refers to dma_for_qspi.o(i.dmac_ch0_dar_l_set) for dmac_ch0_dar_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX) refers to dma_for_qspi.o(i.dmac_ch0_ctrl_l_pack) for dmac_ch0_ctrl_l_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX) refers to dma_for_qspi.o(i.dmac_ch0_ctrl_h_pack) for dmac_ch0_ctrl_h_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX) refers to dma_for_qspi.o(i.dmac_chenreg_l_pack) for dmac_chenreg_l_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX) refers to dma_for_qspi.o(i.dmac_clearblock_l_set) for dmac_clearblock_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX) refers to clk_gate.o(i.clk_gate_dmac_clr) for clk_gate_dmac_clr
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) refers to clk_gate.o(i.clk_gate_dmac_set) for clk_gate_dmac_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) refers to dma_for_qspi.o(i.dmac_ch0_sar_l_set) for dmac_ch0_sar_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) refers to dma_for_qspi.o(i.dmac_ch0_dar_l_set) for dmac_ch0_dar_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) refers to dma_for_qspi.o(i.dmac_ch0_ctrl_l_pack) for dmac_ch0_ctrl_l_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) refers to dma_for_qspi.o(i.dmac_ch0_ctrl_h_pack) for dmac_ch0_ctrl_h_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) refers to dma_for_qspi.o(i.dmac_chenreg_l_pack) for dmac_chenreg_l_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) refers to dma_for_qspi.o(i.dmac_clearblock_l_set) for dmac_clearblock_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) refers to clk_gate.o(i.clk_gate_dmac_clr) for clk_gate_dmac_clr
+    dma_for_qspi.o(i.dmac_transfer_QSPI_TX) refers to clk_gate.o(i.clk_gate_dmac_set) for clk_gate_dmac_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_TX) refers to dma_for_qspi.o(i.dmac_ch0_sar_l_set) for dmac_ch0_sar_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_TX) refers to dma_for_qspi.o(i.dmac_ch0_dar_l_set) for dmac_ch0_dar_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_TX) refers to dma_for_qspi.o(i.dmac_ch0_ctrl_l_pack) for dmac_ch0_ctrl_l_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_TX) refers to dma_for_qspi.o(i.dmac_ch0_ctrl_h_pack) for dmac_ch0_ctrl_h_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_TX) refers to dma_for_qspi.o(i.dmac_chenreg_l_pack) for dmac_chenreg_l_pack
+    dma_for_qspi.o(i.dmac_transfer_QSPI_TX) refers to dma_for_qspi.o(i.dmac_clearblock_l_set) for dmac_clearblock_l_set
+    dma_for_qspi.o(i.dmac_transfer_QSPI_TX) refers to clk_gate.o(i.clk_gate_dmac_clr) for clk_gate_dmac_clr
+    dma_for_qspi.o(i.dmac_transfer_qspi_init) refers to clk_gate.o(i.clk_gate_dmac_set) for clk_gate_dmac_set
+    dma_for_qspi.o(i.dmac_transfer_qspi_init) refers to clk_gate.o(i.clk_gate_dmac_clr) for clk_gate_dmac_clr
+    qspi.o(i.qspi_flash_quad_read_data) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    qspi.o(i.qspi_flash_quad_read_data) refers to uidiv.o(.text) for __aeabi_uidivmod
+    qspi.o(i.qspi_flash_quad_read_data) refers to qspi.o(i.qspi_ssi_en_setf) for qspi_ssi_en_setf
+    qspi.o(i.qspi_flash_quad_read_data) refers to qspi.o(i.qspi_ser_set) for qspi_ser_set
+    qspi.o(i.qspi_flash_quad_read_data) refers to qspi.o(i.qspi_ctrlr0_pack) for qspi_ctrlr0_pack
+    qspi.o(i.qspi_flash_quad_read_data) refers to qspi.o(i.qspi_ctrlr1_pack) for qspi_ctrlr1_pack
+    qspi.o(i.qspi_flash_quad_read_data) refers to qspi.o(i.qspi_dmardlr_set) for qspi_dmardlr_set
+    qspi.o(i.qspi_flash_quad_read_data) refers to qspi.o(i.qspi_dmacr_pack) for qspi_dmacr_pack
+    qspi.o(i.qspi_flash_quad_read_data) refers to qspi.o(i.qspi_ssienr_set) for qspi_ssienr_set
+    qspi.o(i.qspi_flash_quad_read_data) refers to qspi.o(i.qspi_dr_set) for qspi_dr_set
+    qspi.o(i.qspi_flash_quad_read_data) refers to dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) for dmac_transfer_QSPI_RX_32Bit
+    qspi.o(i.qspi_flash_read_data) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    qspi.o(i.qspi_flash_read_data) refers to uidiv.o(.text) for __aeabi_uidivmod
+    qspi.o(i.qspi_flash_read_data) refers to qspi.o(i.qspi_ssi_en_setf) for qspi_ssi_en_setf
+    qspi.o(i.qspi_flash_read_data) refers to qspi.o(i.qspi_ser_set) for qspi_ser_set
+    qspi.o(i.qspi_flash_read_data) refers to qspi.o(i.qspi_ctrlr0_pack) for qspi_ctrlr0_pack
+    qspi.o(i.qspi_flash_read_data) refers to qspi.o(i.qspi_ctrlr1_pack) for qspi_ctrlr1_pack
+    qspi.o(i.qspi_flash_read_data) refers to qspi.o(i.qspi_dmardlr_set) for qspi_dmardlr_set
+    qspi.o(i.qspi_flash_read_data) refers to qspi.o(i.qspi_dmacr_pack) for qspi_dmacr_pack
+    qspi.o(i.qspi_flash_read_data) refers to qspi.o(i.qspi_ssienr_set) for qspi_ssienr_set
+    qspi.o(i.qspi_flash_read_data) refers to qspi.o(i.qspi_dr_set) for qspi_dr_set
+    qspi.o(i.qspi_flash_read_data) refers to dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit) for dmac_transfer_QSPI_RX_32Bit
+    qspi.o(i.qspi_init) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    qspi.o(i.qspi_init) refers to qspi.o(i.qspi_ssi_en_setf) for qspi_ssi_en_setf
+    qspi.o(i.qspi_init) refers to dma_for_qspi.o(i.dmac_transfer_qspi_init) for dmac_transfer_qspi_init
+    qspi.o(i.qspi_read) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_ssi_en_setf) for qspi_ssi_en_setf
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_ser_set) for qspi_ser_set
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_ctrlr0_pack) for qspi_ctrlr0_pack
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_ctrlr1_pack) for qspi_ctrlr1_pack
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_ssienr_set) for qspi_ssienr_set
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_dr_set) for qspi_dr_set
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_tfe_getf) for qspi_tfe_getf
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_dmardlr_set) for qspi_dmardlr_set
+    qspi.o(i.qspi_read) refers to qspi.o(i.qspi_dmacr_pack) for qspi_dmacr_pack
+    qspi.o(i.qspi_read) refers to dma_for_qspi.o(i.dmac_transfer_QSPI_RX) for dmac_transfer_QSPI_RX
+    qspi.o(i.qspi_set_rx_sample_dly) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    qspi.o(i.qspi_set_rx_sample_dly) refers to qspi.o(i.qspi_ssi_en_setf) for qspi_ssi_en_setf
+    qspi.o(i.qspi_write) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    qspi.o(i.qspi_write) refers to qspi.o(i.qspi_ssi_en_setf) for qspi_ssi_en_setf
+    qspi.o(i.qspi_write) refers to qspi.o(i.qspi_ser_set) for qspi_ser_set
+    qspi.o(i.qspi_write) refers to qspi.o(i.qspi_ctrlr0_pack) for qspi_ctrlr0_pack
+    qspi.o(i.qspi_write) refers to qspi.o(i.qspi_ssienr_set) for qspi_ssienr_set
+    qspi.o(i.qspi_write) refers to qspi.o(i.qspi_dr_set) for qspi_dr_set
+    qspi.o(i.qspi_write) refers to qspi.o(i.qspi_dmacr_pack) for qspi_dmacr_pack
+    qspi.o(i.qspi_write) refers to dma_for_qspi.o(i.dmac_transfer_QSPI_TX) for dmac_transfer_QSPI_TX
+    qspi.o(i.qspi_write) refers to qspi.o(i.qspi_tfe_getf) for qspi_tfe_getf
+    flash_cache.o(i.flash_cache_disable) refers to flash_cache.o(i.cache_reg_cache_en_set) for cache_reg_cache_en_set
+    flash_cache.o(i.flash_cache_disable) refers to flash_cache.o(i.qspi_ssi_en_setf) for qspi_ssi_en_setf
+    flash_cache.o(i.flash_cache_disable) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    flash_cache.o(i.flash_cache_flush) refers to flash_cache.o(i.cache_reg_flush_en_set) for cache_reg_flush_en_set
+    flash_cache.o(i.flash_cache_init) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    flash_cache.o(i.flash_cache_init) refers to flash_cache.o(i.qspi_ssi_en_setf) for qspi_ssi_en_setf
+    flash_cache.o(i.flash_cache_init) refers to flash_cache.o(i.cache_reg_cache_en_set) for cache_reg_cache_en_set
+    flash_cache.o(i.flash_cache_init) refers to flash_cache.o(i.cache_reg_flush_en_set) for cache_reg_flush_en_set
+    clk_gate.o(i.clk_gate_dmac_clr) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    clk_gate.o(i.clk_gate_dmac_set) refers to clk_gate.o(i.clk_gate_cpu_g1) for clk_gate_cpu_g1
+    idiv.o(.text) refers to uidiv.o(.text) for __aeabi_uidivmod
+    rand.o(.text) refers to rand.o(.data) for .data
+
+Checking duplicate symbol definitions
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing boot_ram.o(.rev16_text), (4 bytes).
+        Removing symbol __asm___10_boot_ram_c_2094ca11____REV16.
+    Removing boot_ram.o(.revsh_text), (4 bytes).
+        Removing symbol __asm___10_boot_ram_c_2094ca11____REVSH.
+    Removing awo_2400.o(.rev16_text), (4 bytes).
+        Removing symbol __asm___10_awo_2400_c_awo_init____REV16.
+    Removing awo_2400.o(.revsh_text), (4 bytes).
+        Removing symbol __asm___10_awo_2400_c_awo_init____REVSH.
+    Removing awo_2400.o(i.awo_16m_xtal_en), (12 bytes).
+        Removing symbol awo_16m_xtal_en.
+    Removing awo_2400.o(i.awo_32k_rcosc_en), (36 bytes).
+        Removing symbol awo_32k_rcosc_en.
+    Removing awo_2400.o(i.awo_32k_xtal_en), (36 bytes).
+        Removing symbol awo_32k_xtal_en.
+    Removing awo_2400.o(i.awo_after_sleep), (96 bytes).
+        Removing symbol awo_after_sleep.
+    Removing awo_2400.o(i.awo_ana_16m_selrc), (12 bytes).
+        Removing symbol awo_ana_16m_selrc.
+    Removing awo_2400.o(i.awo_ana_32k_selxtal), (36 bytes).
+        Removing symbol awo_ana_32k_selxtal.
+    Removing awo_2400.o(i.awo_before_sleep), (120 bytes).
+        Removing symbol awo_before_sleep.
+    Removing awo_2400.o(i.awo_ble_lp_intclr), (16 bytes).
+        Removing symbol awo_ble_lp_intclr.
+    Removing awo_2400.o(i.awo_blefreq_set), (160 bytes).
+        Removing symbol awo_blefreq_set.
+    Removing awo_2400.o(i.awo_blelp_inrp_value_r), (16 bytes).
+        Removing symbol awo_blelp_inrp_value_r.
+    Removing awo_2400.o(i.awo_blelp_intrp_en), (32 bytes).
+        Removing symbol awo_blelp_intrp_en.
+    Removing awo_2400.o(i.awo_blelp_rawinrp_value), (16 bytes).
+        Removing symbol awo_blelp_rawinrp_value.
+    Removing awo_2400.o(i.awo_change_clock), (12 bytes).
+        Removing symbol awo_change_clock.
+    Removing awo_2400.o(i.awo_clk_div_ble_mac_para0_m1), (12 bytes).
+        Removing symbol awo_clk_div_ble_mac_para0_m1.
+    Removing awo_2400.o(i.awo_clk_div_ble_mac_para1_m1), (12 bytes).
+        Removing symbol awo_clk_div_ble_mac_para1_m1.
+    Removing awo_2400.o(i.awo_clk_div_ble_mac_para_up), (10 bytes).
+        Removing symbol awo_clk_div_ble_mac_para_up.
+    Removing awo_2400.o(i.awo_clk_div_ble_mdm_rx_para_m1), (32 bytes).
+        Removing symbol awo_clk_div_ble_mdm_rx_para_m1.
+    Removing awo_2400.o(i.awo_clk_div_hbus_para_set), (36 bytes).
+        Removing symbol awo_clk_div_hbus_para_set.
+    Removing awo_2400.o(i.awo_clk_gen_init), (74 bytes).
+        Removing symbol awo_clk_gen_init.
+    Removing awo_2400.o(i.awo_clk_ldo_sel), (80 bytes).
+        Removing symbol awo_clk_ldo_sel.
+    Removing awo_2400.o(i.awo_clk_sel_ble_mac), (12 bytes).
+        Removing symbol awo_clk_sel_ble_mac.
+    Removing awo_2400.o(i.awo_clk_sel_ble_mac_by_hw), (12 bytes).
+        Removing symbol awo_clk_sel_ble_mac_by_hw.
+    Removing awo_2400.o(i.awo_clk_sel_ble_mdm_rx_by_hw), (32 bytes).
+        Removing symbol awo_clk_sel_ble_mdm_rx_by_hw.
+    Removing awo_2400.o(i.awo_clk_sel_ble_mdm_rx_sw), (32 bytes).
+        Removing symbol awo_clk_sel_ble_mdm_rx_sw.
+    Removing awo_2400.o(i.awo_clk_swc_dly), (40 bytes).
+        Removing symbol awo_clk_swc_dly.
+    Removing awo_2400.o(i.awo_close_pll), (22 bytes).
+        Removing symbol awo_close_pll.
+    Removing awo_2400.o(i.awo_ext_inrp_value_r), (16 bytes).
+        Removing symbol awo_ext_inrp_value_r.
+    Removing awo_2400.o(i.awo_ext_isr), (10 bytes).
+        Removing symbol awo_ext_isr.
+    Removing awo_2400.o(i.awo_ext_rawinrp_value), (16 bytes).
+        Removing symbol awo_ext_rawinrp_value.
+    Removing awo_2400.o(i.awo_external_int_trig), (224 bytes).
+        Removing symbol awo_external_int_trig.
+    Removing awo_2400.o(i.awo_external_intclr), (16 bytes).
+        Removing symbol awo_external_intclr.
+    Removing awo_2400.o(i.awo_external_inten), (28 bytes).
+        Removing symbol awo_external_inten.
+    Removing awo_2400.o(i.awo_external_pinisint), (36 bytes).
+        Removing symbol awo_external_pinisint.
+    Removing awo_2400.o(i.awo_get_gpio_input_state), (16 bytes).
+        Removing symbol awo_get_gpio_input_state.
+    Removing awo_2400.o(i.awo_get_gpio_pullen_state), (16 bytes).
+        Removing symbol awo_get_gpio_pullen_state.
+    Removing awo_2400.o(i.awo_get_gpio_pullsel_state), (16 bytes).
+        Removing symbol awo_get_gpio_pullsel_state.
+    Removing awo_2400.o(i.awo_get_gpio_schmitt_state), (16 bytes).
+        Removing symbol awo_get_gpio_schmitt_state.
+    Removing awo_2400.o(i.awo_gpio_drive_strength), (84 bytes).
+        Removing symbol awo_gpio_drive_strength.
+    Removing awo_2400.o(i.awo_gpio_input_en), (28 bytes).
+        Removing symbol awo_gpio_input_en.
+    Removing awo_2400.o(i.awo_gpio_pull_en), (28 bytes).
+        Removing symbol awo_gpio_pull_en.
+    Removing awo_2400.o(i.awo_gpio_pull_sel), (28 bytes).
+        Removing symbol awo_gpio_pull_sel.
+    Removing awo_2400.o(i.awo_gpio_schmitt_en), (28 bytes).
+        Removing symbol awo_gpio_schmitt_en.
+    Removing awo_2400.o(i.awo_init), (52 bytes).
+        Removing symbol awo_init.
+    Removing awo_2400.o(i.awo_io_ctrl_set), (32 bytes).
+        Removing symbol awo_io_ctrl_set.
+    Removing awo_2400.o(i.awo_io_state_set), (20 bytes).
+        Removing symbol awo_io_state_set.
+    Removing awo_2400.o(i.awo_ldo_stb_dly), (28 bytes).
+        Removing symbol awo_ldo_stb_dly.
+    Removing awo_2400.o(i.awo_ldo_swc_dly), (40 bytes).
+        Removing symbol awo_ldo_swc_dly.
+    Removing awo_2400.o(i.awo_osc_stb_dly), (40 bytes).
+        Removing symbol awo_osc_stb_dly.
+    Removing awo_2400.o(i.awo_pad_setup), (2 bytes).
+        Removing symbol awo_pad_setup.
+    Removing awo_2400.o(i.awo_pd_onoff_sw), (58 bytes).
+        Removing symbol awo_pd_onoff_sw.
+    Removing awo_2400.o(i.awo_pmu_en), (32 bytes).
+        Removing symbol awo_pmu_en.
+    Removing awo_2400.o(i.awo_pmu_io_retention), (16 bytes).
+        Removing symbol awo_pmu_io_retention.
+    Removing awo_2400.o(i.awo_pmu_seq_time), (32 bytes).
+        Removing symbol awo_pmu_seq_time.
+    Removing awo_2400.o(i.awo_ram_param_read), (72 bytes).
+        Removing symbol awo_ram_param_read.
+    Removing awo_2400.o(i.awo_ram_param_write), (136 bytes).
+        Removing symbol awo_ram_param_write.
+    Removing awo_2400.o(i.awo_read_pd_state), (12 bytes).
+        Removing symbol awo_read_pd_state.
+    Removing awo_2400.o(i.awo_read_wicenack), (16 bytes).
+        Removing symbol awo_read_wicenack.
+    Removing awo_2400.o(i.awo_reset_signal), (16 bytes).
+        Removing symbol awo_reset_signal.
+    Removing awo_2400.o(i.awo_rf_reg), (220 bytes).
+        Removing symbol awo_rf_reg.
+    Removing awo_2400.o(i.awo_rf_reg_ro), (12 bytes).
+        Removing symbol awo_rf_reg_ro.
+    Removing awo_2400.o(i.awo_set_pmu_timer), (36 bytes).
+        Removing symbol awo_set_pmu_timer.
+    Removing awo_2400.o(i.awo_set_pwr_pwm0), (92 bytes).
+        Removing symbol awo_set_pwr_pwm0.
+    Removing awo_2400.o(i.awo_set_pwr_pwm1), (92 bytes).
+        Removing symbol awo_set_pwr_pwm1.
+    Removing awo_2400.o(i.awo_set_pwr_pwm2), (92 bytes).
+        Removing symbol awo_set_pwr_pwm2.
+    Removing awo_2400.o(i.awo_sram_ls_en), (40 bytes).
+        Removing symbol awo_sram_ls_en.
+    Removing awo_2400.o(i.awo_sram_retention_req), (28 bytes).
+        Removing symbol awo_sram_retention_req.
+    Removing awo_2400.o(i.awo_sram_vdd_set), (40 bytes).
+        Removing symbol awo_sram_vdd_set.
+    Removing awo_2400.o(i.awo_start_cap_io), (28 bytes).
+        Removing symbol awo_start_cap_io.
+    Removing awo_2400.o(i.awo_sw_powerdown_start), (22 bytes).
+        Removing symbol awo_sw_powerdown_start.
+    Removing awo_2400.o(i.awo_sw_poweron_start), (22 bytes).
+        Removing symbol awo_sw_poweron_start.
+    Removing awo_2400.o(i.awo_touch_init), (48 bytes).
+        Removing symbol awo_touch_init.
+    Removing awo_2400.o(i.awo_touch_ldo_stb_dly), (40 bytes).
+        Removing symbol awo_touch_ldo_stb_dly.
+    Removing awo_2400.o(i.awo_touch_start), (152 bytes).
+        Removing symbol awo_touch_start.
+    Removing awo_2400.o(i.awo_touch_test), (40 bytes).
+        Removing symbol awo_touch_test.
+    Removing awo_2400.o(i.awo_vdd_value_read), (16 bytes).
+        Removing symbol awo_vdd_value_read.
+    Removing awo_2400.o(i.awo_vdd_value_set), (28 bytes).
+        Removing symbol awo_vdd_value_set.
+    Removing awo_2400.o(i.awo_wait_pll_stable), (36 bytes).
+        Removing symbol awo_wait_pll_stable.
+    Removing awo_2400.o(i.rf_settings), (176 bytes).
+        Removing symbol rf_settings.
+    Removing awo_2400.o(i.sysc_awo_clk_div_ble_mac_para0_m1_setf), (32 bytes).
+        Removing symbol sysc_awo_clk_div_ble_mac_para0_m1_setf.
+    Removing awo_2400.o(i.sysc_awo_clk_div_ble_mac_para1_m1_setf), (32 bytes).
+        Removing symbol sysc_awo_clk_div_ble_mac_para1_m1_setf.
+    Removing awo_2400.o(i.sysc_awo_clk_sel_ble_mac_by_hw_setf), (32 bytes).
+        Removing symbol sysc_awo_clk_sel_ble_mac_by_hw_setf.
+    Removing awo_2400.o(i.sysc_awo_clk_sel_ble_mac_setf), (24 bytes).
+        Removing symbol sysc_awo_clk_sel_ble_mac_setf.
+    Removing awo_2400.o(i.sysc_awo_io_stat_ret_pmu_setf), (24 bytes).
+        Removing symbol sysc_awo_io_stat_ret_pmu_setf.
+    Removing awo_2400.o(i.sysc_awo_io_stat_unret_pmu_setf), (28 bytes).
+        Removing symbol sysc_awo_io_stat_unret_pmu_setf.
+    Removing awo_2400.o(i.sysc_awo_o_16m_xtal_en_setf), (32 bytes).
+        Removing symbol sysc_awo_o_16m_xtal_en_setf.
+    Removing awo_2400.o(i.sysc_awo_o_ana_16m_selrc_setf), (32 bytes).
+        Removing symbol sysc_awo_o_ana_16m_selrc_setf.
+    Removing awo_2400.o(i.sysc_awo_pwm0_en_setf), (28 bytes).
+        Removing symbol sysc_awo_pwm0_en_setf.
+    Removing awo_2400.o(i.sysc_awo_pwm0_fc_h_setf), (24 bytes).
+        Removing symbol sysc_awo_pwm0_fc_h_setf.
+    Removing awo_2400.o(i.sysc_awo_pwm1_en_setf), (28 bytes).
+        Removing symbol sysc_awo_pwm1_en_setf.
+    Removing awo_2400.o(i.sysc_awo_pwm1_fc_h_setf), (28 bytes).
+        Removing symbol sysc_awo_pwm1_fc_h_setf.
+    Removing awo_2400.o(i.sysc_awo_pwm2_en_setf), (32 bytes).
+        Removing symbol sysc_awo_pwm2_en_setf.
+    Removing awo_2400.o(i.sysc_awo_pwm2_fc_h_setf), (32 bytes).
+        Removing symbol sysc_awo_pwm2_fc_h_setf.
+    Removing awo_2400.o(i.sysc_awo_reg_clk_ldo_sel_set), (12 bytes).
+        Removing symbol sysc_awo_reg_clk_ldo_sel_set.
+    Removing awo_2400.o(i.sysc_awo_reg_pd_onoff_get), (12 bytes).
+        Removing symbol sysc_awo_reg_pd_onoff_get.
+    Removing awo_2400.o(i.sysc_awo_reg_pd_onoff_set), (12 bytes).
+        Removing symbol sysc_awo_reg_pd_onoff_set.
+    Removing awo_2400.o(i.sysc_awo_rf_reg_2_set), (12 bytes).
+        Removing symbol sysc_awo_rf_reg_2_set.
+    Removing awo_2400.o(i.sysc_cpu_ble_freq0_setf), (32 bytes).
+        Removing symbol sysc_cpu_ble_freq0_setf.
+    Removing flash.o(i.co_bswap32), (28 bytes).
+        Removing symbol co_bswap32.
+    Removing flash.o(i.content_substitute), (68 bytes).
+        Removing symbol content_substitute.
+    Removing flash.o(i.flash_copy), (140 bytes).
+        Removing symbol flash_copy.
+    Removing flash.o(i.flash_erase), (102 bytes).
+        Removing symbol flash_erase.
+    Removing flash.o(i.flash_init), (8 bytes).
+        Removing symbol flash_init.
+    Removing flash.o(i.flash_operation_wait), (34 bytes).
+        Removing symbol flash_operation_wait.
+    Removing flash.o(i.flash_program), (138 bytes).
+        Removing symbol flash_program.
+    Removing flash.o(i.flash_program_base), (78 bytes).
+        Removing symbol flash_program_base.
+    Removing flash.o(i.flash_program_jflash), (80 bytes).
+        Removing symbol flash_program_jflash.
+    Removing flash.o(i.flash_quad_enable), (60 bytes).
+        Removing symbol flash_quad_enable.
+    Removing flash.o(i.flash_test), (164 bytes).
+        Removing symbol flash_test.
+    Removing flash.o(.bss), (8192 bytes).
+        Removing symbol fbuf.
+        Removing symbol fsrc.
+    Removing dma_for_qspi.o(.rev16_text), (4 bytes).
+        Removing symbol __asm___14_dma_for_qspi_c_d330a991____REV16.
+    Removing dma_for_qspi.o(.revsh_text), (4 bytes).
+        Removing symbol __asm___14_dma_for_qspi_c_d330a991____REVSH.
+    Removing dma_for_qspi.o(i.dmac_transfer_QSPI_TX), (96 bytes).
+        Removing symbol dmac_transfer_QSPI_TX.
+    Removing dma_for_qspi.o(i.dmac_transfer_qspi_init), (104 bytes).
+        Removing symbol dmac_transfer_qspi_init.
+    Removing qspi.o(.rev16_text), (4 bytes).
+        Removing symbol __asm___6_qspi_c_bdeeb880____REV16.
+    Removing qspi.o(.revsh_text), (4 bytes).
+        Removing symbol __asm___6_qspi_c_bdeeb880____REVSH.
+    Removing qspi.o(i.qspi_flash_quad_program), (2 bytes).
+        Removing symbol qspi_flash_quad_program.
+    Removing qspi.o(i.qspi_init), (52 bytes).
+        Removing symbol qspi_init.
+    Removing qspi.o(i.qspi_set_rx_sample_dly), (40 bytes).
+        Removing symbol qspi_set_rx_sample_dly.
+    Removing qspi.o(i.qspi_write), (180 bytes).
+        Removing symbol qspi_write.
+    Removing flash_cache.o(.rev16_text), (4 bytes).
+        Removing symbol __asm___13_flash_cache_c_c0eb7ce5____REV16.
+    Removing flash_cache.o(.revsh_text), (4 bytes).
+        Removing symbol __asm___13_flash_cache_c_c0eb7ce5____REVSH.
+    Removing flash_cache.o(i.flash_cache_disable), (24 bytes).
+        Removing symbol flash_cache_disable.
+    Removing flash_cache.o(i.flash_cache_flush), (44 bytes).
+        Removing symbol flash_cache_flush.
+    Removing clk_gate.o(.rev16_text), (4 bytes).
+        Removing symbol __asm___10_clk_gate_c_d23de2fe____REV16.
+    Removing clk_gate.o(.revsh_text), (4 bytes).
+        Removing symbol __asm___10_clk_gate_c_d23de2fe____REVSH.
+    Removing clk_gate.o(i.clk_gate_cpu_g0), (72 bytes).
+        Removing symbol clk_gate_cpu_g0.
+    Removing clk_gate.o(i.clk_gate_per_g0), (72 bytes).
+        Removing symbol clk_gate_per_g0.
+    Removing clk_gate.o(i.clk_gate_per_g1), (72 bytes).
+        Removing symbol clk_gate_per_g1.
+    Removing awo_2400.o(i.__ARM_common_switch8), (28 bytes).
+        Removing symbol __ARM_common_switch8.
+
+133 unused section(s) (total 13890 bytes) removed from the image.
+
+134 unused symbol(s) removed from the image.
+Patching/Reducing relocations
+Generating Static Call Graph.
+
+==============================================================================
+
+Image Stack Usage Information.
+
+Maximum stack usage for Image.
+
+Maximum Stack Usage for flash_quad_read 0x9c bytes.
+Call chain for maximum stack usage:
+flash_quad_read => qspi_flash_quad_read_data => dmac_transfer_QSPI_RX_32Bit => dmac_ch0_ctrl_l_pack
+
+Maximum stack usage per global function.
+
+Maximum Stack Usage for awo_bootram_init 0x20 bytes.
+Call chain for maximum stack usage:
+awo_bootram_init => awo_open_pll
+
+Maximum Stack Usage for awo_clk_div_pbus_para_up 0x8 bytes.
+Call chain for maximum stack usage:
+awo_clk_div_pbus_para_up
+
+Maximum Stack Usage for awo_open_pll 0x10 bytes.
+Call chain for maximum stack usage:
+awo_open_pll
+
+Maximum Stack Usage for awo_set_parameter 0x4 bytes.
+Call chain for maximum stack usage:
+awo_set_parameter
+
+Maximum Stack Usage for boot_ram_entry 0x38 bytes.
+Call chain for maximum stack usage:
+boot_ram_entry => flash_cache_init
+
+Maximum Stack Usage for clk_gate_dmac_clr 0x4 bytes.
+Call chain for maximum stack usage:
+clk_gate_dmac_clr
+
+Maximum Stack Usage for clk_gate_dmac_set 0x4 bytes.
+Call chain for maximum stack usage:
+clk_gate_dmac_set
+
+Maximum Stack Usage for dmac_qspi_gate 0x8 bytes.
+Call chain for maximum stack usage:
+dmac_qspi_gate
+
+Maximum Stack Usage for dmac_transfer_QSPI_RX 0x34 bytes.
+Call chain for maximum stack usage:
+dmac_transfer_QSPI_RX => dmac_ch0_ctrl_l_pack
+
+Maximum Stack Usage for dmac_transfer_QSPI_RX_32Bit 0x34 bytes.
+Call chain for maximum stack usage:
+dmac_transfer_QSPI_RX_32Bit => dmac_ch0_ctrl_l_pack
+
+Maximum Stack Usage for flash_cache_init 0x28 bytes.
+Call chain for maximum stack usage:
+flash_cache_init
+
+Maximum Stack Usage for flash_quad_read 0x9c bytes.
+Call chain for maximum stack usage:
+flash_quad_read => qspi_flash_quad_read_data => dmac_transfer_QSPI_RX_32Bit => dmac_ch0_ctrl_l_pack
+
+Maximum Stack Usage for flash_read 0x8c bytes.
+Call chain for maximum stack usage:
+flash_read => qspi_read => dmac_transfer_QSPI_RX => dmac_ch0_ctrl_l_pack
+
+Maximum Stack Usage for image_read 0x18 bytes.
+Call chain for maximum stack usage:
+image_read
+
+Maximum Stack Usage for peri_gate 0x8 bytes.
+Call chain for maximum stack usage:
+peri_gate
+
+Maximum Stack Usage for qspi_flash_quad_read_data 0x7c bytes.
+Call chain for maximum stack usage:
+qspi_flash_quad_read_data => dmac_transfer_QSPI_RX_32Bit => dmac_ch0_ctrl_l_pack
+
+Maximum Stack Usage for qspi_flash_read_data 0x6c bytes.
+Call chain for maximum stack usage:
+qspi_flash_read_data => dmac_transfer_QSPI_RX_32Bit => dmac_ch0_ctrl_l_pack
+
+Maximum Stack Usage for qspi_read 0x6c bytes.
+Call chain for maximum stack usage:
+qspi_read => dmac_transfer_QSPI_RX => dmac_ch0_ctrl_l_pack
+
+Stack Usage for functions.
+
+Stack Usage for __aeabi_uidiv 0xc bytes.
+Stack Usage for __aeabi_uidivmod 0xc bytes.
+Stack Usage for awo_bootram_init 0x10 bytes.
+Stack Usage for awo_clk_div_pbus_para_m1 0x0 bytes.
+Stack Usage for awo_clk_div_pbus_para_up 0x8 bytes.
+Stack Usage for awo_clkgate_en 0x0 bytes.
+Stack Usage for awo_hbus0_clksel 0x0 bytes.
+Stack Usage for awo_hbus1_clksel 0x0 bytes.
+Stack Usage for awo_ldo_setup_time 0x0 bytes.
+Stack Usage for awo_open_pll 0x10 bytes.
+Stack Usage for awo_set_parameter 0x4 bytes.
+Stack Usage for boot_ram_entry 0x10 bytes.
+Stack Usage for clk_gate_cpu_g1 0x0 bytes.
+Stack Usage for clk_gate_dmac_clr 0x4 bytes.
+Stack Usage for clk_gate_dmac_set 0x4 bytes.
+Stack Usage for dmac_qspi_gate 0x8 bytes.
+Stack Usage for dmac_transfer_QSPI_RX 0x20 bytes.
+Stack Usage for dmac_transfer_QSPI_RX_32Bit 0x20 bytes.
+Stack Usage for flash_cache_init 0x28 bytes.
+Stack Usage for flash_quad_read 0x20 bytes.
+Stack Usage for flash_read 0x20 bytes.
+Stack Usage for image_read 0x18 bytes.
+Stack Usage for peri_gate 0x8 bytes.
+Stack Usage for qspi_flash_quad_read_data 0x48 bytes.
+Stack Usage for qspi_flash_read_data 0x38 bytes.
+Stack Usage for qspi_read 0x38 bytes.
+Stack Usage for sysc_cpu_clkg1_set 0x0 bytes.
+Stack Usage for sysc_cpu_qspi_en_setf 0x0 bytes.
+Stack Usage for sysc_awo_clkgen_awo_signal_1_set 0x0 bytes.
+Stack Usage for sysc_awo_dr_16m_rcosc_en_setf 0x0 bytes.
+Stack Usage for sysc_awo_reg_16m_rcosc_en_setf 0x0 bytes.
+Stack Usage for sysc_awo_rf_reg_0_get 0x0 bytes.
+Stack Usage for sysc_awo_rf_reg_0_set 0x0 bytes.
+Stack Usage for dmac_ch0_ctrl_h_pack 0x0 bytes.
+Stack Usage for dmac_ch0_ctrl_l_pack 0x14 bytes.
+Stack Usage for dmac_ch0_dar_l_set 0x0 bytes.
+Stack Usage for dmac_ch0_sar_l_set 0x0 bytes.
+Stack Usage for dmac_chenreg_l_pack 0x0 bytes.
+Stack Usage for dmac_clearblock_l_set 0x0 bytes.
+Stack Usage for qspi_ctrlr0_pack 0x14 bytes.
+Stack Usage for qspi_ctrlr1_pack 0x0 bytes.
+Stack Usage for qspi_dmacr_pack 0x0 bytes.
+Stack Usage for qspi_dmardlr_set 0x0 bytes.
+Stack Usage for qspi_dr_set 0x0 bytes.
+Stack Usage for qspi_ser_set 0x0 bytes.
+Stack Usage for qspi_ssi_en_setf 0x0 bytes.
+Stack Usage for qspi_ssienr_set 0x0 bytes.
+Stack Usage for qspi_tfe_getf 0x0 bytes.
+Stack Usage for cache_reg_cache_en_set 0x0 bytes.
+Stack Usage for cache_reg_flush_en_set 0x0 bytes.
+Stack Usage for qspi_ssi_en_setf 0x0 bytes.
+
+Potential Stack Usage Inaccuracies.
+
+Untraceable function pointers.
+
+ * boot_ram_entry from boot_ram.o(i.boot_ram_entry) referenced from boot_ram.o(boot_header_area)
+ * flash_quad_read from flash.o(i.flash_quad_read) referenced from boot_ram.o(i.boot_ram_entry)
+ * flash_read from flash.o(i.flash_read) referenced from boot_ram.o(i.boot_ram_entry)
+Creating output file ../../../../output/boot_ram/boot_ram.elf.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
+    ../clib/microlib/stdlib/rand.c           0x00000000   Number         0  rand.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    E:/KeilProject/SVN/Jmesh/trunk/plf/bx2400/bootloader/boot_ram/boot_ram.c 0x00000000   Number         0  boot_ram.o ABSOLUTE
+    E:/KeilProject/SVN/Jmesh/trunk/plf/bx2400/src/driver/dmac/dma_for_qspi.c 0x00000000   Number         0  dma_for_qspi.o ABSOLUTE
+    E:/KeilProject/SVN/Jmesh/trunk/plf/bx2400/src/driver/flash/flash.c 0x00000000   Number         0  flash.o ABSOLUTE
+    E:/KeilProject/SVN/Jmesh/trunk/plf/bx2400/src/driver/flash_cache/flash_cache.c 0x00000000   Number         0  flash_cache.o ABSOLUTE
+    E:/KeilProject/SVN/Jmesh/trunk/plf/bx2400/src/driver/ssi/qspi/qspi.c 0x00000000   Number         0  qspi.o ABSOLUTE
+    E:/KeilProject/SVN/Jmesh/trunk/plf/bx2400/src/driver/sysctrl/awo/awo_2400.c 0x00000000   Number         0  awo_2400.o ABSOLUTE
+    E:/KeilProject/SVN/Jmesh/trunk/plf/bx2400/src/driver/sysctrl/awo/awo_2401.c 0x00000000   Number         0  awo_2401.o ABSOLUTE
+    E:/KeilProject/SVN/Jmesh/trunk/plf/bx2400/src/driver/sysctrl/clk_gate.c 0x00000000   Number         0  clk_gate.o ABSOLUTE
+    E:\KeilProject\SVN\Jmesh\trunk\plf\bx2400\bootloader\boot_ram\boot_ram.c 0x00000000   Number         0  boot_ram.o ABSOLUTE
+    E:\KeilProject\SVN\Jmesh\trunk\plf\bx2400\src\driver\dmac\dma_for_qspi.c 0x00000000   Number         0  dma_for_qspi.o ABSOLUTE
+    E:\KeilProject\SVN\Jmesh\trunk\plf\bx2400\src\driver\flash_cache\flash_cache.c 0x00000000   Number         0  flash_cache.o ABSOLUTE
+    E:\KeilProject\SVN\Jmesh\trunk\plf\bx2400\src\driver\ssi\qspi\qspi.c 0x00000000   Number         0  qspi.o ABSOLUTE
+    E:\KeilProject\SVN\Jmesh\trunk\plf\bx2400\src\driver\sysctrl\awo\awo_2400.c 0x00000000   Number         0  awo_2400.o ABSOLUTE
+    E:\KeilProject\SVN\Jmesh\trunk\plf\bx2400\src\driver\sysctrl\clk_gate.c 0x00000000   Number         0  clk_gate.o ABSOLUTE
+    boot_header_area                         0x0012dff0   Section       36  boot_ram.o(boot_header_area)
+    .text                                    0x0012e014   Section        0  uidiv.o(.text)
+    i.awo_bootram_init                       0x0012e040   Section        0  awo_2400.o(i.awo_bootram_init)
+    i.awo_clk_div_pbus_para_m1               0x0012e0dc   Section        0  awo_2400.o(i.awo_clk_div_pbus_para_m1)
+    i.awo_clk_div_pbus_para_up               0x0012e100   Section        0  awo_2400.o(i.awo_clk_div_pbus_para_up)
+    i.awo_clkgate_en                         0x0012e10c   Section        0  awo_2400.o(i.awo_clkgate_en)
+    i.awo_hbus0_clksel                       0x0012e11c   Section        0  awo_2400.o(i.awo_hbus0_clksel)
+    i.awo_hbus1_clksel                       0x0012e138   Section        0  awo_2400.o(i.awo_hbus1_clksel)
+    i.awo_ldo_setup_time                     0x0012e158   Section        0  awo_2400.o(i.awo_ldo_setup_time)
+    i.awo_open_pll                           0x0012e174   Section        0  awo_2400.o(i.awo_open_pll)
+    i.awo_set_parameter                      0x0012e24c   Section        0  awo_2400.o(i.awo_set_parameter)
+    i.boot_ram_entry                         0x0012e258   Section        0  boot_ram.o(i.boot_ram_entry)
+    i.cache_reg_cache_en_set                 0x0012e304   Section        0  flash_cache.o(i.cache_reg_cache_en_set)
+    cache_reg_cache_en_set                   0x0012e305   Thumb Code     6  flash_cache.o(i.cache_reg_cache_en_set)
+    i.cache_reg_flush_en_set                 0x0012e310   Section        0  flash_cache.o(i.cache_reg_flush_en_set)
+    cache_reg_flush_en_set                   0x0012e311   Thumb Code     6  flash_cache.o(i.cache_reg_flush_en_set)
+    i.clk_gate_cpu_g1                        0x0012e31c   Section        0  clk_gate.o(i.clk_gate_cpu_g1)
+    i.clk_gate_dmac_clr                      0x0012e364   Section        0  clk_gate.o(i.clk_gate_dmac_clr)
+    i.clk_gate_dmac_set                      0x0012e37c   Section        0  clk_gate.o(i.clk_gate_dmac_set)
+    i.dmac_ch0_ctrl_h_pack                   0x0012e388   Section        0  dma_for_qspi.o(i.dmac_ch0_ctrl_h_pack)
+    dmac_ch0_ctrl_h_pack                     0x0012e389   Thumb Code    10  dma_for_qspi.o(i.dmac_ch0_ctrl_h_pack)
+    i.dmac_ch0_ctrl_l_pack                   0x0012e398   Section        0  dma_for_qspi.o(i.dmac_ch0_ctrl_l_pack)
+    dmac_ch0_ctrl_l_pack                     0x0012e399   Thumb Code    44  dma_for_qspi.o(i.dmac_ch0_ctrl_l_pack)
+    i.dmac_ch0_dar_l_set                     0x0012e3c8   Section        0  dma_for_qspi.o(i.dmac_ch0_dar_l_set)
+    dmac_ch0_dar_l_set                       0x0012e3c9   Thumb Code     6  dma_for_qspi.o(i.dmac_ch0_dar_l_set)
+    i.dmac_ch0_sar_l_set                     0x0012e3d4   Section        0  dma_for_qspi.o(i.dmac_ch0_sar_l_set)
+    dmac_ch0_sar_l_set                       0x0012e3d5   Thumb Code     6  dma_for_qspi.o(i.dmac_ch0_sar_l_set)
+    i.dmac_chenreg_l_pack                    0x0012e3e0   Section        0  dma_for_qspi.o(i.dmac_chenreg_l_pack)
+    dmac_chenreg_l_pack                      0x0012e3e1   Thumb Code    10  dma_for_qspi.o(i.dmac_chenreg_l_pack)
+    i.dmac_clearblock_l_set                  0x0012e3f0   Section        0  dma_for_qspi.o(i.dmac_clearblock_l_set)
+    dmac_clearblock_l_set                    0x0012e3f1   Thumb Code     6  dma_for_qspi.o(i.dmac_clearblock_l_set)
+    i.dmac_qspi_gate                         0x0012e3fc   Section        0  boot_ram.o(i.dmac_qspi_gate)
+    i.dmac_transfer_QSPI_RX                  0x0012e408   Section        0  dma_for_qspi.o(i.dmac_transfer_QSPI_RX)
+    i.dmac_transfer_QSPI_RX_32Bit            0x0012e468   Section        0  dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit)
+    i.flash_cache_init                       0x0012e4c8   Section        0  flash_cache.o(i.flash_cache_init)
+    i.flash_quad_read                        0x0012e5d8   Section        0  flash.o(i.flash_quad_read)
+    i.flash_read                             0x0012e630   Section        0  flash.o(i.flash_read)
+    i.image_read                             0x0012e684   Section        0  boot_ram.o(i.image_read)
+    i.peri_gate                              0x0012e6b0   Section        0  boot_ram.o(i.peri_gate)
+    i.qspi_ctrlr0_pack                       0x0012e6e4   Section        0  qspi.o(i.qspi_ctrlr0_pack)
+    qspi_ctrlr0_pack                         0x0012e6e5   Thumb Code    52  qspi.o(i.qspi_ctrlr0_pack)
+    i.qspi_ctrlr1_pack                       0x0012e71c   Section        0  qspi.o(i.qspi_ctrlr1_pack)
+    qspi_ctrlr1_pack                         0x0012e71d   Thumb Code     6  qspi.o(i.qspi_ctrlr1_pack)
+    i.qspi_dmacr_pack                        0x0012e728   Section        0  qspi.o(i.qspi_dmacr_pack)
+    qspi_dmacr_pack                          0x0012e729   Thumb Code    10  qspi.o(i.qspi_dmacr_pack)
+    i.qspi_dmardlr_set                       0x0012e738   Section        0  qspi.o(i.qspi_dmardlr_set)
+    qspi_dmardlr_set                         0x0012e739   Thumb Code     6  qspi.o(i.qspi_dmardlr_set)
+    i.qspi_dr_set                            0x0012e744   Section        0  qspi.o(i.qspi_dr_set)
+    qspi_dr_set                              0x0012e745   Thumb Code     6  qspi.o(i.qspi_dr_set)
+    i.qspi_flash_quad_read_data              0x0012e750   Section        0  qspi.o(i.qspi_flash_quad_read_data)
+    i.qspi_flash_read_data                   0x0012e83c   Section        0  qspi.o(i.qspi_flash_read_data)
+    i.qspi_read                              0x0012e910   Section        0  qspi.o(i.qspi_read)
+    i.qspi_ser_set                           0x0012e9e0   Section        0  qspi.o(i.qspi_ser_set)
+    qspi_ser_set                             0x0012e9e1   Thumb Code     6  qspi.o(i.qspi_ser_set)
+    i.qspi_ssi_en_setf                       0x0012e9ec   Section        0  qspi.o(i.qspi_ssi_en_setf)
+    qspi_ssi_en_setf                         0x0012e9ed   Thumb Code    20  qspi.o(i.qspi_ssi_en_setf)
+    i.qspi_ssi_en_setf                       0x0012ea04   Section        0  flash_cache.o(i.qspi_ssi_en_setf)
+    qspi_ssi_en_setf                         0x0012ea05   Thumb Code    20  flash_cache.o(i.qspi_ssi_en_setf)
+    i.qspi_ssienr_set                        0x0012ea1c   Section        0  qspi.o(i.qspi_ssienr_set)
+    qspi_ssienr_set                          0x0012ea1d   Thumb Code     6  qspi.o(i.qspi_ssienr_set)
+    i.qspi_tfe_getf                          0x0012ea28   Section        0  qspi.o(i.qspi_tfe_getf)
+    qspi_tfe_getf                            0x0012ea29   Thumb Code    10  qspi.o(i.qspi_tfe_getf)
+    i.sysc_awo_clkgen_awo_signal_1_set       0x0012ea38   Section        0  awo_2400.o(i.sysc_awo_clkgen_awo_signal_1_set)
+    sysc_awo_clkgen_awo_signal_1_set         0x0012ea39   Thumb Code     6  awo_2400.o(i.sysc_awo_clkgen_awo_signal_1_set)
+    i.sysc_awo_dr_16m_rcosc_en_setf          0x0012ea44   Section        0  awo_2400.o(i.sysc_awo_dr_16m_rcosc_en_setf)
+    sysc_awo_dr_16m_rcosc_en_setf            0x0012ea45   Thumb Code    22  awo_2400.o(i.sysc_awo_dr_16m_rcosc_en_setf)
+    i.sysc_awo_reg_16m_rcosc_en_setf         0x0012ea60   Section        0  awo_2400.o(i.sysc_awo_reg_16m_rcosc_en_setf)
+    sysc_awo_reg_16m_rcosc_en_setf           0x0012ea61   Thumb Code    26  awo_2400.o(i.sysc_awo_reg_16m_rcosc_en_setf)
+    i.sysc_awo_rf_reg_0_get                  0x0012ea80   Section        0  awo_2400.o(i.sysc_awo_rf_reg_0_get)
+    sysc_awo_rf_reg_0_get                    0x0012ea81   Thumb Code     6  awo_2400.o(i.sysc_awo_rf_reg_0_get)
+    i.sysc_awo_rf_reg_0_set                  0x0012ea8c   Section        0  awo_2400.o(i.sysc_awo_rf_reg_0_set)
+    sysc_awo_rf_reg_0_set                    0x0012ea8d   Thumb Code     6  awo_2400.o(i.sysc_awo_rf_reg_0_set)
+    i.sysc_cpu_clkg1_set                     0x0012ea98   Section        0  boot_ram.o(i.sysc_cpu_clkg1_set)
+    sysc_cpu_clkg1_set                       0x0012ea99   Thumb Code     6  boot_ram.o(i.sysc_cpu_clkg1_set)
+    i.sysc_cpu_qspi_en_setf                  0x0012eaa4   Section        0  boot_ram.o(i.sysc_cpu_qspi_en_setf)
+    sysc_cpu_qspi_en_setf                    0x0012eaa5   Thumb Code    20  boot_ram.o(i.sysc_cpu_qspi_en_setf)
+    .data                                    0x0012eabc   Section        4  awo_2400.o(.data)
+    wakeup_pll                               0x0012eabc   Data           4  awo_2400.o(.data)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    Load$$LR$$LOAD_SECTION$$Length           0x00000ad0   Number         0  anon$$obj.o ABSOLUTE
+    boot_info                                0x0012dff0   Data          36  boot_ram.o(boot_header_area)
+    __aeabi_uidiv                            0x0012e015   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x0012e015   Thumb Code    44  uidiv.o(.text)
+    awo_bootram_init                         0x0012e041   Thumb Code   144  awo_2400.o(i.awo_bootram_init)
+    awo_clk_div_pbus_para_m1                 0x0012e0dd   Thumb Code    30  awo_2400.o(i.awo_clk_div_pbus_para_m1)
+    awo_clk_div_pbus_para_up                 0x0012e101   Thumb Code    10  awo_2400.o(i.awo_clk_div_pbus_para_up)
+    awo_clkgate_en                           0x0012e10d   Thumb Code    10  awo_2400.o(i.awo_clkgate_en)
+    awo_hbus0_clksel                         0x0012e11d   Thumb Code    24  awo_2400.o(i.awo_hbus0_clksel)
+    awo_hbus1_clksel                         0x0012e139   Thumb Code    26  awo_2400.o(i.awo_hbus1_clksel)
+    awo_ldo_setup_time                       0x0012e159   Thumb Code    22  awo_2400.o(i.awo_ldo_setup_time)
+    awo_open_pll                             0x0012e175   Thumb Code   216  awo_2400.o(i.awo_open_pll)
+    awo_set_parameter                        0x0012e24d   Thumb Code    10  awo_2400.o(i.awo_set_parameter)
+    boot_ram_entry                           0x0012e259   Thumb Code   152  boot_ram.o(i.boot_ram_entry)
+    clk_gate_cpu_g1                          0x0012e31d   Thumb Code    64  clk_gate.o(i.clk_gate_cpu_g1)
+    clk_gate_dmac_clr                        0x0012e365   Thumb Code    20  clk_gate.o(i.clk_gate_dmac_clr)
+    clk_gate_dmac_set                        0x0012e37d   Thumb Code    10  clk_gate.o(i.clk_gate_dmac_set)
+    dmac_qspi_gate                           0x0012e3fd   Thumb Code    12  boot_ram.o(i.dmac_qspi_gate)
+    dmac_transfer_QSPI_RX                    0x0012e409   Thumb Code    90  dma_for_qspi.o(i.dmac_transfer_QSPI_RX)
+    dmac_transfer_QSPI_RX_32Bit              0x0012e469   Thumb Code    92  dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit)
+    flash_cache_init                         0x0012e4c9   Thumb Code   258  flash_cache.o(i.flash_cache_init)
+    flash_quad_read                          0x0012e5d9   Thumb Code    88  flash.o(i.flash_quad_read)
+    flash_read                               0x0012e631   Thumb Code    84  flash.o(i.flash_read)
+    image_read                               0x0012e685   Thumb Code    42  boot_ram.o(i.image_read)
+    peri_gate                                0x0012e6b1   Thumb Code    32  boot_ram.o(i.peri_gate)
+    qspi_flash_quad_read_data                0x0012e751   Thumb Code   224  qspi.o(i.qspi_flash_quad_read_data)
+    qspi_flash_read_data                     0x0012e83d   Thumb Code   198  qspi.o(i.qspi_flash_read_data)
+    qspi_read                                0x0012e911   Thumb Code   204  qspi.o(i.qspi_read)
+
+
+
+==============================================================================
+
+Weak Reference Report
+
+Unresolved Weak References:
+
+Resolved Weak References:
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0012e259
+
+  Load Region LOAD_SECTION (Base: 0x0012dff0, Size: 0x00000ad0, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region EXEC_SECTION (Base: 0x0012dff0, Size: 0x00000ad0, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x0012dff0   0x00000024   Data   RO            9    boot_header_area    boot_ram.o
+    0x0012e014   0x0000002c   Code   RO         1343    .text               mc_p.l(uidiv.o)
+    0x0012e040   0x0000009c   Code   RO          174    i.awo_bootram_init  awo_2400.o
+    0x0012e0dc   0x00000024   Code   RO          181    i.awo_clk_div_pbus_para_m1  awo_2400.o
+    0x0012e100   0x0000000a   Code   RO          182    i.awo_clk_div_pbus_para_up  awo_2400.o
+    0x0012e10a   0x00000002   PAD
+    0x0012e10c   0x00000010   Code   RO          190    i.awo_clkgate_en    awo_2400.o
+    0x0012e11c   0x0000001c   Code   RO          208    i.awo_hbus0_clksel  awo_2400.o
+    0x0012e138   0x00000020   Code   RO          209    i.awo_hbus1_clksel  awo_2400.o
+    0x0012e158   0x0000001c   Code   RO          213    i.awo_ldo_setup_time  awo_2400.o
+    0x0012e174   0x000000d8   Code   RO          216    i.awo_open_pll      awo_2400.o
+    0x0012e24c   0x0000000a   Code   RO          230    i.awo_set_parameter  awo_2400.o
+    0x0012e256   0x00000002   PAD
+    0x0012e258   0x000000ac   Code   RO            3  * i.boot_ram_entry    boot_ram.o
+    0x0012e304   0x0000000c   Code   RO         1230    i.cache_reg_cache_en_set  flash_cache.o
+    0x0012e310   0x0000000c   Code   RO         1231    i.cache_reg_flush_en_set  flash_cache.o
+    0x0012e31c   0x00000048   Code   RO         1287    i.clk_gate_cpu_g1   clk_gate.o
+    0x0012e364   0x00000018   Code   RO         1288    i.clk_gate_dmac_clr  clk_gate.o
+    0x0012e37c   0x0000000a   Code   RO         1289    i.clk_gate_dmac_set  clk_gate.o
+    0x0012e386   0x00000002   PAD
+    0x0012e388   0x00000010   Code   RO         1031    i.dmac_ch0_ctrl_h_pack  dma_for_qspi.o
+    0x0012e398   0x00000030   Code   RO         1032    i.dmac_ch0_ctrl_l_pack  dma_for_qspi.o
+    0x0012e3c8   0x0000000c   Code   RO         1033    i.dmac_ch0_dar_l_set  dma_for_qspi.o
+    0x0012e3d4   0x0000000c   Code   RO         1034    i.dmac_ch0_sar_l_set  dma_for_qspi.o
+    0x0012e3e0   0x00000010   Code   RO         1035    i.dmac_chenreg_l_pack  dma_for_qspi.o
+    0x0012e3f0   0x0000000c   Code   RO         1036    i.dmac_clearblock_l_set  dma_for_qspi.o
+    0x0012e3fc   0x0000000c   Code   RO            4    i.dmac_qspi_gate    boot_ram.o
+    0x0012e408   0x00000060   Code   RO         1037    i.dmac_transfer_QSPI_RX  dma_for_qspi.o
+    0x0012e468   0x00000060   Code   RO         1038    i.dmac_transfer_QSPI_RX_32Bit  dma_for_qspi.o
+    0x0012e4c8   0x00000110   Code   RO         1234    i.flash_cache_init  flash_cache.o
+    0x0012e5d8   0x00000058   Code   RO          930    i.flash_quad_read   flash.o
+    0x0012e630   0x00000054   Code   RO          931    i.flash_read        flash.o
+    0x0012e684   0x0000002a   Code   RO            5    i.image_read        boot_ram.o
+    0x0012e6ae   0x00000002   PAD
+    0x0012e6b0   0x00000034   Code   RO            6    i.peri_gate         boot_ram.o
+    0x0012e6e4   0x00000038   Code   RO         1114    i.qspi_ctrlr0_pack  qspi.o
+    0x0012e71c   0x0000000c   Code   RO         1115    i.qspi_ctrlr1_pack  qspi.o
+    0x0012e728   0x00000010   Code   RO         1116    i.qspi_dmacr_pack   qspi.o
+    0x0012e738   0x0000000c   Code   RO         1117    i.qspi_dmardlr_set  qspi.o
+    0x0012e744   0x0000000c   Code   RO         1118    i.qspi_dr_set       qspi.o
+    0x0012e750   0x000000ec   Code   RO         1120    i.qspi_flash_quad_read_data  qspi.o
+    0x0012e83c   0x000000d4   Code   RO         1121    i.qspi_flash_read_data  qspi.o
+    0x0012e910   0x000000d0   Code   RO         1123    i.qspi_read         qspi.o
+    0x0012e9e0   0x0000000c   Code   RO         1124    i.qspi_ser_set      qspi.o
+    0x0012e9ec   0x00000018   Code   RO         1126    i.qspi_ssi_en_setf  qspi.o
+    0x0012ea04   0x00000018   Code   RO         1235    i.qspi_ssi_en_setf  flash_cache.o
+    0x0012ea1c   0x0000000c   Code   RO         1127    i.qspi_ssienr_set   qspi.o
+    0x0012ea28   0x00000010   Code   RO         1128    i.qspi_tfe_getf     qspi.o
+    0x0012ea38   0x0000000c   Code   RO          253    i.sysc_awo_clkgen_awo_signal_1_set  awo_2400.o
+    0x0012ea44   0x0000001c   Code   RO          254    i.sysc_awo_dr_16m_rcosc_en_setf  awo_2400.o
+    0x0012ea60   0x00000020   Code   RO          265    i.sysc_awo_reg_16m_rcosc_en_setf  awo_2400.o
+    0x0012ea80   0x0000000c   Code   RO          269    i.sysc_awo_rf_reg_0_get  awo_2400.o
+    0x0012ea8c   0x0000000c   Code   RO          270    i.sysc_awo_rf_reg_0_set  awo_2400.o
+    0x0012ea98   0x0000000c   Code   RO            7    i.sysc_cpu_clkg1_set  boot_ram.o
+    0x0012eaa4   0x00000018   Code   RO            8    i.sysc_cpu_qspi_en_setf  boot_ram.o
+    0x0012eabc   0x00000004   Data   RW          273    .data               awo_2400.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       628         70          0          4          0      45044   awo_2400.o
+       314         50         36          0          0      39704   boot_ram.o
+       106         12          0          0          0      65382   clk_gate.o
+       308         44          0          0          0      50158   dma_for_qspi.o
+       172          0          0          0          0       2387   flash.o
+       320         30          0          0          0      39103   flash_cache.o
+       828         80          0          0          0      20847   qspi.o
+
+    ----------------------------------------------------------------------
+      2684        286         36          4          0     262625   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        44          0          0          0          0         72   uidiv.o
+
+    ----------------------------------------------------------------------
+        44          0          0          0          0         72   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        44          0          0          0          0         72   mc_p.l
+
+    ----------------------------------------------------------------------
+        44          0          0          0          0         72   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      2728        286         36          4          0     260673   Grand Totals
+      2728        286         36          4          0     260673   ELF Image Totals
+      2728        286         36          4          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2764 (   2.70kB)
+    Total RW  Size (RW Data + ZI Data)                 4 (   0.00kB)
+    Total ROM Size (Code + RO Data + RW Data)       2768 (   2.70kB)
+
+==============================================================================
+

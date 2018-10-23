@@ -1,0 +1,6 @@
+add_subdirectory(clk_gate)
+add_subdirectory(rst_gen)
+add_subdirectory(periph_mngt)
+add_subdirectory(pin_share)
+add_subdirectory(modem)
+add_subdirectory(swint)

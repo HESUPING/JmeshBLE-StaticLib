@@ -1,0 +1,14 @@
+/*
+ * adc_integration.h
+ *
+ *  Created on: 2018Äê6ÔÂ26ÈÕ
+ *      Author: jiachuang
+ */
+
+#ifndef PLF_BX2400_SRC_PERIPHERAL_INTEGRATION_ADC_ADC_INTEGRATION_H_
+#define PLF_BX2400_SRC_PERIPHERAL_INTEGRATION_ADC_ADC_INTEGRATION_H_
+
+
+
+
+#endif /* PLF_BX2400_SRC_PERIPHERAL_INTEGRATION_ADC_ADC_INTEGRATION_H_ */

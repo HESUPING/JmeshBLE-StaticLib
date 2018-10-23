@@ -1,0 +1,402 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [../../../../output/boot_ram/boot_ram.elf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image ../../../../output/boot_ram/boot_ram.elf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Jul 03 16:25:41 2017
+<BR><P>
+<H3>Maximum Stack Usage =        156 bytes + Unknown(Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+flash_quad_read &rArr; qspi_flash_quad_read_data &rArr; dmac_transfer_QSPI_RX_32Bit &rArr; dmac_ch0_ctrl_l_pack
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[3]">boot_ram_entry</a> from boot_ram.o(i.boot_ram_entry) referenced from boot_ram.o(boot_header_area)
+ <LI><a href="#[1]">flash_quad_read</a> from flash.o(i.flash_quad_read) referenced from boot_ram.o(i.boot_ram_entry)
+ <LI><a href="#[2]">flash_read</a> from flash.o(i.flash_read) referenced from boot_ram.o(i.boot_ram_entry)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[33]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[a]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[4]"></a>awo_bootram_init</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, awo_2400.o(i.awo_bootram_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = awo_bootram_init &rArr; awo_open_pll
+</UL>
+<BR>[Calls]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_awo_reg_16m_rcosc_en_setf
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_awo_dr_16m_rcosc_en_setf
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_set_parameter
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_open_pll
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_hbus1_clksel
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_hbus0_clksel
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_clkgate_en
+<LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_clk_div_pbus_para_up
+<LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_clk_div_pbus_para_m1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boot_ram_entry
+</UL>
+
+<P><STRONG><a name="[7]"></a>awo_clk_div_pbus_para_m1</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, awo_2400.o(i.awo_clk_div_pbus_para_m1))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[8]"></a>awo_clk_div_pbus_para_up</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, awo_2400.o(i.awo_clk_div_pbus_para_up))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = awo_clk_div_pbus_para_up
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_awo_clkgen_awo_signal_1_set
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[9]"></a>awo_clkgate_en</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, awo_2400.o(i.awo_clkgate_en))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[d]"></a>awo_hbus0_clksel</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, awo_2400.o(i.awo_hbus0_clksel))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[c]"></a>awo_hbus1_clksel</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, awo_2400.o(i.awo_hbus1_clksel))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[12]"></a>awo_ldo_setup_time</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, awo_2400.o(i.awo_ldo_setup_time))
+<BR><BR>[Called By]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_set_parameter
+</UL>
+
+<P><STRONG><a name="[b]"></a>awo_open_pll</STRONG> (Thumb, 216 bytes, Stack size 16 bytes, awo_2400.o(i.awo_open_pll))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = awo_open_pll
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_awo_rf_reg_0_set
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_awo_rf_reg_0_get
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[e]"></a>awo_set_parameter</STRONG> (Thumb, 10 bytes, Stack size 4 bytes, awo_2400.o(i.awo_set_parameter))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = awo_set_parameter
+</UL>
+<BR>[Calls]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_ldo_setup_time
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[3]"></a>boot_ram_entry</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, boot_ram.o(i.boot_ram_entry))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = boot_ram_entry &rArr; flash_cache_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_cache_init
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;peri_gate
+<LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;image_read
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_qspi_gate
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_cpu_qspi_en_setf
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_cpu_clkg1_set
+</UL>
+
+<P><STRONG><a name="[1a]"></a>clk_gate_cpu_g1</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, clk_gate.o(i.clk_gate_cpu_g1))
+<BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_cache_init
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_dmac_set
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_dmac_clr
+<LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[19]"></a>clk_gate_dmac_clr</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, clk_gate.o(i.clk_gate_dmac_clr))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = clk_gate_dmac_clr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_cpu_g1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+
+<P><STRONG><a name="[1b]"></a>clk_gate_dmac_set</STRONG> (Thumb, 10 bytes, Stack size 4 bytes, clk_gate.o(i.clk_gate_dmac_set))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = clk_gate_dmac_set
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_cpu_g1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+
+<P><STRONG><a name="[16]"></a>dmac_qspi_gate</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, boot_ram.o(i.dmac_qspi_gate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = dmac_qspi_gate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_cpu_clkg1_set
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boot_ram_entry
+</UL>
+
+<P><STRONG><a name="[1c]"></a>dmac_transfer_QSPI_RX</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, dma_for_qspi.o(i.dmac_transfer_QSPI_RX))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = dmac_transfer_QSPI_RX &rArr; dmac_ch0_ctrl_l_pack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_dmac_set
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_dmac_clr
+<LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_clearblock_l_set
+<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_chenreg_l_pack
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_ch0_sar_l_set
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_ch0_dar_l_set
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_ch0_ctrl_l_pack
+<LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_ch0_ctrl_h_pack
+</UL>
+<BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+</UL>
+
+<P><STRONG><a name="[23]"></a>dmac_transfer_QSPI_RX_32Bit</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, dma_for_qspi.o(i.dmac_transfer_QSPI_RX_32Bit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = dmac_transfer_QSPI_RX_32Bit &rArr; dmac_ch0_ctrl_l_pack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_dmac_set
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_dmac_clr
+<LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_clearblock_l_set
+<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_chenreg_l_pack
+<LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_ch0_sar_l_set
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_ch0_dar_l_set
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_ch0_ctrl_l_pack
+<LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_ch0_ctrl_h_pack
+</UL>
+<BR>[Called By]<UL><LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[18]"></a>flash_cache_init</STRONG> (Thumb, 258 bytes, Stack size 40 bytes, flash_cache.o(i.flash_cache_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = flash_cache_init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ssi_en_setf
+<LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cache_reg_flush_en_set
+<LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cache_reg_cache_en_set
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_cpu_g1
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boot_ram_entry
+</UL>
+
+<P><STRONG><a name="[1]"></a>flash_quad_read</STRONG> (Thumb, 88 bytes, Stack size 32 bytes, flash.o(i.flash_quad_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = flash_quad_read &rArr; qspi_flash_quad_read_data &rArr; dmac_transfer_QSPI_RX_32Bit &rArr; dmac_ch0_ctrl_l_pack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> boot_ram.o(i.boot_ram_entry)
+</UL>
+<P><STRONG><a name="[2]"></a>flash_read</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, flash.o(i.flash_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = flash_read &rArr; qspi_read &rArr; dmac_transfer_QSPI_RX &rArr; dmac_ch0_ctrl_l_pack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> boot_ram.o(i.boot_ram_entry)
+</UL>
+<P><STRONG><a name="[15]"></a>image_read</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, boot_ram.o(i.image_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = image_read
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boot_ram_entry
+</UL>
+
+<P><STRONG><a name="[13]"></a>peri_gate</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, boot_ram.o(i.peri_gate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = peri_gate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sysc_cpu_clkg1_set
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boot_ram_entry
+</UL>
+
+<P><STRONG><a name="[27]"></a>qspi_flash_quad_read_data</STRONG> (Thumb, 224 bytes, Stack size 72 bytes, qspi.o(i.qspi_flash_quad_read_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = qspi_flash_quad_read_data &rArr; dmac_transfer_QSPI_RX_32Bit &rArr; dmac_ch0_ctrl_l_pack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_cpu_g1
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ssienr_set
+<LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ssi_en_setf
+<LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ser_set
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dr_set
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dmardlr_set
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dmacr_pack
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ctrlr1_pack
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ctrlr0_pack
+<LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_quad_read
+</UL>
+
+<P><STRONG><a name="[29]"></a>qspi_flash_read_data</STRONG> (Thumb, 198 bytes, Stack size 56 bytes, qspi.o(i.qspi_flash_read_data))
+<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = qspi_flash_read_data &rArr; dmac_transfer_QSPI_RX_32Bit &rArr; dmac_ch0_ctrl_l_pack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_cpu_g1
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ssienr_set
+<LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ssi_en_setf
+<LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ser_set
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dr_set
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dmardlr_set
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dmacr_pack
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ctrlr1_pack
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ctrlr0_pack
+<LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read
+</UL>
+
+<P><STRONG><a name="[28]"></a>qspi_read</STRONG> (Thumb, 204 bytes, Stack size 56 bytes, qspi.o(i.qspi_read))
+<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = qspi_read &rArr; dmac_transfer_QSPI_RX &rArr; dmac_ch0_ctrl_l_pack
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clk_gate_cpu_g1
+<LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_tfe_getf
+<LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ssienr_set
+<LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ssi_en_setf
+<LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ser_set
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dr_set
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dmardlr_set
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_dmacr_pack
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ctrlr1_pack
+<LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_ctrlr0_pack
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_read
+<LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_quad_read
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[17]"></a>sysc_cpu_clkg1_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, boot_ram.o(i.sysc_cpu_clkg1_set))
+<BR><BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;peri_gate
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_qspi_gate
+<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boot_ram_entry
+</UL>
+
+<P><STRONG><a name="[14]"></a>sysc_cpu_qspi_en_setf</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, boot_ram.o(i.sysc_cpu_qspi_en_setf))
+<BR><BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;boot_ram_entry
+</UL>
+
+<P><STRONG><a name="[f]"></a>sysc_awo_clkgen_awo_signal_1_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, awo_2400.o(i.sysc_awo_clkgen_awo_signal_1_set))
+<BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_clk_div_pbus_para_up
+</UL>
+
+<P><STRONG><a name="[5]"></a>sysc_awo_dr_16m_rcosc_en_setf</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, awo_2400.o(i.sysc_awo_dr_16m_rcosc_en_setf))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[6]"></a>sysc_awo_reg_16m_rcosc_en_setf</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, awo_2400.o(i.sysc_awo_reg_16m_rcosc_en_setf))
+<BR><BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_bootram_init
+</UL>
+
+<P><STRONG><a name="[10]"></a>sysc_awo_rf_reg_0_get</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, awo_2400.o(i.sysc_awo_rf_reg_0_get))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_open_pll
+</UL>
+
+<P><STRONG><a name="[11]"></a>sysc_awo_rf_reg_0_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, awo_2400.o(i.sysc_awo_rf_reg_0_set))
+<BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;awo_open_pll
+</UL>
+
+<P><STRONG><a name="[20]"></a>dmac_ch0_ctrl_h_pack</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dma_for_qspi.o(i.dmac_ch0_ctrl_h_pack))
+<BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+
+<P><STRONG><a name="[1f]"></a>dmac_ch0_ctrl_l_pack</STRONG> (Thumb, 44 bytes, Stack size 20 bytes, dma_for_qspi.o(i.dmac_ch0_ctrl_l_pack))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = dmac_ch0_ctrl_l_pack
+</UL>
+<BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+
+<P><STRONG><a name="[1e]"></a>dmac_ch0_dar_l_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dma_for_qspi.o(i.dmac_ch0_dar_l_set))
+<BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+
+<P><STRONG><a name="[1d]"></a>dmac_ch0_sar_l_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dma_for_qspi.o(i.dmac_ch0_sar_l_set))
+<BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+
+<P><STRONG><a name="[21]"></a>dmac_chenreg_l_pack</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, dma_for_qspi.o(i.dmac_chenreg_l_pack))
+<BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+
+<P><STRONG><a name="[22]"></a>dmac_clearblock_l_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dma_for_qspi.o(i.dmac_clearblock_l_set))
+<BR><BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX_32Bit
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dmac_transfer_QSPI_RX
+</UL>
+
+<P><STRONG><a name="[2c]"></a>qspi_ctrlr0_pack</STRONG> (Thumb, 52 bytes, Stack size 20 bytes, qspi.o(i.qspi_ctrlr0_pack))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = qspi_ctrlr0_pack
+</UL>
+<BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[2d]"></a>qspi_ctrlr1_pack</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, qspi.o(i.qspi_ctrlr1_pack))
+<BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[2f]"></a>qspi_dmacr_pack</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, qspi.o(i.qspi_dmacr_pack))
+<BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[2e]"></a>qspi_dmardlr_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, qspi.o(i.qspi_dmardlr_set))
+<BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[31]"></a>qspi_dr_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, qspi.o(i.qspi_dr_set))
+<BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[2b]"></a>qspi_ser_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, qspi.o(i.qspi_ser_set))
+<BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[2a]"></a>qspi_ssi_en_setf</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, qspi.o(i.qspi_ssi_en_setf))
+<BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[30]"></a>qspi_ssienr_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, qspi.o(i.qspi_ssienr_set))
+<BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_read_data
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_flash_quad_read_data
+</UL>
+
+<P><STRONG><a name="[32]"></a>qspi_tfe_getf</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, qspi.o(i.qspi_tfe_getf))
+<BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;qspi_read
+</UL>
+
+<P><STRONG><a name="[25]"></a>cache_reg_cache_en_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, flash_cache.o(i.cache_reg_cache_en_set))
+<BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_cache_init
+</UL>
+
+<P><STRONG><a name="[26]"></a>cache_reg_flush_en_set</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, flash_cache.o(i.cache_reg_flush_en_set))
+<BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_cache_init
+</UL>
+
+<P><STRONG><a name="[24]"></a>qspi_ssi_en_setf</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, flash_cache.o(i.qspi_ssi_en_setf))
+<BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;flash_cache_init
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

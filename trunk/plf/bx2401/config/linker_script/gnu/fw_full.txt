@@ -1,0 +1,75 @@
+MEMORY
+{
+  ROM (rx)  : ORIGIN = 0x1a00, LENGTH = 0x20000
+  RAM (rwx) : ORIGIN = 0x00100000, LENGTH = 0x34000 
+}
+
+SECTIONS
+{
+    ROM_SECTION :
+    {
+       output/rom_partial_2401.elf(.text*)
+    }>ROM
+    ISR_VECTOR :  
+    { 
+        KEEP(*(.isr_vector))
+        KEEP(*(jump_table_area))
+ 		*(.init)
+		*(.fini)       
+        *(.text*)
+        *(HARDFAULT_CODE)
+        *(.rodata*)
+        *(.eh_frame*)
+    }> RAM
+    .copy.table :
+	{
+		. = ALIGN(4);
+		__copy_table_start__ = .;
+		LONG (__etext)
+		LONG (__copy_start__)
+		LONG (__copy_end__ - __copy_start__)
+		__copy_table_end__ = .;
+	}> RAM
+    .zero.table :
+	{
+		. = ALIGN(4);
+		__zero_table_start__ = .;
+		LONG (__bss_start__)
+		LONG (__bss_end__ - __bss_start__)
+		__zero_table_end__ = .;
+	}> RAM
+    __etext = .;
+    .data : 
+    {   
+        __copy_start__ = .;
+        *(.data*) 
+        __copy_end__ = .;
+    }> RAM
+    .bss (NOLOAD):
+    {
+        __bss_start__ = .;
+        *(.bss*) 
+        *(SECTION_RTT)
+        *(COMMON)
+        __bss_end__ = .;
+    }> RAM
+    BOOT_PARAMS (NOLOAD): {*(boot_tunnel)}> RAM
+    RAM_UNLOADED (NOLOAD):
+    { 
+        . = ALIGN(4); 
+        unloaded_area_start = .;
+        . += 4;
+        unloaded_area_start_end = .;
+    }> RAM
+    .heap :
+	{
+		__end__ = .;
+		PROVIDE(end = .); 
+		*(.heap*)
+		__HeapLimit = .; 
+	}> RAM
+    NVDS_AREA 0x130000:
+    {
+        *(nvds_area)
+    }
+}

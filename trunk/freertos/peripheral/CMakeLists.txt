@@ -1,0 +1,21 @@
+
+set(SRC
+#${CMAKE_CURRENT_SOURCE_DIR}/oled_iic/oled.c
+#${CMAKE_CURRENT_SOURCE_DIR}/mems_spi/adxl362.c
+#${CMAKE_CURRENT_SOURCE_DIR}/motor/motor.c
+#${CMAKE_CURRENT_SOURCE_DIR}/temp/dht11.c
+#${CMAKE_CURRENT_SOURCE_DIR}/rgb_led/rgb_led.c
+#${CMAKE_CURRENT_SOURCE_DIR}/uart_echo/uart_echo.c
+
+)
+
+add_sources(USR_SRCS ${SRC})
+
+target_include_directories(usr_inc
+INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/oled_iic
+INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/mems_spi
+INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/motor
+INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/temp
+INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/rgb_led
+INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/uart_echo
+)

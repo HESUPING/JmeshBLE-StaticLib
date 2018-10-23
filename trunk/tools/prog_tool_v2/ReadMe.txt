@@ -1,0 +1,1 @@
+Please first copy the directory BlueX and the file JLinkDevices.xml to JLink software Installation Path, then open the *.jflash by J-Flash.
