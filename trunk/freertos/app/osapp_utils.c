@@ -78,7 +78,7 @@ void osapp_add_svc_rsp_helper(struct gattm_add_svc_rsp const * param)
     }
 }
 
-uint16_t osapp_get_att_handle_helper(osapp_svc_helper_t *svc_helper,uint8_t att_idx)
+uint16_t osapp_get_att_handle_helper(osapp_svc_helper_t const*svc_helper,uint8_t att_idx)
 {
     return svc_helper->start_hdl + att_idx + 1;
 }

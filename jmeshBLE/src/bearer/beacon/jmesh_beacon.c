@@ -1,6 +1,5 @@
 #include"jmesh_beacon.h"
-//#include "log.h"
-
+#include"../../jmesh/jmesh_print.h"
 
 void jmesh_beacon_handler(unsigned char *mac,unsigned char rssi,jmesh_beacon_t* beacon)
 {
@@ -18,6 +17,10 @@ void jmesh_beacon_handler(unsigned char *mac,unsigned char rssi,jmesh_beacon_t* 
     case(JMESH_BEACON_TYPE_ROUTING):
         //LOG(LOG_LVL_INFO,"\nmac:...%02x receive routing beacon\n",mac[5]);
         jmesh_routing_beacon_handler(mac,rssi,&beacon->routing_beacon);
+        break;
+    case(JMESH_BEACON_TYPE_CONNECT):
+				print_buffer_info(24,((unsigned char*)beacon+1),"reaceived beacon:");
+        //jmesh_connect_beacon_handler(mac,rssi,&beacon->connect_beacon);
         break;
     }
 }

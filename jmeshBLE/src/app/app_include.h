@@ -12,7 +12,7 @@
 #include"realcomm/realcomm_client.h"
 #include"realcomm/realcomm_config.h"
 
-#include"test_app_server.h"
-#include"test_app_client.h"
+#include"test_app/test_app_server.h"
+#include"test_app/test_app_client.h"
 
 

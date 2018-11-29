@@ -26,28 +26,6 @@ void* os_queue_pop(os_queue_t* q)
     q->item_num--;
     return item;
 }
-/*
-void os_queue_push2(os_queue_t* q, void* item)
-{
-    if (os_queue_is_full(q)){
-        os_queue_pop2(q);
-    }
-
-    memcpy(q->zone + ((q->head + q->item_num) % q->queue_size) * os_queue_item_align_size(q->item_size), &item, sizeof(void*));
-    q->item_num++;
-}
-
-void* os_queue_pop2(os_queue_t* q)
-{
-    void* item;
-    if (os_queue_is_empty(q)){
-        return NULL;
-    }
-    memcpy(&item, q->zone + q->head*os_queue_item_align_size(q->item_size), sizeof(void*));
-    q->item_num--;
-    return item;
-}
-*/
 
 int os_queue_is_in(os_queue_t* q,void* item)
 {

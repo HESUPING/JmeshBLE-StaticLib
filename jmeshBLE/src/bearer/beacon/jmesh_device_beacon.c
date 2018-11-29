@@ -4,7 +4,7 @@
 #include"../../onchip_system/os_timer_event.h"
 #include"../../jmesh/jmesh_pdu.h"
 #include"../adv/jmesh_adv.h"
-
+#include"../../jmesh/jmesh_print.h"
 static os_timer_event_t device_beacon_timer;
 static unsigned short device_beacon_send_times;
 
@@ -18,9 +18,9 @@ static void send_device_beacon(void){
             return;
         }
     }
-    os_timer_event_reset(&device_beacon_timer);
     os_timer_event_set(&device_beacon_timer,JMESH_DEVICE_BEACON_INTERVAL_S*1000+(rand()/*+adv_rssi*/)%1000,(os_timer_event_caller_t)send_device_beacon,NULL);   
 		if(NULL==(pdu=jmesh_pdu_new(sizeof(jmesh_device_beacon_t)+JMESH_BEACON_HEAD_SIZE))){
+				print_info("pdu malloc failed!");
         return;
     }
     beacon=(jmesh_beacon_t*)pdu->adv.para;

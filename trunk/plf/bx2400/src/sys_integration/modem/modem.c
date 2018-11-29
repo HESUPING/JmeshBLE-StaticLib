@@ -224,7 +224,7 @@ void modem_init()
     case BX2400_B1:
     case BX2400_B2:
     case BX2400_B3:
-        ble_mdm_vco_stb_time_setf(0x5); // A1
+        ble_mdm_vco_stb_time_setf(0x3); // A1
         break;
     default:
 //        BX_ASSERT(0);

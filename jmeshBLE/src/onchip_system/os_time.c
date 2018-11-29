@@ -45,7 +45,7 @@ os_time_t os_time_ticks(void)
 
 os_time_t os_time_ticks_to_ms(os_time_t ticks)
 {
-    return 1000*(ticks/OS_TICKS_FREQUENCY);
+    return ticks*(1000/OS_TICKS_FREQUENCY);
 }
 
 os_time_t os_time_ms_to_ticks(os_time_t ms)

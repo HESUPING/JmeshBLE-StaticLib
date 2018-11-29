@@ -27,7 +27,7 @@ void osapp_add_svc_req_helper(osapp_svc_helper_t *svc_helper,uint8_t num,void (*
 
 void osapp_add_svc_rsp_helper(struct gattm_add_svc_rsp const * param);
 
-uint16_t osapp_get_att_handle_helper(osapp_svc_helper_t *svc_helper,uint8_t att_idx);
+uint16_t osapp_get_att_handle_helper(osapp_svc_helper_t const *svc_helper,uint8_t att_idx);
 
 osapp_svc_helper_t *osapp_get_svc_helper_ptr(uint16_t handle);
 

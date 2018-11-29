@@ -29,6 +29,11 @@ void *ahi_msg_alloc(ke_msg_id_t const id, ke_task_id_t const dest_id, uint16_t c
     return param_ptr;
 }
 
+void ahi_msg_free(void *ptr)
+{
+    vPortFree(ahi_param2msg(ptr));
+}
+
 void *usr_msg_alloc(uint16_t length)
 {
     return pvPortMalloc(length);
@@ -50,22 +55,33 @@ void *hci_data_alloc(uint16_t handle,uint8_t pb_flag,uint8_t bc_flag,uint16_t da
     return data->param;
 }
 
-static void msg_send(AHI_MSGBOX_t *msg_box,uint32_t xTicksToWait)
+static void msg_send(QueueHandle_t q,AHI_MSGBOX_t *msg_box,uint32_t xTicksToWait)
 {
-    if(xQueueSend(osapp_task_env.queue_ptr->cmd_q,msg_box,xTicksToWait)!=pdPASS)
+    if(xQueueSend(q,msg_box,xTicksToWait)!=pdPASS)
     {
         BX_ASSERT(0);
     }
 }
 
-static void msg_send_isr(AHI_MSGBOX_t *msg_box)
+static void msg_send_isr(QueueHandle_t q,AHI_MSGBOX_t *msg_box)
 {
-    BaseType_t ret = xQueueSendFromISR(osapp_task_env.queue_ptr->cmd_q,msg_box,NULL);
+    BaseType_t ret = xQueueSendFromISR(q,msg_box,NULL);
     if(ret!=pdPASS)
     {
         BX_ASSERT(0);
     }
     portYIELD_FROM_ISR(pdTRUE);
+}
+
+static void msg_send_to_ble_task(AHI_MSGBOX_t *msg_box,uint32_t xTicksToWait)
+{
+    msg_send(osapp_task_env.queue_ptr->cmd_q,msg_box,xTicksToWait);
+}
+
+static void msg_send_to_ble_task_isr(AHI_MSGBOX_t *msg_box)
+{
+    msg_send_isr(osapp_task_env.queue_ptr->cmd_q,msg_box);
+
 }
 
 void osapp_ahi_msg_send(void *param_ptr,uint16_t param_length,uint32_t xTicksToWait)
@@ -75,7 +91,7 @@ void osapp_ahi_msg_send(void *param_ptr,uint16_t param_length,uint32_t xTicksToW
         .len = param_length + sizeof(AHI_MSG_t) - sizeof(uint32_t),
         .indicator = AHI_KE_MSG_TYPE,
     };
-    msg_send(&msg_box,xTicksToWait);
+    msg_send_to_ble_task(&msg_box,xTicksToWait);
 }
 
 void osapp_ahi_msg_send_isr(void * param_ptr, uint16_t param_length)
@@ -85,7 +101,7 @@ void osapp_ahi_msg_send_isr(void * param_ptr, uint16_t param_length)
         .len = param_length + sizeof(AHI_MSG_t) - sizeof(uint32_t),
         .indicator = AHI_KE_MSG_TYPE,
     };
-    msg_send_isr(&msg_box);
+    msg_send_to_ble_task_isr(&msg_box);
 }
 
 int32_t osapp_msg_build_send(void *param_ptr,uint16_t param_length)
@@ -101,7 +117,7 @@ void osapp_hci_cmd_send(void *param_ptr,uint16_t param_length,uint32_t xTicksToW
         .len = param_length + offsetof(hci_cmd_t,param),
         .indicator = HCI_CMD_MSG_TYPE,
     };
-    msg_send(&msg_box,xTicksToWait);
+    msg_send_to_ble_task(&msg_box,xTicksToWait);
 }
 
 void osapp_hci_cmd_send_isr(void *param_ptr,uint16_t param_length)
@@ -111,7 +127,7 @@ void osapp_hci_cmd_send_isr(void *param_ptr,uint16_t param_length)
         .len = param_length + offsetof(hci_cmd_t,param),
         .indicator = HCI_CMD_MSG_TYPE,
     };
-    msg_send_isr(&msg_box);
+    msg_send_to_ble_task_isr(&msg_box);
 }
 
 void osapp_hci_data_send(void *param_ptr,uint16_t param_length,uint32_t xTicksToWait)
@@ -121,7 +137,7 @@ void osapp_hci_data_send(void *param_ptr,uint16_t param_length,uint32_t xTicksTo
         .len = param_length + offsetof(hci_data_t,param),
         .indicator = HCI_ACL_MSG_TYPE,
     };
-    msg_send(&msg_box,xTicksToWait);
+    msg_send_to_ble_task(&msg_box,xTicksToWait);
 }
 
 void osapp_hci_data_send_isr(void *param_ptr,uint16_t param_length)
@@ -131,7 +147,27 @@ void osapp_hci_data_send_isr(void *param_ptr,uint16_t param_length)
         .len = param_length + offsetof(hci_data_t,param),
         .indicator = HCI_ACL_MSG_TYPE,
     };
-    msg_send_isr(&msg_box);
+    msg_send_to_ble_task_isr(&msg_box);
+}
+
+void osapp_usr_msg_send(void *param_ptr,uint16_t param_length,uint32_t xTicksToWait)
+{
+    AHI_MSGBOX_t msg_box ={
+        .pmsg = param_ptr,
+        .len = param_length,
+        .indicator = USR_DEF_MSG_TYPE,
+    };
+    msg_send(osapp_task_env.queue_ptr->rsp_q,&msg_box,xTicksToWait);
+}
+
+void osapp_usr_msg_send_isr(void *param_ptr,uint16_t param_length)
+{
+    AHI_MSGBOX_t msg_box ={
+        .pmsg = param_ptr,
+        .len = param_length,
+        .indicator = USR_DEF_MSG_TYPE,
+    };
+    msg_send_isr(osapp_task_env.queue_ptr->rsp_q,&msg_box);
 }
 
 static void osapp_ahi_msg_rx(AHI_MSG_t *msg)

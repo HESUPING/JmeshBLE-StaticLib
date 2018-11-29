@@ -67,43 +67,43 @@ int config_default_ttl_set_server_callback(unsigned char ttl)
 int config_gatt_proxy_get_server_callback(void)
 {
 /*
-    ret_buffer[0]=jmesh_state_get_gatt_proxy();
+    ret_buffer[0]=jmesh_get_proxy_feature();
 */    return 0 ;
 }
 
 int config_gatt_proxy_set_server_callback(unsigned char proxy)
 {
 /*
-    jmesh_state_set_gatt_proxy(data[0]);
-    ret_buffer[0]=jmesh_state_get_gatt_proxy();
+    jmesh_set_proxy_feature(data[0]);
+    ret_buffer[0]=jmesh_get_proxy_feature();
 */    return 0 ;
 }
 
 int config_friend_get_server_callback(void)
 {
 /*
-    ret_buffer[0]=jmesh_state_get_friend();
+    ret_buffer[0]=jmesh_get_friend_feature();
 */    return 0;
 }
 int config_friend_set_server_callback(unsigned char friend)
 {
 /*
-    jmesh_state_set_friend(data[0]);
-    ret_buffer[0]=jmesh_state_get_friend();
+    jmesh_set_friend_feature(data[0]);
+    ret_buffer[0]=jmesh_get_friend_feature();
 */    return 0;
 }
 
 int config_relay_get_server_callback(void)
 {
 /*
-    ret_buffer[0]=jmesh_state_get_relay();
+    ret_buffer[0]=jmesh_get_relay_feature();
 */    return 0;
 }
 int config_relay_set_server_callback(unsigned char relay)
 {
 /*
-    jmesh_state_set_relay(data[0]);
-    ret_buffer[0]=jmesh_state_get_relay();
+    jmesh_set_relay_feature(data[0]);
+    ret_buffer[0]=jmesh_get_relay_feature();
 */    return 0;
 }
 

@@ -468,7 +468,7 @@ void rf_reg_settings_init_mp_GitWiz()
 
     rf_setPA_0dbm();
 }
-
+//#define PA_8DBM_ADV
 void rf_reg_settings_init_mp()
 {
     hwp_rf_reg->rf_reg_0.freq_pulling = 1;
@@ -656,5 +656,10 @@ void rf_reg_settings_init_mp()
     hwp_rf_reg->rf_reg_f.Prescaler_inv_Sync = 0;
     hwp_rf_reg->rf_reg_f.Xtal_32MHz_inv_Sync= 0;
 
+
+#ifndef PA_8DBM_ADV
     rf_setPA_0dbm();
+#else
+		rf_setPA_8dbm();
+#endif
 }

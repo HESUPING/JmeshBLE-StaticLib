@@ -61,7 +61,7 @@
 #define APP_DIS_PNP_ID               ("\x02\x5E\x04\x40\x00\x00\x03")
 #define APP_DIS_PNP_ID_LEN           (7)
 #ifdef ENABLE_UART
-app_uart_inst_t uart_inst = UART_INSTANCE(0);  /**< UART0 instance. */
+static app_uart_inst_t uart_inst = UART_INSTANCE(0);  /**< UART0 instance. */
 #endif
 static int32_t osapp_reset()
 {
@@ -185,18 +185,12 @@ static void osapp_device_ready_ind_handler(ke_msg_id_t const msgid, void const *
     osapp_reset();
 
     #ifdef ENABLE_UART
-    app_uart_comm_params_t uart_parm =
-    {
-        .rx_pin_no = 13,
-        .tx_pin_no = 12,
-        .rts_pin_no = 21,
-        .cts_pin_no = 20,
-        .flow_control = APP_UART_FLOW_CONTROL_DISABLED,
-        .use_parity = 0,
-        .priority = APP_IRQ_PRIORITY_MID,
-        .baud_rate = UART_BAUDRATE_115200
-    };
-    app_uart_init(&uart_inst, &uart_parm);
+    uart_inst.param.baud_rate = UART_BAUDRATE_9600;
+    uart_inst.param.rx_pin_no = 13;
+    uart_inst.param.tx_pin_no = 12;
+    uart_inst.param.tx_dma = 1;
+    uart_inst.param.rx_dma = 1;
+    app_uart_init(&uart_inst.inst);
     #endif
 }
 

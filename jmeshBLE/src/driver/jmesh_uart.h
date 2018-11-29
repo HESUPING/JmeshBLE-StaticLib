@@ -42,5 +42,7 @@ extern void jmesh_uart_stop(JMESH_UART_NAME_T uart);
 extern void jmesh_uart_send(JMESH_UART_NAME_T uart, unsigned short length, unsigned char *data);
 extern int jmesh_uart_baudrate_set(unsigned long baudrate);
 int jmesh_uart_baudrate_set(unsigned long baudrate);
+signed char baudrate_to_enum(unsigned long baudrate);
+int enum_to_baudrate(unsigned char baud_enum);
 
 #endif // UART_H

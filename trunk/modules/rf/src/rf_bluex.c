@@ -108,7 +108,8 @@ void rf_init(struct rwip_rf_api *api)
     case BX2400_B1:
     case BX2400_B2:
     case BX2400_B3:
-        ble_txpwrup0_setf(0x74); // A1
+        ble_txpwrup0_setf(0x76); // A1
+        ble_rxpwrup0_setf(0x80);
         break;        
     }
 

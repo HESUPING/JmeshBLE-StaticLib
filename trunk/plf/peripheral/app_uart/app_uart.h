@@ -189,7 +189,7 @@ bool app_uart_flow_off(periph_inst_handle_t hdl);
 
 
 void app_uart_isr(app_uart_inst_t *inst);
-void uart_set_divisor(reg_uart_t *reg,uint16_t divisor);
+
 #endif
 /** @}*/
 

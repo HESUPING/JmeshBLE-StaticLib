@@ -41,9 +41,9 @@
 //#define CFG_PRF_PASPS  
 #define CFG_PRF_BXOTAS
 
-#define BLE_JMESH_PROV_S
-#define BLE_JMESH_PROV_C
+//#define BLE_JMESH_PROV_S
+//#define BLE_JMESH_PROV_C
 
-#define BLE_JMESH_APP_S
-#define BLE_JMESH_APP_C
+//#define BLE_JMESH_APP_S
+//#define BLE_JMESH_APP_C
 #endif

@@ -19,7 +19,8 @@ typedef struct
     void (*callback)();
     uint8_t idx;
     uint8_t edge: 1,
-                  polarity: 1;
+            polarity: 1,
+            both_edge: 1;
 }app_gpio_int_cfg_t;
 
 typedef struct

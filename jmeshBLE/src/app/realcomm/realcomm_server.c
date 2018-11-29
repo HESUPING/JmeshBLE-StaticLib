@@ -24,11 +24,11 @@ void realcomm_server_init(void){
 
 static void realcomm_server_config_handler(unsigned short src,unsigned short dst,unsigned short nid,unsigned short aid,unsigned short len,unsigned char* data)
 {
-		unsigned short baud = 0;
+		unsigned char baud = 0;
 		unsigned char  parity = 0 ;
-    if(len==3){
-				JMESH_BIG_ENDIAN_PICK2(baud,data);
-				parity = data[2];
+    if(len==2){
+				baud = data[0];
+				parity = data[1];
         if(1==realcomm_server_config_callback(baud,parity)){
             jmesh_access_send(src,nid,aid,&realcomm_server,message_realcomm_config_server_status,len,data);
         }

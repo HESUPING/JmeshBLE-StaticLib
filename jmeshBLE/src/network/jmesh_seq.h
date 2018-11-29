@@ -15,7 +15,7 @@ void jmesh_seq_add(void);
 void jmesh_seq_init(void);
 void jmesh_seq_clear(void);
 void jmesh_seq_remove(unsigned short src);
-
+void jmesh_seq_list_init(void);
 void jmesh_seq_set(unsigned short src,unsigned char ivi,unsigned long seq);
 int jmesh_seq_is_valid(unsigned short src,unsigned char ivi,unsigned char active_ivi,unsigned long seq);
 void jmesh_seq_set_local(unsigned long seq);

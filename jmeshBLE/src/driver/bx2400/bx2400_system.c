@@ -37,7 +37,7 @@ void jmesh_thread_start(void(*handler)(void)){
 
 void jmesh_random_init(int seed)
 {
-    srand(seed);
+//    srand(seed);
 }
 int jmesh_random_get(int min,int max){
     int r;

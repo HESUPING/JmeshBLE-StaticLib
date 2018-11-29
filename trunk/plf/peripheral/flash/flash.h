@@ -1,5 +1,10 @@
 /** @addtogroup FLASH
  *    @ingroup PERIPHERAL
+ *
+ *    All flash operation functions works in blocking mode, and the global interrupt is disabled when necessarily.
+ *    So be aware of the time consumption of calling flash APIs. Programming a page of 256 bytes will typically 
+ *    consume serveral hundreds of us. Erasing a 4KB Sector will typically consume several tens of ms. For detailed
+ *    timing specification, please refer to the specification of the SPI Flash on PCB board.
  *  @{
  */
 #ifndef FLASH_H_

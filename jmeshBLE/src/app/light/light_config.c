@@ -5,7 +5,7 @@
 #include"../../driver/jmesh_system.h"
 #include"../../access/jmesh_access.h"
 #include"../../access/jmesh_access_callback.h"
-
+#include"../../jmesh/jmesh_print.h"
 #include"stdio.h"
 
 static void light_config_client_button_status_handler(unsigned short src,unsigned short dst,unsigned short nid,unsigned short aid,unsigned short len,unsigned char* data);
@@ -45,7 +45,7 @@ static void light_config_server_scene_status_handler(unsigned short src,unsigned
 }
 
 void light_config_init(void){
-    jmesh_element_add_model(&element_app,&light_config);
+    jmesh_element_add_model(&element_app,&light_config);	
 }
 
 

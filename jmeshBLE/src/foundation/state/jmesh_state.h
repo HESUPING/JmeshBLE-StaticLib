@@ -27,23 +27,10 @@ enum{
 void jmesh_mac_init(void);
 void jmesh_mac_get(jmesh_mac_t mac);
 void jmesh_mac_set(jmesh_mac_t mac);
-void jmesh_seq_init(void);
-void jmesh_state_add_seq(void);
-unsigned long jmesh_state_get_seq(void);
-void jmesh_state_clear_seq(void);
-void jmesh_state_set_seq(unsigned long seq);
-void jmesh_default_ttl_init(void);
-void jmesh_default_ttl_set(unsigned char default_ttl);
-unsigned char jmesht_default_ttl_get(void);
+
 void jmesh_state_init_flags(void);
-void jmesh_state_set_relay(unsigned char relay_state);
-unsigned char jmesh_state_get_relay(void);
 int jmesh_state_set_secure_network_beacon(unsigned char secure_network_beacon_state);
 unsigned char jmesh_state_get_secure_network_beacon(void);
-void jmesh_state_set_gatt_proxy(unsigned char gatt_proxy_state);
-unsigned char jmesh_state_get_gatt_proxy(void);
-void jmesh_state_set_friend(unsigned char state);
-unsigned char jmesh_state_get_friend(void);
 int jmesh_composition_page_data_get(unsigned char* data);
 
 #endif

@@ -1,0 +1,27 @@
+#ifndef JMESH_APP_SVC_H
+#define JMESH_APP_SVC_H
+#include"jmesh_prov_svc.h"
+
+enum{
+    JMESHS_IDX_MESH_SERIAL_TRANSMIT_CHAR,
+    JMESHS_IDX_MESH_SERIAL_TRANSMIT_VAL,
+    JMESHS_IDX_MESH_SERIAL_TRANSMIT_NTF_CFG,
+
+    JMESHS_IDX_MESH_APP_ELEC_CHAR,
+    JMESHS_IDX_MESH_APP_ELEC_VAL,
+    JMESHS_IDX_MESH_APP_ELEC_NTF_CFG,
+
+    JMESHS_IDX_MESH_APP_WATER_CHAR,
+    JMESHS_IDX_MESH_APP_WATER_VAL,
+    JMESHS_IDX_MESH_APP_WATER_NTF_CFG,
+
+    JMESHS_IDX_MESH_APP_LIGHT_CHAR,
+    JMESHS_IDX_MESH_APP_LIGHT_VAL,
+    JMESHS_IDX_MESH_APP_LIGHT_NTF_CFG,
+
+    JMESHS_IDX_APP_NB,
+};
+extern struct gattm_svc_desc const jmesh_app_svc_desc ;
+extern struct gattm_att_desc const jmesh_app_svc_att_db[JMESHS_IDX_APP_NB];
+void jmesh_add_app_svc();
+#endif

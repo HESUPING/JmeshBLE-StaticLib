@@ -28,6 +28,9 @@ void jmesh_gpio_init(JMESH_GPIO_NAME_T gpio, int mode){
         case JMESH_INPUT_6:
             pin_num=1;
             break;
+        case POWER_LIGHT:
+            pin_num=22;
+            break;			
         default:
             return;
     }
@@ -68,6 +71,9 @@ extern void jmesh_gpio_interrupt_init(JMESH_GPIO_NAME_T gpio,int mode,jmesh_gpio
         case JMESH_INPUT_6:
             pin_num=1;
             break;
+        case POWER_LIGHT:
+            pin_num=22;
+            break;			
         default:
             return;
     }
@@ -114,6 +120,9 @@ void jmesh_gpio_set(JMESH_GPIO_NAME_T gpio, int value){
         case JMESH_INPUT_6:
             pin_num=1;
             break;
+        case POWER_LIGHT:
+            pin_num=22;
+            break;				
         default:
             return;
     }
@@ -154,6 +163,9 @@ int jmesh_gpio_get(JMESH_GPIO_NAME_T gpio){
         case JMESH_INPUT_6:
             pin_num=1;
             break;
+        case POWER_LIGHT:
+            pin_num=22;
+            break;				
         default:
             return -1;
     }

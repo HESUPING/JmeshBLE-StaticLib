@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>HW_BX_VERSION=2400</Define>
               <Undefine></Undefine>
-              <IncludePath>..\;..\freertos;..\freertos\app;..\freertos\src;..\freertos\src\include;..\freertos\src\portable;..\freertos\src\portable\ARMCC\ARM_CM0;..\ip\ahi\api;..\ip\ble\hl\api;..\ip\ble\hl\inc;..\ip\ble\hl\src\gap;..\ip\ble\hl\src\gap\gapc;..\ip\ble\hl\src\gap\gapm;..\ip\ble\hl\src\gap\smpc;..\ip\ble\hl\src\gap\smpm;..\ip\ble\hl\src\gatt;..\ip\ble\hl\src\gatt\attc;..\ip\ble\hl\src\gatt\attm;..\ip\ble\hl\src\gatt\atts;..\ip\ble\hl\src\gatt\gattc;..\ip\ble\hl\src\gatt\gattm;..\ip\ble\hl\src\l2c;..\ip\ble\hl\src\l2c\l2cc;..\ip\ble\hl\src\l2c\l2cm;..\ip\ble\hl\src\prf;..\ip\ble\hl\src\rwble_hl;..\ip\ea\api;..\ip\em\api;..\ip\hci\api;..\ip\hci\src;..\modules\app\api;..\modules\app\src;..\modules\common\api;..\modules\dbg\api;..\modules\display\api;..\modules\display\src;..\modules\ecc_p256\api;..\modules\h4tl\api;..\modules\ke\api;..\modules\ke\src;..\modules\nvds\api;..\modules\rf\api;..\modules\rwip\api;..\plf\inc;..\plf\inc\cmsis;..\plf\bx_debug;..\plf\bx_debug\log;..\plf\bx_debug\log\RTT;..\ip\ble\profiles\anp;..\ip\ble\profiles\anp\anpc\api;..\ip\ble\profiles\anp\anpc\src;..\ip\ble\profiles\anp\anps\api;..\ip\ble\profiles\anp\anps\src;..\ip\ble\profiles\bas;..\ip\ble\profiles\bas\basc\api;..\ip\ble\profiles\bas\basc\src;..\ip\ble\profiles\bas\bass\api;..\ip\ble\profiles\bas\bass\src;..\ip\ble\profiles\blp;..\ip\ble\profiles\blp\blpc\api;..\ip\ble\profiles\blp\blpc\src;..\ip\ble\profiles\blp\blps\api;..\ip\ble\profiles\blp\blps\src;..\ip\ble\profiles\bxota;..\ip\ble\profiles\bxota\bxotac\api;..\ip\ble\profiles\bxota\bxotac\src;..\ip\ble\profiles\bxota\bxotas\api;..\ip\ble\profiles\bxota\bxotas\src;..\ip\ble\profiles\cpp;..\ip\ble\profiles\cpp\cppc\api;..\ip\ble\profiles\cpp\cppc\src;..\ip\ble\profiles\cpp\cpps\api;..\ip\ble\profiles\cpp\cpps\src;..\ip\ble\profiles\cscp;..\ip\ble\profiles\cscp\cscpc\api;..\ip\ble\profiles\cscp\cscpc\src;..\ip\ble\profiles\cscp\cscps\api;..\ip\ble\profiles\cscp\cscps\src;..\ip\ble\profiles\dis;..\ip\ble\profiles\dis\disc\api;..\ip\ble\profiles\dis\disc\src;..\ip\ble\profiles\dis\diss\api;..\ip\ble\profiles\dis\diss\src;..\ip\ble\profiles\find;..\ip\ble\profiles\find\findl\api;..\ip\ble\profiles\find\findl\src;..\ip\ble\profiles\find\findt\api;..\ip\ble\profiles\find\findt\src;..\ip\ble\profiles\glp;..\ip\ble\profiles\glp\glpc\api;..\ip\ble\profiles\glp\glpc\src;..\ip\ble\profiles\glp\glps\api;..\ip\ble\profiles\glp\glps\src;..\ip\ble\profiles\hrp;..\ip\ble\profiles\hrp\hrpc\api;..\ip\ble\profiles\hrp\hrpc\src;..\ip\ble\profiles\hrp\hrps\api;..\ip\ble\profiles\hrp\hrps\src;..\ip\ble\profiles\htp;..\ip\ble\profiles\htp\htpc\api;..\ip\ble\profiles\htp\htpc\src;..\ip\ble\profiles\htp\htpt\api;..\ip\ble\profiles\htp\htpt\src;..\ip\ble\profiles\lan;..\ip\ble\profiles\lan\lanc\api;..\ip\ble\profiles\lan\lanc\src;..\ip\ble\profiles\lan\lans\api;..\ip\ble\profiles\lan\lans\src;..\ip\ble\profiles\pasp;..\ip\ble\profiles\pasp\paspc\api;..\ip\ble\profiles\pasp\paspc\src;..\ip\ble\profiles\pasp\pasps\api;..\ip\ble\profiles\pasp\pasps\src;..\ip\ble\profiles\prox;..\ip\ble\profiles\prox\proxm\api;..\ip\ble\profiles\prox\proxm\src;..\ip\ble\profiles\prox\proxr\api;..\ip\ble\profiles\prox\proxr\src;..\ip\ble\profiles\rscp;..\ip\ble\profiles\rscp\rscpc\api;..\ip\ble\profiles\rscp\rscpc\src;..\ip\ble\profiles\rscp\rscps\api;..\ip\ble\profiles\rscp\rscps\src;..\ip\ble\profiles\scpp;..\ip\ble\profiles\scpp\scppc\api;..\ip\ble\profiles\scpp\scppc\src;..\ip\ble\profiles\scpp\scpps\api;..\ip\ble\profiles\scpp\scpps\src;..\ip\ble\profiles\tip;..\ip\ble\profiles\tip\tipc\api;..\ip\ble\profiles\tip\tipc\src;..\ip\ble\profiles\tip\tips\api;..\ip\ble\profiles\tip\tips\src;..\ip\ble\profiles\hogp;..\ip\ble\profiles\hogp\hogpbh\api;..\ip\ble\profiles\hogp\hogpbh\src;..\ip\ble\profiles\hogp\hogpd\api;..\ip\ble\profiles\hogp\hogpd\src;..\ip\ble\profiles\hogp\hogprh\api;..\ip\ble\profiles\hogp\hogprh\src;..\ip\ble\ll\src\rwble;..\ip\ble\ll\src\em;..\ip\ble\ll\src\llc;..\ip\ble\ll\src\lld;..\ip\ble\ll\src\llm;..\plf\peripheral\;..\plf\peripheral\swint;..\plf\peripheral\ssi;..\plf\peripheral\ssi\app_qspi;..\plf\peripheral\ssi\app_spi;..\plf\peripheral\rtc;..\plf\peripheral\led;..\plf\peripheral\hw_ecc;..\plf\peripheral\flash;..\plf\peripheral\app_uart;..\plf\peripheral\sleep_recovery;..\plf\peripheral\app_dmac;..\plf\peripheral\app_hwecc;..\plf\bx2400\src;..\plf\bx2400\src\arch;..\plf\bx2400\src\arch\boot\armcc;..\plf\bx2400\src\arch\compiler\armcc;..\plf\bx2400\src\arch\ll\;..\plf\bx2400\src\build\ble-full\reg\fw;..\plf\bx2400\src\jmp_table;..\plf\bx2400\src\patch_list;..\plf\bx2400\src\sleep;..\plf\bx2400\src\inc;..\plf\bx2400\src\arch\boot\armcc;..\plf\bx2400\src\peripheral_integration\cache;..\plf\bx2400\src\peripheral_integration\dmac;..\plf\bx2400\src\peripheral_integration\hwecc;..\plf\bx2400\src\peripheral_integration\qspi;..\plf\bx2400\src\peripheral_integration\rtc;..\plf\bx2400\src\peripheral_integration\uart;..\plf\bx2400\src\sys_integration\clk_gate;..\plf\bx2400\src\sys_integration\modem;..\plf\bx2400\src\sys_integration\patch;..\plf\bx2400\src\sys_integration\periph_mngt;..\plf\bx2400\src\sys_integration\pshare;..\plf\bx2400\src\sys_integration\rc_calib;..\plf\bx2400\src\sys_integration\rst_gen;..\plf\bx2400\src\sys_integration\swint;..\plf\bx2400\src\sys_integration\sysctrl;..\plf\bx2400\src\peripheral_integration\spi;..\plf\bx_debug\internal_log;..\plf\peripheral\app_gpio;..\plf\peripheral\flash_cache;..\..\jmeshBLE\src\app\gate;..\..\jmeshBLE\src\app\light;..\..\jmeshBLE\src\app\meter;..\..\jmeshBLE\src\app\realcomm;..\..\jmeshBLE\src\app\water;..\..\jmeshBLE\src\foundation\state;..\..\jmeshBLE\src\access;..\..\jmeshBLE\src\upper;..\..\jmeshBLE\src\upper\control;..\..\jmeshBLE\src\upper\lowpower;..\..\jmeshBLE\src\upper\routing;..\..\jmeshBLE\src\lower;..\..\jmeshBLE\src\network;..\..\jmeshBLE\src\bearer\adv;..\..\jmeshBLE\src\bearer\beacon;..\..\jmeshBLE\src\bearer\gatt;..\..\jmeshBLE\src\bearer\provisioning;..\..\jmeshBLE\src\driver;..\..\jmeshBLE\src\driver\bx2400;..\..\jmeshBLE\src\jmesh;..\..\jmeshBLE\src\onchip_system;..\..\jmeshBLE\src\secure;..\..\jmeshBLE\src\secure\AES_CMAC\base;..\..\jmeshBLE\src\secure\AES_CMAC\toolbox;..\..\jmeshBLE\src\secure\ECDH;..\..\jmeshBLE\src\BLE;..\..\jmeshBLE\src\foundation\config;..\..\jmeshBLE\src\foundation\cmd;..\..\jmeshBLE\src\app\realcomm;..\..\jmeshBLE\src\app\light;..\..\jmeshBLE\src\app\meter;..\plf\peripheral\app_pwm;..\plf\bx2400\src\peripheral_integration\pwm;..\..\jmeshBLE\src\app\test_app</IncludePath>
+              <IncludePath>..\;..\freertos;..\freertos\app;..\freertos\src;..\freertos\src\include;..\freertos\src\portable;..\freertos\src\portable\ARMCC\ARM_CM0;..\ip\ahi\api;..\ip\ble\hl\api;..\ip\ble\hl\inc;..\ip\ble\hl\src\gap;..\ip\ble\hl\src\gap\gapc;..\ip\ble\hl\src\gap\gapm;..\ip\ble\hl\src\gap\smpc;..\ip\ble\hl\src\gap\smpm;..\ip\ble\hl\src\gatt;..\ip\ble\hl\src\gatt\attc;..\ip\ble\hl\src\gatt\attm;..\ip\ble\hl\src\gatt\atts;..\ip\ble\hl\src\gatt\gattc;..\ip\ble\hl\src\gatt\gattm;..\ip\ble\hl\src\l2c;..\ip\ble\hl\src\l2c\l2cc;..\ip\ble\hl\src\l2c\l2cm;..\ip\ble\hl\src\prf;..\ip\ble\hl\src\rwble_hl;..\ip\ea\api;..\ip\em\api;..\ip\hci\api;..\ip\hci\src;..\modules\app\api;..\modules\app\src;..\modules\common\api;..\modules\dbg\api;..\modules\display\api;..\modules\display\src;..\modules\ecc_p256\api;..\modules\h4tl\api;..\modules\ke\api;..\modules\ke\src;..\modules\nvds\api;..\modules\rf\api;..\modules\rwip\api;..\plf\inc;..\plf\inc\cmsis;..\plf\bx_debug;..\plf\bx_debug\log;..\plf\bx_debug\log\RTT;..\ip\ble\profiles\anp;..\ip\ble\profiles\anp\anpc\api;..\ip\ble\profiles\anp\anpc\src;..\ip\ble\profiles\anp\anps\api;..\ip\ble\profiles\anp\anps\src;..\ip\ble\profiles\bas;..\ip\ble\profiles\bas\basc\api;..\ip\ble\profiles\bas\basc\src;..\ip\ble\profiles\bas\bass\api;..\ip\ble\profiles\bas\bass\src;..\ip\ble\profiles\blp;..\ip\ble\profiles\blp\blpc\api;..\ip\ble\profiles\blp\blpc\src;..\ip\ble\profiles\blp\blps\api;..\ip\ble\profiles\blp\blps\src;..\ip\ble\profiles\bxota;..\ip\ble\profiles\bxota\bxotac\api;..\ip\ble\profiles\bxota\bxotac\src;..\ip\ble\profiles\bxota\bxotas\api;..\ip\ble\profiles\bxota\bxotas\src;..\ip\ble\profiles\cpp;..\ip\ble\profiles\cpp\cppc\api;..\ip\ble\profiles\cpp\cppc\src;..\ip\ble\profiles\cpp\cpps\api;..\ip\ble\profiles\cpp\cpps\src;..\ip\ble\profiles\cscp;..\ip\ble\profiles\cscp\cscpc\api;..\ip\ble\profiles\cscp\cscpc\src;..\ip\ble\profiles\cscp\cscps\api;..\ip\ble\profiles\cscp\cscps\src;..\ip\ble\profiles\dis;..\ip\ble\profiles\dis\disc\api;..\ip\ble\profiles\dis\disc\src;..\ip\ble\profiles\dis\diss\api;..\ip\ble\profiles\dis\diss\src;..\ip\ble\profiles\find;..\ip\ble\profiles\find\findl\api;..\ip\ble\profiles\find\findl\src;..\ip\ble\profiles\find\findt\api;..\ip\ble\profiles\find\findt\src;..\ip\ble\profiles\glp;..\ip\ble\profiles\glp\glpc\api;..\ip\ble\profiles\glp\glpc\src;..\ip\ble\profiles\glp\glps\api;..\ip\ble\profiles\glp\glps\src;..\ip\ble\profiles\hrp;..\ip\ble\profiles\hrp\hrpc\api;..\ip\ble\profiles\hrp\hrpc\src;..\ip\ble\profiles\hrp\hrps\api;..\ip\ble\profiles\hrp\hrps\src;..\ip\ble\profiles\htp;..\ip\ble\profiles\htp\htpc\api;..\ip\ble\profiles\htp\htpc\src;..\ip\ble\profiles\htp\htpt\api;..\ip\ble\profiles\htp\htpt\src;..\ip\ble\profiles\lan;..\ip\ble\profiles\lan\lanc\api;..\ip\ble\profiles\lan\lanc\src;..\ip\ble\profiles\lan\lans\api;..\ip\ble\profiles\lan\lans\src;..\ip\ble\profiles\pasp;..\ip\ble\profiles\pasp\paspc\api;..\ip\ble\profiles\pasp\paspc\src;..\ip\ble\profiles\pasp\pasps\api;..\ip\ble\profiles\pasp\pasps\src;..\ip\ble\profiles\prox;..\ip\ble\profiles\prox\proxm\api;..\ip\ble\profiles\prox\proxm\src;..\ip\ble\profiles\prox\proxr\api;..\ip\ble\profiles\prox\proxr\src;..\ip\ble\profiles\rscp;..\ip\ble\profiles\rscp\rscpc\api;..\ip\ble\profiles\rscp\rscpc\src;..\ip\ble\profiles\rscp\rscps\api;..\ip\ble\profiles\rscp\rscps\src;..\ip\ble\profiles\scpp;..\ip\ble\profiles\scpp\scppc\api;..\ip\ble\profiles\scpp\scppc\src;..\ip\ble\profiles\scpp\scpps\api;..\ip\ble\profiles\scpp\scpps\src;..\ip\ble\profiles\tip;..\ip\ble\profiles\tip\tipc\api;..\ip\ble\profiles\tip\tipc\src;..\ip\ble\profiles\tip\tips\api;..\ip\ble\profiles\tip\tips\src;..\ip\ble\profiles\hogp;..\ip\ble\profiles\hogp\hogpbh\api;..\ip\ble\profiles\hogp\hogpbh\src;..\ip\ble\profiles\hogp\hogpd\api;..\ip\ble\profiles\hogp\hogpd\src;..\ip\ble\profiles\hogp\hogprh\api;..\ip\ble\profiles\hogp\hogprh\src;..\ip\ble\ll\src\rwble;..\ip\ble\ll\src\em;..\ip\ble\ll\src\llc;..\ip\ble\ll\src\lld;..\ip\ble\ll\src\llm;..\plf\peripheral\;..\plf\peripheral\swint;..\plf\peripheral\ssi;..\plf\peripheral\ssi\app_qspi;..\plf\peripheral\ssi\app_spi;..\plf\peripheral\rtc;..\plf\peripheral\led;..\plf\peripheral\hw_ecc;..\plf\peripheral\flash;..\plf\peripheral\app_uart;..\plf\peripheral\sleep_recovery;..\plf\peripheral\app_dmac;..\plf\peripheral\app_hwecc;..\plf\bx2400\src;..\plf\bx2400\src\arch;..\plf\bx2400\src\arch\boot\armcc;..\plf\bx2400\src\arch\compiler\armcc;..\plf\bx2400\src\arch\ll\;..\plf\bx2400\src\build\ble-full\reg\fw;..\plf\bx2400\src\jmp_table;..\plf\bx2400\src\patch_list;..\plf\bx2400\src\sleep;..\plf\bx2400\src\inc;..\plf\bx2400\src\arch\boot\armcc;..\plf\bx2400\src\peripheral_integration\cache;..\plf\bx2400\src\peripheral_integration\dmac;..\plf\bx2400\src\peripheral_integration\hwecc;..\plf\bx2400\src\peripheral_integration\qspi;..\plf\bx2400\src\peripheral_integration\rtc;..\plf\bx2400\src\peripheral_integration\uart;..\plf\bx2400\src\sys_integration\clk_gate;..\plf\bx2400\src\sys_integration\modem;..\plf\bx2400\src\sys_integration\patch;..\plf\bx2400\src\sys_integration\periph_mngt;..\plf\bx2400\src\sys_integration\pshare;..\plf\bx2400\src\sys_integration\rc_calib;..\plf\bx2400\src\sys_integration\rst_gen;..\plf\bx2400\src\sys_integration\swint;..\plf\bx2400\src\sys_integration\sysctrl;..\plf\bx2400\src\peripheral_integration\spi;..\plf\bx_debug\internal_log;..\plf\peripheral\app_gpio;..\plf\peripheral\flash_cache;..\..\jmeshBLE\src\app\gate;..\..\jmeshBLE\src\app\light;..\..\jmeshBLE\src\app\meter;..\..\jmeshBLE\src\app\realcomm;..\..\jmeshBLE\src\app\water;..\..\jmeshBLE\src\foundation\state;..\..\jmeshBLE\src\access;..\..\jmeshBLE\src\upper;..\..\jmeshBLE\src\upper\control;..\..\jmeshBLE\src\upper\lowpower;..\..\jmeshBLE\src\upper\routing;..\..\jmeshBLE\src\lower;..\..\jmeshBLE\src\network;..\..\jmeshBLE\src\bearer\adv;..\..\jmeshBLE\src\bearer\beacon;..\..\jmeshBLE\src\bearer\gatt;..\..\jmeshBLE\src\bearer\provisioning;..\..\jmeshBLE\src\driver;..\..\jmeshBLE\src\driver\bx2400;..\..\jmeshBLE\src\jmesh;..\..\jmeshBLE\src\onchip_system;..\..\jmeshBLE\src\secure;..\..\jmeshBLE\src\secure\AES_CMAC\base;..\..\jmeshBLE\src\secure\AES_CMAC\toolbox;..\..\jmeshBLE\src\secure\ECDH;..\..\jmeshBLE\src\BLE;..\..\jmeshBLE\src\foundation\config;..\..\jmeshBLE\src\foundation\cmd;..\..\jmeshBLE\src\app\realcomm;..\..\jmeshBLE\src\app\light;..\..\jmeshBLE\src\app\meter;..\plf\peripheral\app_pwm;..\plf\bx2400\src\peripheral_integration\pwm;..\..\jmeshBLE\src\app\test_app;..\..\jmeshBLE\src\</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1324,6 +1324,11 @@
           <GroupName>peripheral</GroupName>
           <Files>
             <File>
+              <FileName>realcomm_client_callback.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\jmeshBLE\src\app\realcomm\realcomm_client_callback.c</FilePath>
+            </File>
+            <File>
               <FileName>app_dmac.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\plf\peripheral\app_dmac\app_dmac.c</FilePath>
@@ -1397,11 +1402,6 @@
               <FileName>realcomm_client.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\jmeshBLE\src\app\realcomm\realcomm_client.c</FilePath>
-            </File>
-            <File>
-              <FileName>realcomm_client_callback.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\app\realcomm\realcomm_client_callback.c</FilePath>
             </File>
             <File>
               <FileName>realcomm_config.c</FileName>
@@ -1492,16 +1492,6 @@
               <FileName>test_app_client_callback.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\jmeshBLE\src\app\test_app\test_app_client_callback.c</FilePath>
-            </File>
-            <File>
-              <FileName>test_app_config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\app\test_app\test_app_config.c</FilePath>
-            </File>
-            <File>
-              <FileName>test_app_config_callback.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\app\test_app\test_app_config_callback.c</FilePath>
             </File>
             <File>
               <FileName>test_app_server.c</FileName>
@@ -2099,11 +2089,6 @@
               <FilePath>..\..\jmeshBLE\src\bearer\gatt\jmesh_proxy.c</FilePath>
             </File>
             <File>
-              <FileName>jmesh_proxy_config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\bearer\gatt\jmesh_proxy_config.c</FilePath>
-            </File>
-            <File>
               <FileName>jmesh_provisioning_client.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\jmeshBLE\src\bearer\provisioning\jmesh_provisioning_client.c</FilePath>
@@ -2314,34 +2299,14 @@
               <FilePath>..\..\jmeshBLE\src\BLE\BLE_adapt.c</FilePath>
             </File>
             <File>
-              <FileName>jmeshc.c</FileName>
+              <FileName>jmesh_app_svc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\BLE\jmeshc.c</FilePath>
+              <FilePath>..\..\jmeshBLE\src\BLE\jmesh_app_svc.c</FilePath>
             </File>
             <File>
-              <FileName>jmeshc_task.c</FileName>
+              <FileName>jmesh_prov_svc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\BLE\jmeshc_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>jmeshs_prov.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\BLE\jmeshs_prov.c</FilePath>
-            </File>
-            <File>
-              <FileName>jmeshs_prov_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\BLE\jmeshs_prov_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>jmeshs_app.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\BLE\jmeshs_app.c</FilePath>
-            </File>
-            <File>
-              <FileName>jmeshs_app_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\jmeshBLE\src\BLE\jmeshs_app_task.c</FilePath>
+              <FilePath>..\..\jmeshBLE\src\BLE\jmesh_prov_svc.c</FilePath>
             </File>
           </Files>
         </Group>

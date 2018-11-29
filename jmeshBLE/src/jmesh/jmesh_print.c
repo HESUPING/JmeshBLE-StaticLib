@@ -7,7 +7,20 @@
 #include <ctype.h>
 
 char sprint_buf[256] = {0};
+char sprint_cmd_buf[256] = {0};
 
+int _print_cmd(const char* fmt, ...)
+{
+	va_list args;
+	int n;
+	wait_uart_send_over();
+	va_start(args, fmt);
+	n = vsprintf(sprint_buf, fmt,args);
+	va_end(args);
+
+	jmesh_uart_send(JMESH_UART_0, strlen(sprint_buf), (unsigned char*)sprint_buf);
+	return n;
+}
 int _print(const char* fmt, ...)
 {
 	va_list args;
@@ -58,7 +71,28 @@ void HexToStr(char *pszDest, unsigned char *pbSrc, int nLen)
 
     //pszDest[nLen * 2] = '\0';
 }
-
+int _print_buffer_cmd(int len,char* data,const char* fmt, ...)
+{
+    int str_len;
+    va_list args;
+	int n;
+	wait_uart_send_over();
+	va_start(args, fmt);
+	n = vsprintf(sprint_buf, fmt,args);
+	va_end(args);
+	str_len=strlen(sprint_buf);
+	if(sprint_buf[str_len-1]=='\n'){
+        str_len--;
+	}
+	if(str_len+len*2>254){
+        len=(254-str_len)/2;
+	}
+    HexToStr(sprint_buf+str_len,(unsigned char*)data,len);
+    sprint_buf[str_len+len*2]='\n';
+    sprint_buf[str_len+len*2+1]='\0';
+		jmesh_uart_send(JMESH_UART_0, len*2+str_len+1, (unsigned char*)sprint_buf);
+	return n;
+}
 int _print_buffer(int len,char* data,const char* fmt, ...)
 {
     int str_len;

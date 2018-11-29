@@ -1,6 +1,7 @@
 #ifndef OS_CALLBACK_H
 #define OS_CALLBACK_H
 #include"os_time.h"
+#include"stdio.h"
 #include"../driver/jmesh_system.h"
 #include"../bearer/adv/jmesh_adv.h"
 #include"../jmesh/jmesh_pdu.h"
@@ -28,10 +29,10 @@
 #include"../upper/routing/jmesh_routing_table.h"
 #include"../driver/jmesh_uart.h"
 #include"../driver/jmesh_gpio.h"
-#include"stdio.h"
 #include"../foundation/state/jmesh_state.h"
 #include"../driver/jmesh_driver_config.h"
 #include"../bearer/provisioning/jmesh_provisioning_server.h"
+#include"../network/jmesh_seq.h"
 void os_start_callback(void);
 void os_inited_callback(void);
 void os_cycle_callback(void);

@@ -7,6 +7,10 @@
 #include"../jmesh_uart_callback.h"
 #include"string.h"
 #include"osapp_config.h"
+#include"../../jmesh/jmesh_save_define.h"
+#include"../../jmesh/jmesh_save.h"
+#include"../../jmesh/jmesh_print.h"
+extern void uart_set_divisor(reg_uart_t *reg,uint16_t divisor);
 
 #define UART_CACHE_BUFFER_SIZE 150
 #define UART_RECV_INTERVAL_TIMEOUT_MS 50
@@ -121,6 +125,8 @@ void jmesh_uart_init(JMESH_UART_NAME_T uart, JMESH_UART_BAUD_T baud, JMESH_UART_
         default:
             return;
     }
+//		jmesh_save_write(JMESH_SAVE_BAUTRATE,sizeof(unsigned char),(unsigned char*)&baud);
+
     switch(parity)
     {
         case JMESH_UART_PARITY_EVEN:
@@ -201,26 +207,92 @@ void jmesh_uart_send(JMESH_UART_NAME_T uart, unsigned short length, unsigned cha
 //        }
 //    }
 }
-
-int jmesh_uart_baudrate_set(unsigned long baudrate)
+int enum_to_baudrate(unsigned char baud_enum)
 {
+		if(baud_enum > JMESH_UART_BAUD_115200) return -1;
+		switch(baud_enum)
+		{
+				case JMESH_UART_BAUD_1200 :
+					return 1200;
+				case JMESH_UART_BAUD_2400 :
+					return 2400;
+				case JMESH_UART_BAUD_4800:
+					return 4800;
+				case JMESH_UART_BAUD_9600:
+					return 9600;
+				case JMESH_UART_BAUD_19200:
+					return 19200;
+				case JMESH_UART_BAUD_38400:
+					return 38400;
+				case JMESH_UART_BAUD_115200:
+					return 115200;
+				default :
+					return -1;
+		}		
+}
+signed char baudrate_to_enum(unsigned long baudrate)
+{
+		
 			switch(baudrate)
 			{
 				case 1200 :
-						uart_set_divisor(uart0.reg,(uint16_t)UART_BAUDRATE_1200&0x3ff);
+					return JMESH_UART_BAUD_1200;					
+				case 2400 :
+					return JMESH_UART_BAUD_2400;
+				case 4800 :
+					return JMESH_UART_BAUD_4800;
+				case 9600 :
+					return JMESH_UART_BAUD_9600;
+				case 19200 :
+					return JMESH_UART_BAUD_19200;
+				case 38400 :
+					return JMESH_UART_BAUD_38400;
+				case 115200 :
+					return JMESH_UART_BAUD_115200;
+				default :
+						return -1;
+			}	
+}
+int jmesh_uart_baudrate_set(unsigned long baudrate)
+{
+			unsigned char enum_baud = 0;
+			vTaskDelay(20);
+			switch(baudrate)
+			{
+				case 1200 :
+						enum_baud = JMESH_UART_BAUD_1200;
+						uart_set_divisor(uart0.reg,(uint16_t)UART_BAUDRATE_1200&0x3ff);		
+						
 				break;
 				case 2400 :
+						enum_baud = JMESH_UART_BAUD_2400;
 						uart_set_divisor(uart0.reg,(uint16_t)UART_BAUDRATE_2400&0x3ff);
 					break;
 				case 4800 :
+						enum_baud = JMESH_UART_BAUD_4800;
 						uart_set_divisor(uart0.reg,(uint16_t)UART_BAUDRATE_4800&0x3ff);
 					break;
 				case 9600 :
+						enum_baud = JMESH_UART_BAUD_9600;
 						uart_set_divisor(uart0.reg,(uint16_t)UART_BAUDRATE_9600&0x3ff);
 					break;
+				case 19200 :
+						enum_baud = JMESH_UART_BAUD_19200;
+						uart_set_divisor(uart0.reg,(uint16_t)UART_BAUDRATE_19200&0x3ff);
+					break;	
+				case 38400 :
+						enum_baud = JMESH_UART_BAUD_38400;
+						uart_set_divisor(uart0.reg,(uint16_t)UART_BAUDRATE_38400&0x3ff);
+					break;
+				case 115200 :
+						enum_baud = JMESH_UART_BAUD_115200;
+						uart_set_divisor(uart0.reg,(uint16_t)UART_BAUDRATE_115200&0x3ff);
+					break;				
 				default :
 						return -1;
 			}
+			enum_baud ++;
+			jmesh_save_write(JMESH_SAVE_BAUTRATE,sizeof(unsigned char),(unsigned char*)&(enum_baud));
 			return baudrate;
 }
 #endif

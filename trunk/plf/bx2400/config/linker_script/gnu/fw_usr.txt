@@ -9,12 +9,19 @@ ENTRY(Reset_Handler)
 
 SECTIONS
 {
+    FLASH_CODE :
+    {    
+        KEEP(*(flash_section))
+        *mesh/*(.text*)
+        *mesh/*(.rodata*)
+    }> FLASH
+    
     RAM_CODE :  
     { 
         KEEP(*(.isr_vector))
         KEEP(*(jump_table_area))
- 		*(.init)
-		*(.fini)       
+        *(.init)
+        *(.fini)       
         *(.text*)
         *(.rodata*)
         *(HARDFAULT_CODE)
@@ -22,24 +29,24 @@ SECTIONS
         *(.data*) 
     }> RAM
     .copy.table :
-	{
-		. = ALIGN(4);
-		__copy_table_start__ = .;
-		__copy_table_end__ = .;
-	}> RAM
+    {
+        . = ALIGN(4);
+        __copy_table_start__ = .;
+        __copy_table_end__ = .;
+    }> RAM
     .zero.table :
-	{
-		. = ALIGN(4);
-		__zero_table_start__ = .;
-		LONG (__bss_start__)
-		LONG (__bss_end__ - __bss_start__)
-		__zero_table_end__ = .;
-	}> RAM
-	RWIP_ENV (NOLOAD):
+    {
+        . = ALIGN(4);
+        __zero_table_start__ = .;
+        LONG (__bss_start__)
+        LONG (__bss_end__ - __bss_start__)
+        __zero_table_end__ = .;
+    }> RAM
+    RWIP_ENV (NOLOAD):
     {
         *rwip*(.bss* COMMON)
     }> EM
-	.bss (NOLOAD):
+    .bss (NOLOAD):
     {
         __bss_start__ = .;
         *(.bss*) 
@@ -48,16 +55,18 @@ SECTIONS
         __bss_end__ = .;
     }> RAM
     .heap (NOLOAD):
-	{
-		__end__ = .;
-		PROVIDE(end = .);
-		*(.heap*)
-		__HeapLimit = .;
-	}> RAM
+    {
+        __end__ = .;
+        PROVIDE(end = .);
+        *(.heap*)
+        __HeapLimit = .;
+    }> RAM
     .stack_dummy (NOLOAD):
-	{
-		*(.stack*)
-	}> RAM
+    {
+        *(.stack*)
+
+    }> RAM
+    ASSERT( __StackTop <= 0x128000 ,"Error, RAM overflow")
     BOOT_PARAMS (NOLOAD): {*(boot_tunnel)}> EM
     RAM_UNLOADED (NOLOAD):
     { 
@@ -66,11 +75,6 @@ SECTIONS
         . += 12;
         unloaded_area_start_end = .;
     }> EM
-    
-    FLASH_CODE ORIGIN(FLASH)+SIZEOF(RAM_CODE)+SIZEOF(.copy.table)+SIZEOF(.zero.table):
-    {
-        KEEP(*(flash_section))
-    }
 
     NVDS_AREA 0xb0000000 :
     {

@@ -27,38 +27,44 @@ void jmesh_start_routing_seq_count(void)
 
 unsigned short jmesh_get_routing_seq(void)
 {
-	  return routing_seq;
+	  return ++routing_seq;
 }
-
-static void send_routing_beacon(void)
+void jmesh_connect_request_beacon(unsigned char* mac)
 {
-    jmesh_pdu_t* pdu;
+  jmesh_routing_connect(mac);
+  jmesh_routing_connect(mac);
+  jmesh_routing_connect(mac);
+}
+void jmesh_routing_connect(unsigned char* mac)
+{
+      jmesh_pdu_t* pdu;
     jmesh_beacon_t* beacon;
     jmesh_netkey_t *net_key;
     jmesh_key_t cmac;
     unsigned short addr;
     unsigned short seq;
 
-    os_timer_event_reset(&routing_beacon_timer);
-
-
     net_key=jmesh_netkey_get_by_index(0);
     if(NULL==net_key)
     {
-        //LOG(LOG_LVL_INFO,"\nsend routing beacon netkey NULL!!\n");
         return;
     }
     //else if(JMESH_STATUS_SUCCESS!=jmesh_netkey_state_get(0,net_key)){
     //    return;
     //}
 
-    if(NULL==(pdu=jmesh_pdu_new(sizeof(jmesh_routing_beacon_t)+JMESH_BEACON_HEAD_SIZE))){
-        //LOG(LOG_LVL_INFO,"\nsend routing beacon pdu NULL!!\n");
-        //print_note("routing beacon pdu fail!!\n");
+				if(NULL==(pdu=jmesh_pdu_new(sizeof(jmesh_routing_beacon_t)+JMESH_BEACON_HEAD_SIZE))){
+					print_note("routing beacon pdu fail!!\n");
+			
         return;
     }
     beacon=(jmesh_beacon_t*)pdu->adv.para;
-
+    if(mac==NULL){
+      memset(beacon->routing_beacon.connect_request_mac,0,6);
+    }
+    else{
+      memcpy(beacon->routing_beacon.connect_request_mac,mac,6);
+    }
     beacon->type=JMESH_BEACON_TYPE_ROUTING;
     beacon->routing_beacon.is_relay=1;
     beacon->routing_beacon.connect_num=jmesh_gatt_ready_num();
@@ -74,8 +80,11 @@ static void send_routing_beacon(void)
     pdu->adv.length=1+sizeof(jmesh_routing_beacon_t);
 
     jmesh_adv_send_beacon(pdu);
-    //print_note("routing beacon send\n");
-    //LOG(LOG_LVL_INFO,"\nsend routing beacon\n");
+}
+static void send_routing_beacon(void)
+{
+  jmesh_routing_connect(NULL);
+  os_timer_event_reset(&routing_beacon_timer);
 }
 void jmesh_routing_beacon_start(int adv_time){
     os_timer_event_set(&routing_beacon_timer,(JMESH_ROUTING_BEACON_INTERVAL_S)*1000,(os_timer_event_caller_t)send_routing_beacon,NULL);
@@ -87,6 +96,7 @@ void jmesh_routing_beacon_handler(unsigned char *mac,unsigned char rssi,jmesh_ro
     jmesh_key_t auth;
     static unsigned char cache_auth[8]={0};
     jmesh_netkey_t *net_key;
+    unsigned char local_mac[6];
 
     net_key=jmesh_netkey_get_by_index(0);
     if(NULL==net_key)
@@ -99,7 +109,7 @@ void jmesh_routing_beacon_handler(unsigned char *mac,unsigned char rssi,jmesh_ro
     //    return;
     //}
     if(0!=memcmp(cache_auth,beacon->authentication_value,8)){
-        security_AES_CMAC((uint8_t *)JMESH_NETKEY_GET_BEACON_KEY(net_key),7,(uint8_t *)beacon,(uint8_t *)auth);
+        security_AES_CMAC((uint8_t *)JMESH_NETKEY_GET_BEACON_KEY(net_key),13,(uint8_t *)beacon,(uint8_t *)auth);
         if(0==memcmp(auth,beacon->authentication_value,8)){
             unsigned short addr;
             unsigned short route_seq;
@@ -108,6 +118,11 @@ void jmesh_routing_beacon_handler(unsigned char *mac,unsigned char rssi,jmesh_ro
             JMESH_BIG_ENDIAN_PICK2(addr,beacon->addr);
             JMESH_BIG_ENDIAN_PICK2(route_seq,beacon->route_seq);
             jmesh_neighbor_add_mesh(mac,addr,beacon->element_num,beacon->connect_num,beacon->neighbor_num,beacon->is_relay,route_seq,rssi);
+            jmesh_mac_get(local_mac);
+            if(0==memcmp(beacon->connect_request_mac,local_mac,6)){
+              print_buffer_info(6,mac,"recv a connect request beacon and start cnnect:");
+              jmesh_ble_gatt_connect(mac);
+            }
             //print_note("process routing beacon sucess!\n");
         }
         else

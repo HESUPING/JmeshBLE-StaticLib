@@ -25,7 +25,6 @@
 #include "plf.h"
 #include "reg_sysc_awo.h"
 #include "sys_sleep.h"
-#include "os_main.h"
 #if defined( INCLUDE_uxTaskGetStackHighWaterMark )
 extern void stk_chk_dbg( void );
 #endif
@@ -142,6 +141,8 @@ static void rtos_tasks_create(const task_table_info_t * task_table_info)
         }
     }
 }
+
+extern void os_start(void);
 void rtos_task_init()
 {
 	
@@ -154,9 +155,7 @@ void rtos_task_init()
 	
     rtos_tasks_create(&core_task_table_info);
     rtos_tasks_create(&extra_task_table_info);
-    
-    os_start();//jmesh
-    
+//    os_start();
     vTaskStartScheduler();
 
 }

@@ -1,7 +1,7 @@
 #include "jmesh_provisioning_client.h"
 #include "jmesh_provisioning.h"
 #include "../../secure/ECDH/uECC.h"
-
+#include"../../jmesh/jmesh_task.h"
 #include "../../onchip_system/os_timer_event.h"
 #include "../../jmesh/jmesh_print.h"
 #include "../../driver/jmesh_system.h"
@@ -9,6 +9,7 @@
 #include"../gatt/jmesh_gatt.h"
 #include"../gatt/jmesh_proxy.h"
 #include"stdbool.h"
+#include"../../network/jmesh_network.h"
 #include "../../jmesh/jmesh_device.h"
 #include "../../network/jmesh_netkey.h"
 #include"../../driver/jmesh_gpio.h"
@@ -64,7 +65,7 @@ static prov_pdu_type_t  CURRENT_STAGE   = Prov_Idle;
 static os_timer_event_t link_hold_timer,ind_light_timer;
 void ind_light_timer_handler(const void* argc)
 {
-		unsigned char on_off = 1;
+		static unsigned char on_off = 1;
 		os_timer_event_restart(&ind_light_timer);
 		jmesh_gpio_set(JMESH_LED1, on_off);
 		on_off ^= 1;
@@ -167,7 +168,7 @@ static uint16_t gatt_provisioning_invite_handler(uint8_t* dat, uint8_t* dat_out)
 {
     //my_printf("received Invite...\n");
     memcpy(&stored_invite_data,dat+1,sizeof(provision_invite_format_t));
-		os_timer_event_set(&ind_light_timer, PROVISIONING_PERIOD, ind_light_timer_handler, NULL);	
+//		os_timer_event_set(&ind_light_timer, PROVISIONING_PERIOD, ind_light_timer_handler, NULL);	
     print_note("provisioning recv intive attention duration=%d\n",stored_invite_data.Attention_Duration);
     return gatt_provisioning_capabilities(dat_out);
 }
@@ -326,23 +327,24 @@ static uint16_t gatt_provisioning_data_handler(uint8_t* dat, uint8_t* dat_out)
         JMESH_BIG_ENDIAN_PICK2(nid,param->key_index);
 				jmesh_set_primary_addr(short_addr);
         print_buffer_note(16,param->network_key,"provisioning short addr=%2x,nid=%2x,iv_index=%4x,flag=%x,netkey:",short_addr,nid,iv_index,param->flags);
-				os_timer_event_set(&ind_light_timer, PROVISIONED_PERIOD, ind_light_timer_handler, NULL);	
+//				os_timer_event_set(&ind_light_timer, PROVISIONED_PERIOD, ind_light_timer_handler, NULL);	
         //if (network_list_add(param)!=0) {
         if(0){
             //failed, not enough memb, return failed with error-code:OutpofResources
             return gatt_provisioning_failed(dat_out, OutofResources);
         }
         else {
-
-
             //1. short addr 2. 6bytes mac 3. devkey
             uint8_t mac_addr[] = BX_DEV_ADDR;
 						jmesh_device_clear();
-            jmesh_device_new(short_addr, 2,mac_addr, stored_device_key); //TODO: what is short-addr
+            jmesh_device_new(short_addr, 2,mac_addr, stored_device_key); 
+						jmesh_network_init();  // clear the queue;
+					
+//						os_timer_event_set(&netkey_cal_timer,100,netkey_cal_timer_handler,param);
             if (jmesh_netkey_state_set(param->key_index[0]*0x100+param->key_index[1], param->network_key) !=0) {
                 return gatt_provisioning_failed(dat_out, OutofResources);
-            }
-            jmesh_netkey_test_set_iv_index(0,iv_index);
+            }					
+						jmesh_netkey_test_set_iv_index(0,iv_index);		
 
             return gatt_provisioning_complete(dat_out);
             //TODO: send succeed msg to uart
@@ -373,14 +375,13 @@ static uint16_t gatt_provisioning_failed(uint8_t* dat, uint8_t error_code)
     //TODO: close link(Mutex)
 		if(JMESH_ADDR_UNASSIGNED == jmesh_get_primary_addr())
 		{
-				os_timer_event_set(&ind_light_timer, UNPROVISION_PERIOD, ind_light_timer_handler, NULL);	
+//				os_timer_event_set(&ind_light_timer, UNPROVISION_PERIOD, ind_light_timer_handler, NULL);	
 			
 		}else{
-				os_timer_event_set(&ind_light_timer, PROVISIONED_PERIOD, ind_light_timer_handler, NULL);	
+//				os_timer_event_set(&ind_light_timer, PROVISIONED_PERIOD, ind_light_timer_handler, NULL);	
 		
 		}
-
-	
+		
     prov_reset_progress();
     return LEN_PROVISION_PARAMETERS[Prov_Failed]+1;
 }
@@ -407,13 +408,37 @@ static gatt_prov_device_handler_t gatt_provisioning_server_handler[Prov_Idle] = 
     [Prov_Failed]       = gatt_provisioning_failed_handler
 };
 
-uint16_t gatt_provisioning_server_handlers(uint8_t* dat_in, uint8_t* dat_out)
-{
-    if(dat_in[0]>=Prov_Idle){
-        return gatt_provisioning_failed(dat_out, InvalidPDU);
-    }
-    if (!prov_check_progress(dat_in))
-        return gatt_provisioning_failed(dat_out, UnexpectedPDU);
-    return (*gatt_provisioning_server_handler[dat_in[0]])(dat_in, dat_out);
-}
 
+int jmesh_provision_send_handler(jmesh_pdu_t* pdu)
+{
+		if(pdu->length > 0){
+			jmesh_proxy_send(pdu->proxy.head,JMESH_PROXY_TYPE_PROVISION,pdu);						
+		}
+		jmesh_pdu_free(pdu);
+		return 0;
+}
+int jmesh_provision_recv_handler(jmesh_pdu_t* pdu)
+{
+		jmesh_pdu_t* pdu_out = jmesh_pdu_new(100);
+		pdu_out->proxy.head = pdu->proxy.head;
+	
+    if(pdu->proxy.para[0] >= Prov_Idle){
+         
+				pdu_out->length = gatt_provisioning_failed(pdu_out->proxy.para, InvalidPDU);
+				os_event_post(&jmesh_task,JMESH_EVENT_PROVISION_SEND,pdu_out);
+				jmesh_pdu_free(pdu);
+				return -1;
+    }
+    if(!prov_check_progress(pdu->proxy.para))
+		{			
+				pdu_out->length = gatt_provisioning_failed(pdu_out->proxy.para, UnexpectedPDU);
+				os_event_post(&jmesh_task,JMESH_EVENT_PROVISION_SEND,pdu_out);	
+				jmesh_pdu_free(pdu);
+				return -1;
+		}
+		
+    pdu_out->length = (*gatt_provisioning_server_handler[pdu->proxy.para[0]])(pdu->proxy.para, pdu_out->proxy.para);	
+		os_event_post(&jmesh_task,JMESH_EVENT_PROVISION_SEND,pdu_out);			
+		jmesh_pdu_free(pdu);
+    return 0;
+}

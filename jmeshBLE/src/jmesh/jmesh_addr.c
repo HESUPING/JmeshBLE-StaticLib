@@ -38,7 +38,7 @@ unsigned short jmesh_get_addr_by_element(unsigned char element){
     return jmesh_primary_addr+element;
 }
 unsigned char jmesh_get_element_num(void){
-    return 1;
+    return 2;
 }
 int jmesh_set_primary_addr(unsigned short primary_addr){
     if(primary_addr==JMESH_ADDR_UNASSIGNED || primary_addr+jmesh_get_element_num()>JMESH_ADDR_UNICAST_MAX){

@@ -402,7 +402,7 @@
 #endif
 
 #if defined(BLE_JMESH_APP_C)
-#define BLE_JMESHC_APP_SERVER    1
+#define BLE_JMESHC_APP_CLIENT    1
 #else
 #define BLE_JMESHC_APP_CLIENT    0
 #endif

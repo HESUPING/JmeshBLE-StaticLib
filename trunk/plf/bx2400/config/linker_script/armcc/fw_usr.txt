@@ -1,6 +1,6 @@
 #! armcc -E
 
-#define RAM_BASE	            0x00100000
+#define RAM_BASE                0x00100000
 #define RAM_LIMIT               0x00130000
 #define EM_START                0x00128000
 #define EM_END                  0x00129dc6
@@ -13,8 +13,15 @@
 #define IMAGE_BASE_IN_FLASH     ((FLASH_MAPPED_ADDR)+(IMAGE_OFFSET_IN_FLASH)+(IMAGE_HEADER_SIZE))
 
 
+LR_FLASH1 IMAGE_BASE_IN_FLASH{
+    FLASH_CODE +0{
+        *(flash_section)   
+    ;#include "mesh_link.txt"
+    }
+} 
+
 LR_RAM1 RAM_BASE ALIGN 0x80{
-	RAM_CODE +0 {
+    RAM_CODE +0 {
         *(RESET, +First)
         *(jump_table_area)
     }
@@ -45,17 +52,13 @@ LR_RAM2 ImageLimit(RAM_CODE_2) ALIGN 0x4
         *(boot_tunnel)
     }
     RAM_UNLOADED +0 EMPTY 12
-	{
-	}
+    {
+    }
     ScatterAssert(ImageLimit(RAM_UNLOADED)<=ROM_CODE_ZI_BASE)
 }
 
 
-LR_FLASH1 IMAGE_BASE_IN_FLASH+ImageLength(LR_RAM1){
-    FLASH_CODE +0{
-        *(flash_section)
-    }
-} 
+
 
 LR_FLASH2 DUMMY_ADDR
 {

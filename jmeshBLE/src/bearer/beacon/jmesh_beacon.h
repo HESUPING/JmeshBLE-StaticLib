@@ -12,6 +12,7 @@
 #define JMESH_BEACON_TYPE_DEVICE 0
 #define JMESH_BEACON_TYPE_SECURE 1
 #define JMESH_BEACON_TYPE_ROUTING 2
+#define JMESH_BEACON_TYPE_CONNECT 3
 
 
 #define JMESH_BEACON_HEAD_SIZE 3
@@ -24,6 +25,8 @@ typedef struct st_jmesh_beacon{
         jmesh_device_beacon_t device_beacon;
         jmesh_routing_beacon_t routing_beacon;
     };
+    unsigned char mac[6];
+    unsigned char rssi;		
 }jmesh_beacon_t;
 void jmesh_beacon_handler(unsigned char *mac,unsigned char rssi,jmesh_beacon_t* beacon);
 

@@ -101,12 +101,12 @@ int jmesh_appkey_list(unsigned short netkey_index,unsigned char buffer_size,unsi
 {
     int list_index,pdu_index;
     for(list_index=0,pdu_index=0;list_index<JMESH_APPKEY_MAX_NUM && (pdu_index+3<=buffer_size);list_index++){
-				if(netkey_index == jmesh_appkey[list_index].netkey_index && jmesh_appkey[list_index].is_valid == 1){
-					if((pdu_index%3)==0){
-                pdu[pdu_index]=jmesh_appkey[list_index].appkey_index;
-                pdu_index+=1;
-                pdu[pdu_index]=jmesh_appkey[list_index].appkey_index>>8;
-                pdu_index+=1;
+		if(netkey_index == jmesh_appkey[list_index].netkey_index && jmesh_appkey[list_index].is_valid == 1){
+			if((pdu_index%3)==0){
+			pdu[pdu_index]=jmesh_appkey[list_index].appkey_index;
+			pdu_index+=1;
+			pdu[pdu_index]=jmesh_appkey[list_index].appkey_index>>8;
+			pdu_index+=1;
             }
             else{
                 pdu[pdu_index-1]|=(jmesh_appkey[list_index].appkey_index<<4);

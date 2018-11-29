@@ -9,6 +9,7 @@ typedef enum {
     JMESH_LED_RED,
     JMESH_OUTPUT_5,
     JMESH_INPUT_6,
+		POWER_LIGHT,
 } JMESH_GPIO_NAME_T;
 enum {
     JMESH_GPIO_MODE_INPUT,

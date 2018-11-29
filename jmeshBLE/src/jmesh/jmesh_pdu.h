@@ -5,12 +5,15 @@
 #define JMESH_SHORT_PDU_SIZE 31
 #define JMESH_LONG_PDU_SIZE 384
 #include"jmesh_config.h"
-
+#include"../bearer/beacon/jmesh_beacon.h"
 
 typedef struct st_jmesh_adv_pdu{
     unsigned char length;
     unsigned char ad_type;
-    unsigned char para[1];
+    union{
+      unsigned char para[1];
+      jmesh_beacon_t beacon;
+    };
 }jmesh_adv_pdu_t;
 typedef struct st_jmesh_proxy_pdu{
     unsigned char length;
@@ -27,7 +30,7 @@ typedef struct st_jmesh_proxy_pdu{
 
 typedef struct st_jmesh_lower_segment_control_pdu{
     unsigned char head[3];
-    unsigned char param[8];
+    unsigned char pdu[8];
 }jmesh_lower_segment_control_pdu_t;
 
 typedef struct st_jmesh_lower_segment_acknowledgment{
@@ -88,11 +91,11 @@ typedef struct st_jmesh_access_pdu{
         struct{
             unsigned short src;
             unsigned short dst;
+            unsigned short length;
             union{
                 unsigned short netkey_index;
                 jmesh_appkey_t* appkey;
             };
-            unsigned short length;
         }head;
         struct{
             unsigned char rfu[12];
@@ -104,6 +107,17 @@ typedef struct st_jmesh_access_pdu{
         }segment;
     };
 }jmesh_access_pdu_t;
+typedef struct st_jmesh_ble_pdu{
+  unsigned char length;
+  union{
+    struct{
+      unsigned char id;
+      unsigned char is_server;
+			unsigned char reason;
+      unsigned char mac[1];
+    }connect;
+  };
+}jmesh_ble_pdu_t;
 
 typedef struct st_jmesh_pdu jmesh_pdu_t;
 struct st_jmesh_pdu{
@@ -115,6 +129,7 @@ struct st_jmesh_pdu{
         jmesh_network_pdu_t network;
         jmesh_provisioning_pdu_t provisioning;
         jmesh_access_pdu_t access;
+        jmesh_ble_pdu_t ble;
     };
 };
 

@@ -46,6 +46,7 @@ add_custom_target(mk_dir_then_cp_jlinkscript
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/output/fw_ram
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/output/boot_rom
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/output/boot_ram
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/output/libmesh
     COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/KeilPro/JLinkSettings.JLinkScript ${CMAKE_BINARY_DIR}/
 )
 
@@ -63,6 +64,7 @@ add_subdirectory(modules)
 add_subdirectory(plf)
 add_subdirectory(freertos)
 add_subdirectory(ip)
+
 
 
 

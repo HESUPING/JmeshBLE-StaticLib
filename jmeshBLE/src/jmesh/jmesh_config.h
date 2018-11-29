@@ -5,7 +5,7 @@
 
 #define JMESH_NETKEY_MAX_NUM 5
 #define JMESH_APPKEY_MAX_NUM 5
-#define JMESH_DEVICE_MAX_NUM 100
+#define JMESH_DEVICE_MAX_NUM 1
 #define JMESH_MODEL_MAX_NUM  10
 
 #define JMESH_FEATURE_RELAY    JMESH_FEATURE_ENABLE
@@ -16,11 +16,11 @@
 //    #error feature friend and lowpower cannot be bose support
 #endif
 
-#define JMESH_CMD_PRINTABLE 0
-#define JMESH_INFO_PRINTABLE 0
-#define JMESH_NOTE_PRINTABLE 0
-#define JMESH_WARNING_PRINTABLE 0
-#define JMESH_ERROR_PRINTABLE 0
+#define JMESH_CMD_PRINTABLE 1
+#define JMESH_INFO_PRINTABLE 1
+#define JMESH_NOTE_PRINTABLE 1
+#define JMESH_WARNING_PRINTABLE 1
+#define JMESH_ERROR_PRINTABLE 1
 
 
 /**< use for jmesh pdu.c */

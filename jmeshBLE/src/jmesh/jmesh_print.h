@@ -8,10 +8,11 @@
 #include"jmesh_config.h"
 int _print(const char* fmt, ...);
 int _print_buffer(int len,char* data,const char* fmt, ...);
-
+int _print_cmd(const char* fmt, ...);
+int _print_buffer_cmd(int len,char* data,const char* fmt, ...);
 #if(JMESH_CMD_PRINTABLE==1)
-    #define print_cmd(fmt, ...) _print(fmt, ##__VA_ARGS__)
-    #define print_buffer_cmd(len,buffer,fmt,...) _print_buffer(len,(char*)buffer,fmt, ##__VA_ARGS__)
+    #define print_cmd(fmt, ...) _print_cmd(fmt, ##__VA_ARGS__)
+    #define print_buffer_cmd(len,buffer,fmt,...) _print_buffer_cmd(len,(char*)buffer,fmt, ##__VA_ARGS__)
 #else
     #define print_cmd(fmt, ...)
     #define print_buffer_cmd(len,buffer,fmt,...)

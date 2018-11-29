@@ -27,7 +27,7 @@
 
 /*------------- NVDS ---------- */
 #define BX_DEV_NAME {'B','X','2','4','0','0'}
-#define BX_DEV_ADDR {0x66,0x66,0x66,0x66,0x66,0x66}
+#define BX_DEV_ADDR {0x00,0x00,0x07,0x11,0x18,0x20}
 #ifdef FLASH_XIP
 #define BLE_WAKEUP_TIME {1200}
 #else
@@ -47,6 +47,11 @@
 //#define PWR_PWM_LEGACY //should be enabled before V4M
 #define DIG_VOLTAGE_CTRL_BY_RF_REG
 //#define DCDC_BYPASS_VOLTAGE_LEGACY //Must be ON for V4MB ,V4 ...
+//#define RUN_WITHOUT_SLEEP
+#ifdef RUN_WITHOUT_SLEEP
+#undef DEEP_SLEEP_ENABLE
+#define DEEP_SLEEP_ENABLE {0}
+#endif
 #if (MAIN_CLOCK>32000000)
 #define CPU_LDO_BYPASS
 #endif

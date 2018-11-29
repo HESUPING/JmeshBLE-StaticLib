@@ -6,6 +6,8 @@
 #include"../../access/jmesh_access.h"
 #include"../../driver/jmesh_gpio.h"
 #include"../../driver/jmesh_pwm.h"
+#include"../../onchip_system/os_timer.h"
+#include"../../onchip_system/os_timer_event.h"
 static light_config_server_scene_t server_scene[LIGHT_SERVER_SCENE_SIZE];
 
 void light_hard_init(void)
@@ -22,6 +24,13 @@ void light_server_scene_init(void)
 void light_server_control_callback(unsigned char pwm_nums,unsigned char* pwm_value){
 		
     print_info("light server control callback %x\n",pwm_value[0]);
+		if(pwm_nums == 1)   
+		{
+				jmesh_gpio_set(JMESH_LED1, pwm_value[0]);			
+			  jmesh_gpio_set(POWER_LIGHT, pwm_value[0]);
+
+		}
+
 		if(pwm_nums == 3)
 		{
 				jmesh_pwm_start(20,JMESH_PWM_CHANNEL_0, pwm_value[0], 0xff-pwm_value[0]);
@@ -62,7 +71,47 @@ void light_server_scene_callback(unsigned short src,unsigned short nid,unsigned 
         light_server_control_callback(server_scene[scene_id].pwm_nums,server_scene[scene_id].value);
     }
 }
-void light_server_blink_callback(unsigned char last_s,unsigned char delays_ms,unsigned char on_ms,unsigned char off_ms)
+os_timer_event_t light_blink;
+struct light_blink_time_st{
+		unsigned char last_s;
+		unsigned char delays_ms;
+		unsigned char on_ms;
+		unsigned char off_ms;
+}blink_time;
+void light_blink_timer_handler(void* argv)
 {
+		static unsigned short count = 0;
+		count++;
+		if(blink_time.on_ms == 0)
+		{
+				jmesh_gpio_set(JMESH_LED1, GPIO_VALUE_HIGH);
+				os_timer_event_remove(&light_blink);
+				return;
+		}			
+		if(blink_time.off_ms == 0) 
+		{
+				jmesh_gpio_set(JMESH_LED1, GPIO_VALUE_LOW);
+				os_timer_event_remove(&light_blink);
+				return;
+		}
+		os_timer_event_restart(&light_blink);	
+		if(count < blink_time.on_ms)
+		{
+			    jmesh_gpio_set(JMESH_LED1, GPIO_VALUE_HIGH);
+
+		}else {
+					jmesh_gpio_set(JMESH_LED1, GPIO_VALUE_LOW);
+		}
+		if(count == blink_time.on_ms +blink_time.off_ms) count = 0;
+		
+}
+void light_server_blink_callback(unsigned char last_s,unsigned char delays_ms,unsigned char on_100ms,unsigned char off100_ms)
+{
+		os_timer_event_set(&light_blink, 100, light_blink_timer_handler, NULL);			
+		blink_time.last_s =	last_s;
+		blink_time.delays_ms = delays_ms;
+		blink_time.off_ms  = off100_ms;
+		blink_time.on_ms   = on_100ms;
+
     ;
 }

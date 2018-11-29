@@ -11,11 +11,20 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #endif
-#ifdef FLASH_XIP
-#include "flash_cache.h"
-#endif
 
-extern uint32_t flash_dual_quad;
+static void os_scheduler_disable()
+{
+    #ifdef CFG_FREERTOS_SUPPORT
+    vTaskSuspendAll();
+    #endif
+}
+
+static void os_scheduler_restore()
+{
+    #ifdef CFG_FREERTOS_SUPPORT
+    xTaskResumeAll();
+    #endif
+}
 
 static uint8_t flash_operation_wait()
 {
@@ -25,26 +34,6 @@ static uint8_t flash_operation_wait()
         app_qspi_std_read_wrapper(&read_stat_cmd,sizeof(uint8_t),&flash_status,sizeof(uint8_t));
     }while(flash_status&0x1);                                               // wait until erase done
     return flash_status;
-}
-
-static void flash_qspi_operation_enter()
-{
-    #ifdef FLASH_XIP
-    #ifdef CFG_FREERTOS_SUPPORT
-    taskENTER_CRITICAL();
-    #endif
-    flash_cache_disable();
-    #endif
-}
-
-static void flash_qspi_operation_exit()
-{
-    #ifdef FLASH_XIP
-    flash_cache_enable(flash_dual_quad);
-    #ifdef CFG_FREERTOS_SUPPORT
-    taskEXIT_CRITICAL();
-    #endif
-    #endif
 }
 
 static void flash_write_enable()
@@ -92,26 +81,20 @@ void flash_reset()
 
 void flash_wakeup()
 {
-    flash_qspi_operation_enter();
     uint8_t flash_res_cmd = FLASH_RELEASE_POWER_DOWN;
     app_qspi_std_write_wrapper(&flash_res_cmd,sizeof(flash_res_cmd));
-    flash_qspi_operation_exit();
 }
 
 void flash_deep_power_down()
 {
-    flash_qspi_operation_enter();
     uint8_t flash_dp_cmd = FLASH_DEEP_POWER_DOWN;
     app_qspi_std_write_wrapper(&flash_dp_cmd, sizeof(flash_dp_cmd));
-    flash_qspi_operation_exit();
 }
 
 uint8_t flash_read(uint32_t offset, uint32_t length, uint8_t *buffer)
 {
-    flash_qspi_operation_enter();
     uint8_t read_cmd[4] = {FLASH_READ_DATA_BYTES,offset>>16&0xff,offset>>8&0xff,offset&0xff};
     app_qspi_std_read_wrapper(read_cmd,sizeof(read_cmd), buffer, length);
-    flash_qspi_operation_exit();
     return 0;
 }
 
@@ -119,7 +102,7 @@ uint8_t flash_read(uint32_t offset, uint32_t length, uint8_t *buffer)
 uint8_t flash_erase(uint32_t offset, erase_t type)
 {
     BX_ASSERT(type==Sector_Erase || type==Block_32KB_Erase ||  type==Block_64KB_Erase || type==Chip_Erase);
-    flash_qspi_operation_enter();
+    os_scheduler_disable();
     flash_write_enable();
     uint8_t erase_cmd_addr[4],cmd_length;
     erase_cmd_addr[1] = offset>>16 & 0xff;
@@ -146,22 +129,23 @@ uint8_t flash_erase(uint32_t offset, erase_t type)
     }
     app_qspi_std_write_wrapper(erase_cmd_addr,cmd_length);
     flash_operation_wait();
-    flash_qspi_operation_exit();
+    os_scheduler_restore();
     return 0;
 }
 
 static void flash_program_base(uint32_t offset, uint32_t length, uint8_t *buffer)
 {
     BX_ASSERT(length<=256);
+    os_scheduler_disable();
     flash_write_enable();
     app_qspi_flash_program_wrapper(FLASH_PAGE_PROGRAM,offset,buffer,length);
     flash_operation_wait();
+    os_scheduler_restore();
 }
 
 uint8_t flash_program(uint32_t offset, uint32_t length, uint8_t *buffer)
 {
     BX_ASSERT((offset&0xff000000)==0);
-    flash_qspi_operation_enter();
     uint32_t offset_base = offset&(~(FLASH_PAGE_SIZE-1));
     if(offset_base!=offset)
     {
@@ -185,15 +169,19 @@ uint8_t flash_program(uint32_t offset, uint32_t length, uint8_t *buffer)
     {
         flash_program_base(offset,remainder,buffer);
     }
-    flash_qspi_operation_exit();
     return 0;
 }
 
 void flash_multi_read(uint32_t offset, uint32_t length, uint8_t * buffer, bool quad)
 {
-    flash_qspi_operation_enter();
-    app_qspi_multi_read_wrapper(FLASH_QUAD_OUTPUT_FAST_READ, offset, buffer, length,quad);
-    flash_qspi_operation_exit();
+    if(quad)
+    {
+        app_qspi_multi_read_wrapper(FLASH_QUAD_OUTPUT_FAST_READ, offset, buffer, length,quad);
+    }
+    else
+    {
+        app_qspi_multi_read_wrapper(FLASH_DUAL_OUTPUT_FAST_READ, offset, buffer, length,quad);
+    }
 }
 
 uint8_t flash_quad_read(uint32_t offset, uint32_t length, uint8_t *buffer)
@@ -210,7 +198,7 @@ uint8_t flash_dual_read(uint32_t offset, uint32_t length, uint8_t *buffer)
 
 //#define FLASH_TEST
 #ifdef FLASH_TEST
-#include "reg_sysc_cpu.h"
+#include "io_ctrl.h"
 #define SECTOR_SIZE 0x1000
 #define FLASH_SIZE (1<<20)
 #define SECTOR_SIZE_IN_WORD (SECTOR_SIZE/sizeof(uint32_t))
@@ -218,13 +206,17 @@ uint32_t fbuf[SECTOR_SIZE_IN_WORD];
 uint32_t fsrc[SECTOR_SIZE_IN_WORD];
 void flash_test()
 {
-    sysc_cpu_qspi_en_setf(0xf);
+//    sysc_cpu_qspi_en_setf(0xf);
 //    *(uint32_t*)0x20201074 = 0x0010000;// 0x8010000 on V2/0x0010000 on V3 - set VDD_PAD3 to 3.3V for qspi
     uint32_t offset = 0;
+    io_cfg_output(23);
+    io_pin_clear(23);
     while(offset<FLASH_SIZE)
     {
         /* erase test */
+        io_pin_set(23);
         flash_erase(offset,Sector_Erase);
+        io_pin_clear(23);
 //        flash_read(offset,SECTOR_SIZE,(uint8_t *)fbuf);
         flash_quad_read(offset,SECTOR_SIZE,(uint8_t *)fbuf);
         uint32_t i;
@@ -241,7 +233,9 @@ void flash_test()
         {
             fsrc[i] = rand();
         }
+        io_pin_set(23);
         flash_program(offset,SECTOR_SIZE,(uint8_t *)fsrc);
+        io_pin_clear(23);
 //        flash_read(offset,SECTOR_SIZE,(uint8_t *)fbuf);
         flash_quad_read(offset,SECTOR_SIZE,(uint8_t *)fbuf);
         for(i=0;i<SECTOR_SIZE_IN_WORD;++i)

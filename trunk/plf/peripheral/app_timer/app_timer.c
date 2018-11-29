@@ -99,7 +99,13 @@ void app_timer_stop(periph_inst_handle_t hdl)
     timer_universal_func.sys_stat_func(inst,TIMER_STOP);   
 }
 
+uint32_t app_timer_getValue(periph_inst_handle_t hdl)
+{
+    app_timer_inst_t *inst = CONTAINER_OF(hdl, app_timer_inst_t, inst);
+    reg_timer_t *reg = inst->reg;
 
+    return FIELD_RD((&reg->ch[inst->idx]), TIMERCURRENTVALUE, TIMER_TIMERCURRENTVALUEREGISTER);
+}
 
 
 

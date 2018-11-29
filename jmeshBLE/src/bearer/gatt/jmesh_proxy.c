@@ -8,7 +8,8 @@
 #include"../../jmesh/jmesh_print.h"
 #include"../provisioning/jmesh_provisioning_client.h"
 #include"../provisioning/jmesh_provisioning_server.h"
-
+#include"../../BLE/jmesh_prov_svc.h"
+#include"../../jmesh/jmesh_task.h"
 void jmesh_proxy_send(unsigned char interface,unsigned char type,jmesh_pdu_t* pdu)
 {
     int i,seg_num,seg_len,tail_len;
@@ -70,8 +71,6 @@ void jmesh_proxy_send(unsigned char interface,unsigned char type,jmesh_pdu_t* pd
     }
     jmesh_pdu_free(pdu);
 }
-
-
 
 void jmesh_proxy_recv(jmesh_gatt_t* gatt,unsigned short instance,unsigned char length,unsigned char* data)
 {
@@ -142,29 +141,24 @@ void jmesh_proxy_recv(jmesh_gatt_t* gatt,unsigned short instance,unsigned char l
         default:
             return;
     }
-		int retlen = 0;
-		jmesh_pdu_t* buff=jmesh_pdu_new(100);		
+		
     switch(gatt->recv_cache->proxy.type){
         case JMESH_PROXY_TYPE_NETWORK:
-			gatt->recv_cache->length--;
+						gatt->recv_cache->length--;
             jmesh_interface_recv(jmesh_gatt_get_interface(gatt),gatt->recv_cache);
             break;
         case JMESH_PROXY_TYPE_BEACON:
-            jmesh_beacon_handler(NULL,0,(jmesh_beacon_t*)gatt->recv_cache->proxy.para);
-            jmesh_pdu_free(gatt->recv_cache);
+						memcpy(gatt->recv_cache->adv.para,data,length);
+						memcpy(gatt->recv_cache->adv.beacon.mac,gatt->mac,6);
+						gatt->recv_cache->adv.beacon.rssi=0;
+						os_event_post(&jmesh_task,JMESH_EVENT_BEACON_RECV,gatt->recv_cache->adv.para);				
             break;
         case JMESH_PROXY_TYPE_CONFIG:
             //jmesh_proxy_config_process(connect,connect->recv_cache);
             break;
         case JMESH_PROXY_TYPE_PROVISION:
-            retlen= gatt_provisioning_server_handlers(gatt->recv_cache->proxy.para, buff->proxy.para);
-						if(retlen>0){
-								buff->length=retlen;
-								buff->proxy.type=JMESH_PROXY_TYPE_PROVISION;
-								jmesh_proxy_send(jmesh_gatt_get_interface(gatt),JMESH_PROXY_TYPE_PROVISION,buff);						
-						}
-
-				    jmesh_pdu_free(gatt->recv_cache);
+						gatt->recv_cache->proxy.head = jmesh_gatt_get_interface(gatt);
+						os_event_post(&jmesh_task,JMESH_EVENT_PROVISION_RECV,gatt->recv_cache);
             break;
     }
     gatt->recv_cache=NULL;

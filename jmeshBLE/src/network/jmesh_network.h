@@ -8,13 +8,13 @@
 #define JMESH_NETWORK_PDU_MAX_LEN 29
 
 
-#define JMESH_NETWORK_CIPHER_PDU_CACHE_SIZE 2
+#define JMESH_NETWORK_CIPHER_PDU_CACHE_SIZE 4
 #define JMESH_NETWORK_CIPHER_PDU_CACHE_NUM 20
 
 #define JMESH_NETWORK_PLAIN_PDU_CACHE_SIZE 4
 #define JMESH_NETWORK_PLAIN_PDU_CACHE_NUM 20
 
-#define JMESH_NETWORK_CIPHER_CACHE_OFFSET        2/**< first 2 octets because pdu is obfuscated */
+#define JMESH_NETWORK_CIPHER_CACHE_OFFSET        0/**< first 2 octets because pdu is obfuscated */
 #define JMESH_NETWORK_PLAIN_CACHE_OFFSET        5/**< seq(lower 2 octets) + src */
 
 
@@ -33,4 +33,5 @@
 void jmesh_network_init(void);
 int jmesh_network_send(unsigned short netkey_index,jmesh_pdu_t* pdu);
 int jmesh_network_recv(jmesh_pdu_t* pdu);
+int network_cipher_cache(unsigned char* pdu);
 #endif // JMESH_NETWORK_H

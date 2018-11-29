@@ -1,0 +1,226 @@
+/*
+ * mesh_test.c
+ *
+ *  Created on: 2017-12-19
+ *      Author: jiachuang
+ */
+
+#include "osapp_config.h"
+#ifdef OSAPP_MESH
+#ifdef OSAPP_MESH
+#include "osapp_mesh.h"
+#include "security.h"
+#include "bx_ring_queue.h"
+#include "log.h"
+#include "mesh_test_config.h"
+#ifdef MESH_TEST_AES_CCM
+//#define ENCRYPT_TEST
+#define DECRYPT_TEST
+//#define ENCRYPT_AES_CCM_TEST
+//#define DECRYPT_AES_CCM_TEST
+
+/*
+ * 目前为高位在前保存数据
+ * 解密时候，保存结果数组，需要额外开辟出来MIC_LENGTH的空间，为了校验MIC。
+ *
+ * ENCRYPT_TEST/DECRYPT_TEST：Mesh数据加密解密测试
+ * ENCRYPT_AES_CCM_TEST/DECRYPT_AES_CCM_TEST:AES-CCM模块测试。数据为nistspecialpublication800-38c.pdf中参数。需要修改secirity。h中NONCE_LENGTH宏定义的长度。
+ *
+ */
+volatile uint32_t aes_ccm_ok = 0;
+
+#ifdef ENCRYPT_TEST
+#define TEST_MSG_LENGTH 4
+uint8_t test_key[]   = {0xbe,0x63,0x51,0x05,0x43,0x48,0x59,0xf4,0x84,0xfc,0x79,0x8e,0x04,0x3c,0xe4,0x0e};
+uint8_t test_nonce[] = {0x00,0x80,0x00,0x00,0x02,0x12,0x01,0x00,0x00,0x12,0x34,0x56,0x78};
+uint8_t test_msg[]   = {0x23,0x45,0x01,0x00};
+//test var
+aes_ccm_param_t test_aes_ccm_para;
+uint8_t test_mesh_encrypted_data[40]={0};
+#endif
+
+#ifdef DECRYPT_TEST
+#define TEST_MSG_LENGTH 4
+uint8_t test_key[16]   = {0xbe,0x63,0x51,0x05,0x43,0x48,0x59,0xf4,0x84,0xfc,0x79,0x8e,0x04,0x3c,0xe4,0x0e};
+uint8_t test_nonce[13] = {0x00,0x80,0x00,0x00,0x02,0x12,0x01,0x00,0x00,0x12,0x34,0x56,0x78};
+uint8_t test_msg[12]   = {0xb0,0xe5,0xd0,0xad,0x97,0x0d,0x57,0x9a,0x4e,0x88,0x05,0x1c};
+//test var
+aes_ccm_param_t test_aes_ccm_para;
+volatile uint8_t test_mesh_decrypted_data[12];
+#endif
+
+#ifdef ENCRYPT_AES_CCM_TEST
+#if 1 //Example2
+#define K_LEN   16 //key
+#define T_LEN   6  //mic length
+#define N_LEN   NONCE_LENGTH  //nonce=8
+#define A_LEN   16  //additional data
+#define P_LEN   16  //msg payload
+
+uint8_t test_key[K_LEN]   = {0x40,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,0x4a,0x4b,0x4c,0x4d,0x4e,0x4f};
+uint8_t test_nonce[N_LEN] = {0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17};
+uint8_t test_addi[A_LEN]  = {0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0a,0x0b,0x0c,0x0d,0x0e,0x0f};
+uint8_t test_msg[P_LEN]   = {0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x29,0x2a,0x2b,0x2c,0x2d,0x2e,0x2f};
+#endif
+
+#if 0  //Example1
+#define K_LEN   16 //key
+#define T_LEN   4  //mic length
+#define N_LEN   NONCE_LENGTH  //nonce=7
+#define A_LEN   8  //additional data
+#define P_LEN   4  //msg payload
+
+uint8_t test_key[K_LEN]   = {0x40,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,0x4a,0x4b,0x4c,0x4d,0x4e,0x4f};
+uint8_t test_nonce[N_LEN] = {0x10,0x11,0x12,0x13,0x14,0x15,0x16};
+uint8_t test_addi[A_LEN]  = {0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07};
+uint8_t test_msg[P_LEN]   = {0x20,0x21,0x22,0x23};
+#endif
+
+#if 0   //Example4
+#define K_LEN   16 //key
+#define T_LEN   4  //mic length
+#define N_LEN   NONCE_LENGTH  //nonce=7
+#define A_LEN   0  //additional data
+#define P_LEN   64  //msg payload
+
+uint8_t test_key[K_LEN]   = {0x40,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,0x4a,0x4b,0x4c,0x4d,0x4e,0x4f};
+uint8_t test_nonce[N_LEN] = {0x10,0x11,0x12,0x13,0x14,0x15,0x16};
+#define  test_addi NULL ;
+uint8_t test_msg[P_LEN]   = {
+0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x29,0x2a,0x2b,0x2c,0x2d,0x2e,0x2f,
+0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,0x3a,0x3b,0x3c,0x3d,0x3e,0x3f,
+0x40,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,0x4a,0x4b,0x4c,0x4d,0x4e,0x4f,
+0x50,0x51,0x52,0x53,0x54,0x55,0x56,0x57,0x58,0x59,0x5a,0x5b,0x5c,0x5d,0x5e,0x5f
+};
+#endif
+
+#if 0
+uint8_t test_key[K_LEN]   = {0x4f,0x4e,0x4d,0x4c,0x4b,0x4a,0x49,0x48,0x47,0x46,0x45,0x44,0x43,0x42,0x41,0x40};
+uint8_t test_nonce[N_LEN] = {0x17,0x16,0x15,0x14,0x13,0x12,0x11,0x10};
+uint8_t test_addi[A_LEN]  = {0x0f,0x0e,0x0d,0x0c,0x0b,0x0a,0x09,0x08,0x07,0x06,0x05,0x04,0x03,0x02,0x01,0x00};
+uint8_t test_msg[P_LEN]   = {0x2f,0x2e,0x2d,0x2c,0x2b,0x2a,0x29,0x28,0x27,0x26,0x25,0x24,0x23,0x22,0x21,0x20};
+#endif
+
+//test var
+aes_ccm_param_t test_aes_ccm_para;
+uint8_t test_mesh_encrypted_data[T_LEN+P_LEN]={0};
+#endif
+
+#ifdef DECRYPT_AES_CCM_TEST
+#if 1 //Example2
+#define K_LEN   16 //key
+#define T_LEN   6  //mic length
+#define N_LEN   NONCE_LENGTH  //nonce=8
+#define A_LEN   16  //additional data
+#define P_LEN   16  //msg payload
+
+uint8_t test_key[K_LEN]   = {0x40,0x41,0x42,0x43,0x44,0x45,0x46,0x47,0x48,0x49,0x4a,0x4b,0x4c,0x4d,0x4e,0x4f};
+uint8_t test_nonce[N_LEN] = {0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17};
+uint8_t test_addi[A_LEN]  = {0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0a,0x0b,0x0c,0x0d,0x0e,0x0f};
+uint8_t test_msg[T_LEN+P_LEN]   = {0};
+uint8_t test_c[T_LEN+P_LEN]     ={0xd2,0xa1,0xf0,0xe0,0x51,0xea,0x5f,0x62,0x08,0x1a,0x77,0x92,0x07,0x3d,0x59,0x3d,0x1f,0xc6,0x4f,0xbf,0xac,0xcd};
+#endif
+
+aes_ccm_param_t test_aes_ccm_para;
+#endif
+
+
+void test_mesh_cb(void)
+{
+    LOG(3,"ENCRIPTED OK\n");
+    aes_ccm_ok = 1;
+}
+
+
+#ifdef ENCRYPT_AES_CCM_TEST
+void mesh_aes_ccm_part_encrypt_test(void)
+{
+    //init
+    test_aes_ccm_para.key               = test_key;
+    test_aes_ccm_para.nonce             = test_nonce;
+    test_aes_ccm_para.msg               = test_msg;
+    test_aes_ccm_para.additional_data   = test_addi;
+    test_aes_ccm_para.msg_length        = P_LEN;
+    test_aes_ccm_para.mic_length        = T_LEN;
+    test_aes_ccm_para.additional_data_length = A_LEN;
+
+    //encript
+    aes_ccm_encrypt(&test_aes_ccm_para,test_mesh_encrypted_data,test_mesh_cb);
+}
+#endif
+
+#ifdef DECRYPT_AES_CCM_TEST
+void mesh_aes_ccm_part_decrypt_test(void)
+{
+    //init
+    test_aes_ccm_para.key               = test_key;
+    test_aes_ccm_para.nonce             = test_nonce;
+    test_aes_ccm_para.msg               = test_c;
+    test_aes_ccm_para.additional_data   = test_addi;
+    test_aes_ccm_para.msg_length        = P_LEN;
+    test_aes_ccm_para.mic_length        = T_LEN;
+    test_aes_ccm_para.additional_data_length = A_LEN;
+
+    //encript
+    aes_ccm_decrypt(&test_aes_ccm_para,test_msg,test_mesh_cb);
+}
+#endif
+
+
+#ifdef ENCRYPT_TEST
+void mesh_aes_ccm_encrypt_test(void)
+{
+    //init
+    test_aes_ccm_para.key               = test_key;
+    test_aes_ccm_para.nonce             = test_nonce;
+    test_aes_ccm_para.msg               = test_msg;
+    test_aes_ccm_para.additional_data   = NULL;
+    test_aes_ccm_para.msg_length        = TEST_MSG_LENGTH;
+    test_aes_ccm_para.mic_length        = 8;
+    test_aes_ccm_para.additional_data_length = 0;
+
+    //encript
+    aes_ccm_encrypt(&test_aes_ccm_para,test_mesh_encrypted_data,test_mesh_cb);
+}
+#endif
+
+
+#ifdef DECRYPT_TEST
+void mesh_aes_ccm_decrypt_test(void)
+{
+    //init
+    test_aes_ccm_para.key               = test_key;
+    test_aes_ccm_para.nonce             = test_nonce;
+    test_aes_ccm_para.msg               = test_msg;
+    test_aes_ccm_para.additional_data   = NULL;
+    test_aes_ccm_para.msg_length        = TEST_MSG_LENGTH;
+    test_aes_ccm_para.mic_length        = 8;
+    test_aes_ccm_para.additional_data_length = 0;
+
+    //encript
+    aes_ccm_decrypt(&test_aes_ccm_para,test_mesh_decrypted_data,test_mesh_cb);
+}
+#endif
+
+void app_mesh_test_init(void)
+{
+    aes_ccm_ok = 0;
+#ifdef ENCRYPT_AES_CCM_TEST
+    mesh_aes_ccm_part_encrypt_test();
+#endif
+#ifdef ENCRYPT_TEST
+    mesh_aes_ccm_encrypt_test();
+#endif
+#ifdef DECRYPT_TEST
+    mesh_aes_ccm_decrypt_test();
+#endif
+#ifdef DECRYPT_AES_CCM_TEST
+    mesh_aes_ccm_part_decrypt_test();
+#endif
+    while(aes_ccm_ok == 0);
+}
+
+#endif
+
+#endif
+#endif

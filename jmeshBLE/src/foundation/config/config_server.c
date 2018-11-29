@@ -68,7 +68,7 @@ void config_appkey_add_handler(unsigned short src,unsigned short dst,unsigned sh
     }
 		print_buffer_note(len,data,"%s: ",__func__);
 		JMESH_KEY_INDEX_PICK2(netkey_index,appkey_index,data);
-    ret_buffer[0] = config_appkey_add_server_callback(netkey_index,appkey_index,ret_buffer+4);
+    ret_buffer[0] = config_appkey_add_server_callback(netkey_index,appkey_index,data+3);
 		ret_buffer[1] = data[0];
     ret_buffer[2] = data[1];
     ret_buffer[3] = data[2];
@@ -130,7 +130,7 @@ void config_appkey_update_handler(unsigned short src,unsigned short dst,unsigned
     }
 		print_buffer_note(len,data,"%s: ",__func__);
     JMESH_KEY_INDEX_PICK2(netkey_index,appkey_index,data);
-    ret_buffer[0] = config_appkey_update_server_callback(netkey_index,appkey_index,ret_buffer+4);
+    ret_buffer[0] = config_appkey_update_server_callback(netkey_index,appkey_index,data+3);
     ret_buffer[1] = data[0];
     ret_buffer[2] = data[1];
     ret_buffer[3] = data[2];

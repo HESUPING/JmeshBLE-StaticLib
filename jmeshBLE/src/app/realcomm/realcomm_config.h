@@ -15,22 +15,13 @@ JMESH_MODEL_NAME(realcomm_config);
 #define REALCOMM_CONFIG_MODEL_ID   0x0006
 
 enum{
-    REALCOMM_BAUD_1200=0,
-    REALCOMM_BAUD_2400=1,
-    REALCOMM_BAUD_4800=2,
-    REALCOMM_BAUD_9600=3,
-    REALCOMM_BAUD_19200=4,
-    REALCOMM_BAUD_38400=5,
-    REALCOMM_BAUD_115200=6,
-};
-enum{
     REALCOMM_PARITY_EVEN=0,
     REALCOMM_PARITY_ODD=1,
     REALCOMM_PARITY_NONE=2,
 };
 void realcomm_config_init(void);
 void realcomm_config_client(unsigned short dst,unsigned short nid,unsigned short aid,unsigned short addr);
-void realcomm_config_server(unsigned short dst,unsigned short nid,unsigned short aid,unsigned short baud,unsigned char parity);
+void realcomm_config_server(unsigned short dst,unsigned short nid,unsigned short aid,unsigned char baud,unsigned char parity);
 
 
 

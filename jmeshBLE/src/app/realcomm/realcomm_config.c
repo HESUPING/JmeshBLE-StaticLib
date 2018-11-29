@@ -31,11 +31,11 @@ static void realcomm_config_client_status_handler(unsigned short src,unsigned sh
 }
 static void realcomm_config_server_status_handler(unsigned short src,unsigned short dst,unsigned short nid,unsigned short aid,unsigned short len,unsigned char* data)
 {
-		unsigned short baud;
+		unsigned char baud;
 		unsigned char parity;
-    if(len==3){
-				JMESH_BIG_ENDIAN_PICK2(baud,data);
-				parity = data[2];
+    if(len==2){
+				baud  =  data[0];
+				parity = data[1];
         realcomm_config_server_status_callback(src,nid,aid,baud,parity);
     }
 }
@@ -46,10 +46,10 @@ void realcomm_config_client(unsigned short dst,unsigned short nid,unsigned short
     JMESH_BIG_ENDIAN_FILL2(addr,buff);
     jmesh_access_send(dst,nid,aid,&realcomm_config,message_realcomm_client_config,2,buff);
 }
-void realcomm_config_server(unsigned short dst,unsigned short nid,unsigned short aid,unsigned short baud,unsigned char parity)
+void realcomm_config_server(unsigned short dst,unsigned short nid,unsigned short aid,unsigned char baud,unsigned char parity)
 {
-    unsigned char buff[3];
-    JMESH_BIG_ENDIAN_FILL2(baud,buff);
-    buff[2]=parity;
-    jmesh_access_send(dst,nid,aid,&realcomm_config,message_realcomm_server_config,3,buff);
+    unsigned char buff[2];
+		buff[0] = baud;
+		buff[1]=parity;
+    jmesh_access_send(dst,nid,aid,&realcomm_config,message_realcomm_server_config,2,buff);
 }

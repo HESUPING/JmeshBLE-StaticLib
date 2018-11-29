@@ -10,6 +10,7 @@
 #include "touch.h"
 #include "bx2400.h"
 #include "reg_sysc_awo.h"
+
 #include "log.h"
 
 #define TOUCH_INTERVAL  0xff*25 // number of 32K clock cycle
@@ -40,9 +41,9 @@ void touch_start(Touch_param_t* param)
         ext_int_cfg |= 1<<TOUCH_EXT_INT;
 
         sysc_awo_ext_inrp_config_set(ext_int_cfg);
+        NVIC_EnableIRQ(EXT_INTR_IRQn);
     }
     sysc_awo_touch_en_setf(1);                  //enable touch
-    NVIC_EnableIRQ(EXT_INTR_IRQn);
 }
 
 void touch_stop(uint8_t disable_ext_int)
@@ -54,7 +55,7 @@ void touch_stop(uint8_t disable_ext_int)
     }
 }
 
-void touch_test_cb(void)
+static void touch_test_cb(void)
 {
     LOG(LOG_LVL_INFO, "Touching...\n");
 }

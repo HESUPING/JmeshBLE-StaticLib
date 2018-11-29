@@ -4,6 +4,6 @@
 
 void realcomm_server_init_callback(void);
 
-int realcomm_server_config_callback(unsigned short baud,unsigned char parity);
+int realcomm_server_config_callback(unsigned char baud,unsigned char parity);
 void realcomm_server_trans_callback(unsigned char length,unsigned char* data);
 #endif // REALCOMM_SERVER_CALLBACK_H

@@ -38,7 +38,7 @@ static int32_t  osapp_connect()   //struct gap_bdaddr *addr, struct gapm_start_c
     addr.addr.addr[2] = 0x33;
     addr.addr.addr[3] = 0x44;
     addr.addr.addr[4] = 0x55;
-    addr.addr.addr[5] = 0xF0;
+    addr.addr.addr[5] = 0x66;
 
 
     addr.addr_type = ADDR_PUBLIC;

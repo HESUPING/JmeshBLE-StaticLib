@@ -125,6 +125,14 @@ void app_timer_start(periph_inst_handle_t hdl);
  */
 void app_timer_stop(periph_inst_handle_t hdl);
 
+/**
+ * @brief Get current value
+ * @param[in] hdl the peripheral common instance handler(pointer) for the TIMER instance
+ *
+ * @return[out] Current value of timer
+ */
+uint32_t app_timer_getValue(periph_inst_handle_t hdl);
+
 
 /** @}*/
 #endif /* PLF_PERIPHERAL_APP_TIMER_APP_TIMER_H_ */

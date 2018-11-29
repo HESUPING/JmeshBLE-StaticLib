@@ -147,7 +147,8 @@ void boot_ram_entry()
         system_reset();
     }
     uint32_t flash_offset = image == image_header? 0: boot_ram_header.image_limit;
-    uint32_t image_offset = flash_offset + IMAGE_OFFSET_BASE + FLASH_IMAGE_HEADER_SIZE;
+    uint32_t flash_xip_size = image->image_total_size - image->image_ram_size;
+    uint32_t image_offset = flash_offset + IMAGE_OFFSET_BASE + FLASH_IMAGE_HEADER_SIZE + flash_xip_size;
     if(image->feature.dual_quad == Quad_SPI_Format)
     {
         sysc_cpu_qspi_en_setf(0xf);

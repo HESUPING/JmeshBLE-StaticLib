@@ -18,7 +18,7 @@ ${CMAKE_CURRENT_SOURCE_DIR}/osapp_selfie.c
 #${CMAKE_CURRENT_SOURCE_DIR}/osapp_mi_scale.c
 ${CMAKE_CURRENT_SOURCE_DIR}/osapp_uart_server.c
 #${CMAKE_CURRENT_SOURCE_DIR}/osapp_demo.c
-${CMAKE_CURRENT_SOURCE_DIR}/osapp_mesh.c
+#${CMAKE_CURRENT_SOURCE_DIR}/osapp_mesh.c
 ${CMAKE_CURRENT_SOURCE_DIR}/osapp_1M2M_master.c
 ${CMAKE_CURRENT_SOURCE_DIR}/osapp_1M2M_slave.c
 ${CMAKE_CURRENT_SOURCE_DIR}/osapp_throughput_server.c

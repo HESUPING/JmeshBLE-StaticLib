@@ -8,6 +8,7 @@ extern periph_universal_func_set_t gpio_universal_func;
 
 static void gpio_int_cfg(app_gpio_inst_t *inst,app_gpio_int_cfg_t *int_cfg)
 {
+    REG_BIT_WR(inst->reg->GPIO_INT_BOTHEDGE,int_cfg->idx,int_cfg->both_edge);
     REG_BIT_WR(inst->reg->GPIO_INTTYPE_LEVEL,int_cfg->idx,int_cfg->edge);
     REG_BIT_WR(inst->reg->GPIO_INT_POLARITY,int_cfg->idx,int_cfg->polarity);
     REG_BIT_WR(inst->reg->GPIO_INTEN,int_cfg->idx,1);

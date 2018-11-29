@@ -30,8 +30,6 @@
 #if (BLE_PROFILES)
 #include "prf.h"
 #include "att.h"
-#include"../../../../../../jmeshBLE/src/BLE/jmeshs_prov.h"
-#include"../../../../../../jmeshBLE/src/BLE/jmeshs_app.h"
 
 #if (BLE_HT_THERMOM)
 extern const struct prf_task_cbs* htpt_prf_itf_get(void);
@@ -600,9 +598,9 @@ static const struct prf_task_cbs * prf_itf_get(uint16_t task_id)
             break;
 				#endif	
 				
-				#if (BLE_JMESHS_PROV_CLIENT)
+				#if (BLE_JMESHC_PROV_CLIENT)
         case TASK_ID_JMESHC_PROV:
-//            prf_cbs = jmeshc_prov_prf_itf_get();
+            prf_cbs = jmeshc_prf_itf_get();
             break;
 				#endif			
 
@@ -612,9 +610,9 @@ static const struct prf_task_cbs * prf_itf_get(uint16_t task_id)
             break;
 				#endif	
 				
-				#if (BLE_JMESHS_APP_CLIENT)
+				#if (BLE_JMESHC_APP_CLIENT)
         case TASK_ID_JMESHC_APP:
-//            prf_cbs = jmeshc_app_prf_itf_get();
+            prf_cbs = jmeshc_app_prf_itf_get();
             break;
 				#endif	
         default: /* Nothing to do */ break;

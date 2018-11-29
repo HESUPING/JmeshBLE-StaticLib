@@ -153,23 +153,39 @@ static void uart_sys_stat(app_uart_inst_t *inst,uint32_t sys_stat)
         recovery_list_remove(&periph_domain_recovery_mngt,&inst->inst);
     break;
     case UART_READ_START:
+        if(idx)
+        {
+            periph_domain_stat.uart1_rx = 1;
+        }else
+        {
+            periph_domain_stat.uart0_rx = 1;
+        }
+    break;
     case UART_WRITE_START:
         if(idx)
         {
-            periph_domain_stat.uart1 = 1;
+            periph_domain_stat.uart1_tx = 1;
         }else
         {
-            periph_domain_stat.uart0 = 1;
+            periph_domain_stat.uart0_tx = 1;
         }
     break;
     case UART_READ_DONE:
+        if(idx)
+        {
+            periph_domain_stat.uart1_rx = 0;
+        }else
+        {
+            periph_domain_stat.uart0_rx = 0;
+        }
+    break;
     case UART_WRITE_DONE:
         if(idx)
         {
-            periph_domain_stat.uart1 = 0;
+            periph_domain_stat.uart1_tx = 0;
         }else
         {
-            periph_domain_stat.uart0 = 0;
+            periph_domain_stat.uart0_tx = 0;
         }
     break;
     default:

@@ -74,7 +74,7 @@ typedef struct
 #define ARRAY_INFO(hdl) {hdl,sizeof(hdl)/sizeof(hdl[0])}
 
 ///define stack size
-#define BLE_TASK_STACK_SIZE				500							// actual size = (XXX_TASK_STACK_SIZE * 4) Byte						
+#define BLE_TASK_STACK_SIZE				256							// actual size = (XXX_TASK_STACK_SIZE * 4) Byte						
 #define APP_TASK_STACK_SIZE			         256	
 
 ///define task priority
@@ -113,11 +113,9 @@ typedef struct
 
 //#define OSAPP_UART_SERVER
 
-//#define OSAPP_MESH
+#define OSAPP_JMESH
 //#define OSAPP_1M2M_SLAVE
 //#define OSAPP_1M2M_MASTER
-
-#define  OSAPP_JMESH
 
 //#define OSAPP_BLE_DEMO	/**<An example for Bx2400 using as a ble demo. Only one OSAPP_XXX macro can be defined.  */
 

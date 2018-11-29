@@ -5,13 +5,10 @@
 int ble_reset(void);
 
 int ble_connect(unsigned short timeflow_ms,unsigned char addr_type,unsigned char* addr);
-int ble_disconnect(unsigned char connect_id);
 
 int ble_bond(unsigned char connect_id);
 int ble_gatt_send(unsigned char connect_id);
 int ble_gatt_read(unsigned char connect_id);
-int ble_discover_service(unsigned char connect_id);
-
 
 typedef struct st_mesh_env{
     unsigned char MAC[6];

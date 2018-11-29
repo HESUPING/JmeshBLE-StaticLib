@@ -10,6 +10,8 @@
 extern TaskHandle_t handler_osapp_task;
 void osapp_task(void *params);
 void *ahi_msg_alloc(ke_msg_id_t const id, ke_task_id_t const dest_id, uint16_t const param_len);
+/* You should call this ahi_msg_free() API only if you do not send your msg to ble stack and won't send it any more.*/
+void ahi_msg_free(void *ptr);
 void *usr_msg_alloc(uint16_t length);
 void osapp_ahi_msg_send(void *param_ptr,uint16_t param_length,uint32_t xTicksToWait);
 void osapp_ahi_msg_send_isr(void *param_ptr,uint16_t param_length);

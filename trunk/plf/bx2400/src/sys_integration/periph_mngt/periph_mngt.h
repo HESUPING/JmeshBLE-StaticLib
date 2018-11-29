@@ -6,8 +6,10 @@
 #include "periph_recovery.h"
 typedef struct
 {
-    uint32_t uart0:1,
-             uart1:1,
+    uint32_t uart0_tx:1,
+             uart0_rx:1,
+             uart1_tx:1,
+             uart1_rx:1,
              spim0:1,
              spim1:1,
              spis:1,

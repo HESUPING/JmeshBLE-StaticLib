@@ -484,26 +484,15 @@ void prov_result_time_flow(void){
 
 static os_timer_event_t  connect_wait_timer;
 
-void provision_start_timer_handler(unsigned char* mac)
-{
-    jmesh_gatt_t* gatt = jmesh_gatt_connect_server(mac);		
-		if(gatt->is_ready)
-		{
-			 jmesh_provisioning_connected(mac,gatt->id);
-		}
-}
 void jmesh_provisioning_device(unsigned char* mac,unsigned short primary_address){
     jmesh_gatt_t* connect;
     memcpy(provisioning_mac,mac,6);
     provisioning_addr=primary_address;
     os_timer_event_set(&provisioning_timer,2000,(os_timer_event_caller_t)prov_result_connect_fail,NULL);
 
-    connect=jmesh_gatt_connect_server(mac);
+    jmesh_routing_connect(mac);
     print_info("provite connect mac:%x,%x,%x,%x,%x,%x",mac[0],mac[1],mac[2],mac[3],mac[4],mac[5]);
-    if(connect!=NULL){
-//				vTaskDelay(500);				
-			  os_timer_event_set(&connect_wait_timer,6000,(os_timer_event_caller_t)provision_start_timer_handler,provisioning_mac);
-    }	
+
     /*unsigned char key[16]={0};
     jmesh_add_device(3,provisioning_mac,STORED_DEVICE_KEY);
     config_appkey_add(3,0,1,key);

@@ -113,11 +113,15 @@ void app_adc_init(periph_inst_handle_t hdl)
 void app_adc_uninit(periph_inst_handle_t hdl)
 {
     app_adc_inst_t *inst = CONTAINER_OF(hdl, app_adc_inst_t, inst);
+    reg_adc_t *reg = inst->reg;
     
     //NO USE
     adc_universal_func.clk_gate_func(inst,CLR_CLK);
     adc_universal_func.intr_op_func(inst,INTR_DISABLE);
     
+    //Close LDO FORCE ON
+    FIELD_WR(reg, CTRL0, ADC_LDO_FORCE_ON, 0);
+
     //STAT
     adc_universal_func.sys_stat_func(inst,ADC_UNINIT);
 }

@@ -2,10 +2,8 @@
 #ifdef OSAPP_UART_SERVER
 #include <stdlib.h>
 #include "log.h"
-#include "pwm.h"
-#include "pshare.h"
-#include "clk_gate.h"
-
+#include "osapp_utils.h"
+#include "app_uart.h"
 #define APP_ADV_CHMAP 0x7
 #define APP_ADV_INT 32
 #define UART_SVC_ADV_NAME "BlueX BLE UART Server"
@@ -76,19 +74,61 @@ struct gattm_att_desc const uart_svc_att_db[UART_SVC_ATT_NUM] = {
                .ext_perm = PERM(UUID_LEN,UUID_16),
             },
 };
-typedef struct
+app_uart_inst_t uart0_inst = UART_INSTANCE(0);
+static uint8_t uart0_buf;
+static uint8_t conn_hdl;
+static bool uart0_tx_busy;
+static void uart_server_read_req_ind(osapp_svc_helper_t const *,ke_task_id_t const,uint16_t);
+static void uart_server_write_req_ind(osapp_svc_helper_t const *,ke_task_id_t const,uint16_t,uint16_t,uint16_t,uint8_t const*);
+osapp_svc_helper_t uart_server_svc_helper = 
 {
-    uint16_t start_hdl;
-}uart_server_env_t;
-static uart_server_env_t uart_server_env;
-static void osapp_add_uart_svc()
+    .svc_desc = &uart_svc_desc,
+    .att_desc = uart_svc_att_db,
+    .att_num = UART_SVC_ATT_NUM,
+    .read = uart_server_read_req_ind,
+    .write = uart_server_write_req_ind,
+};
+
+static void uart_server_read_req_ind(osapp_svc_helper_t const *svc_helper,ke_task_id_t const src_id,uint16_t att_idx)
 {
-    struct gattm_add_svc_req *req = AHI_MSG_ALLOC_DYN(GATTM_ADD_SVC_REQ,TASK_ID_GATTM,\
-        gattm_add_svc_req,sizeof(uart_svc_att_db));
-    struct gattm_svc_desc *svc = &req->svc_desc;
-    memcpy(svc,&uart_svc_desc,sizeof(uart_svc_desc));
-    memcpy(svc->atts,uart_svc_att_db,sizeof(uart_svc_att_db));
-    osapp_ahi_msg_send(req, sizeof(struct gattm_svc_desc)+sizeof(uart_svc_att_db),portMAX_DELAY);
+
+    LOG(LOG_LVL_INFO,"read att_idx:%d\n",att_idx);
+    if(att_idx == UART_SVC_IDX_TX_NTF_CFG)
+    {
+        struct gattc_read_cfm *cfm = AHI_MSG_ALLOC(GATTC_READ_CFM,src_id, gattc_read_cfm);
+        cfm->handle = osapp_get_att_handle_helper(svc_helper,att_idx);
+        cfm->length=0;
+        cfm->status = 0;
+        osapp_ahi_msg_send(cfm, sizeof(struct gattc_read_cfm),portMAX_DELAY);
+    }
+
+}
+
+static void uart_write_callback(void *dummy,uint8_t status)
+{
+	uart0_tx_busy = false;
+    LOG(LOG_LVL_WARN,"uart tx done\n");
+}
+
+static void uart_server_write_req_ind(osapp_svc_helper_t const *svc_helper,ke_task_id_t const src_id,uint16_t att_idx,uint16_t offset,uint16_t length,uint8_t const*value)
+{
+    LOG(LOG_LVL_INFO,"write att_idx:%d\n",att_idx);
+    struct gattc_write_cfm *cfm = AHI_MSG_ALLOC(GATTC_WRITE_CFM,src_id,gattc_write_cfm);
+    cfm->status = ATT_ERR_NO_ERROR;
+    cfm->handle = osapp_get_att_handle_helper(svc_helper,att_idx);
+    osapp_ahi_msg_send(cfm, sizeof(struct gattc_write_cfm),portMAX_DELAY);  
+    if(att_idx != UART_SVC_IDX_RX_VAL)
+    {
+    	return;
+    }
+    if(uart0_tx_busy)
+    {
+        LOG(LOG_LVL_WARN,"tx busy,data discard\n");
+    }else
+    {
+    	uart0_tx_busy = true;
+        app_uart_write(&uart0_inst.inst, value, length, uart_write_callback,NULL);
+    }
 }
 
 static void osapp_start_advertising()
@@ -119,19 +159,6 @@ static int32_t osapp_gapc_param_update_cfm(ke_task_id_t const src_id)
 
 }
 
-static void osapp_gattm_add_svc_rsp_handler(ke_msg_id_t const msgid, struct gattm_add_svc_rsp const * param, ke_task_id_t const dest_id, ke_task_id_t const src_id)
-{
-    if(param->status == ATT_ERR_NO_ERROR)
-    {
-        uart_server_env.start_hdl = param->start_hdl;
-    }else
-    {
-        LOG(LOG_LVL_ERROR,"add svc fail\n");
-		LOG(3,"SVC fail num = 0x%x\n",param->status);
-    }
-    osapp_start_advertising();
-}
-
 static void osapp_set_dev_config(uint8_t role,uint8_t addr_type,uint8_t pairing_mode)
 {
     // Set Device configuration
@@ -154,6 +181,11 @@ static void osapp_gapc_param_update_req_handler(ke_msg_id_t const msgid, void co
     osapp_gapc_param_update_cfm(src_id);
 }
 
+static void add_svc_callback(uint8_t status,osapp_svc_helper_t *svc_helper)
+{
+    osapp_start_advertising();
+}
+
 static void osapp_gapm_cmp_evt_handler(ke_msg_id_t const msgid, struct gapm_cmp_evt const * param, ke_task_id_t const dest_id, ke_task_id_t const src_id)
 {
     struct gapm_cmp_evt const *cmp_evt = param;
@@ -165,7 +197,7 @@ static void osapp_gapm_cmp_evt_handler(ke_msg_id_t const msgid, struct gapm_cmp_
         break;
     case GAPM_SET_DEV_CONFIG:
         BX_ASSERT(cmp_evt->status==GAP_ERR_NO_ERROR);
-        osapp_add_uart_svc();
+        osapp_add_svc_req_helper(&uart_server_svc_helper,1,add_svc_callback);
         break;
     case GAPM_ADV_UNDIRECT:
         LOG(LOG_LVL_WARN,"adv status:%d\n",cmp_evt->status);
@@ -186,66 +218,36 @@ static void osapp_gapc_disconnect_ind_handler(ke_msg_id_t const msgid, struct ga
 static void osapp_gapc_conn_confirm(ke_task_id_t dest_id)
 {
     struct gapc_connection_cfm *cfm = AHI_MSG_ALLOC(GAPC_CONNECTION_CFM, dest_id, gapc_connection_cfm);
-    cfm->auth = GAP_AUTH_REQ_NO_MITM_NO_BOND;
+    memset(cfm,0,sizeof(struct gapc_connection_cfm));
     osapp_ahi_msg_send(cfm,sizeof(struct gapc_connection_cfm),portMAX_DELAY);
 }
 
-static void osapp_gapc_conn_req_ind_handler(ke_msg_id_t const msgid, struct gapc_connection_req_ind const * param, ke_task_id_t const dest_id, ke_task_id_t const src_id)
-{
-    osapp_gapc_conn_confirm(src_id);
-}
-
-static void osapp_send_notification(ke_task_id_t const dest_id,uint8_t const *data,uint16_t length)
+static void osapp_send_notification_isr(ke_task_id_t const dest_id,uint8_t const *data,uint16_t length)
 {
     static uint16_t notify_seq_num = 0;
     struct gattc_send_evt_cmd *cmd= AHI_MSG_ALLOC_DYN(GATTC_SEND_EVT_CMD,dest_id, gattc_send_evt_cmd, length);
     cmd->operation = GATTC_NOTIFY;
     cmd->seq_num = notify_seq_num++;
-    cmd->handle = uart_server_env.start_hdl + 1 + UART_SVC_IDX_TX_VAL;
+    cmd->handle = osapp_get_att_handle_helper(&uart_server_svc_helper,UART_SVC_IDX_TX_VAL);
     cmd->length = length;
     memcpy(cmd->value,data,length);
-    osapp_ahi_msg_send(cmd, sizeof(struct gattc_send_evt_cmd) + length, portMAX_DELAY);
-}
-static void pwm_ctrl_init()
-{
-    sysc_per_clkg1_set(PER_CLKG_SET_PWM0|PER_CLKG_SET_PWM_DIV);
-    pshare_funcio_set(2,10 ,ENABLE);
-    pwm_Enable(pwm_Chn0);
-}
-static void pwm_ctrl(uint8_t const *data,uint16_t len)
-{
-    if(len > 2)
-    {
-        return;
-    }
-    char const str[3] = {data[0],len==2?data[1] : 0,0};
-    uint8_t duty = atoi(str);
-    LOG(LOG_LVL_INFO,"duty:%d\n",duty);
-    uint16_t high =duty * 320;
-    uint16_t low = 32000 - high;
-
-    pwm_SetHighPeriod(pwm_Chn0, high);
-    pwm_SetLowPeriod(pwm_Chn0,low);
-    
-    
+    osapp_ahi_msg_send_isr(cmd, sizeof(struct gattc_send_evt_cmd) + length);
 }
 
-static void osapp_gattc_write_req_ind_handler(ke_msg_id_t const msgid,struct gattc_write_req_ind const *param,ke_task_id_t const dest_id,ke_task_id_t src_id)
+static void uart0_rx_callback(void *dummy,uint8_t status)
 {
-    struct gattc_write_cfm *cfm = AHI_MSG_ALLOC(GATTC_WRITE_CFM,src_id,gattc_write_cfm);
-    cfm->status = ATT_ERR_NO_ERROR;
-    cfm->handle = param->handle;
-    osapp_ahi_msg_send(cfm, sizeof(struct gattc_write_cfm),portMAX_DELAY);
-    if(param->handle == uart_server_env.start_hdl + 1 + UART_SVC_IDX_RX_VAL)
-    {
-        LOG(LOG_LVL_INFO,"len:%d\n",param->length);
-        pwm_ctrl(param->value,param->length);
-        osapp_send_notification(src_id,param->value,param->length);
-    }else
-    {
-        LOG(LOG_LVL_WARN,"hdl_idx,%d\n",param->handle-uart_server_env.start_hdl);
-    }
+    osapp_send_notification_isr(KE_BUILD_ID(TASK_ID_GATTC, conn_hdl),&uart0_buf,sizeof(uart0_buf));
+}
 
+static void osapp_gapc_conn_req_ind_handler(ke_msg_id_t const msgid, struct gapc_connection_req_ind const * param, ke_task_id_t const dest_id, ke_task_id_t const src_id)
+{
+    osapp_gapc_conn_confirm(src_id);
+    conn_hdl = KE_IDX_GET(src_id);
+    uart0_inst.param.baud_rate = UART_BAUDRATE_115200;
+    uart0_inst.param.tx_pin_no = 12;
+    uart0_inst.param.rx_pin_no = 13;
+    app_uart_init(&uart0_inst.inst);
+    app_uart_read(&uart0_inst.inst,&uart0_buf,sizeof(uart0_buf), uart0_rx_callback,NULL);
 }
 
 static void osapp_gattc_cmp_evt_handler(ke_msg_id_t const msgid,struct gattc_cmp_evt const *param,ke_task_id_t const dest_id,ke_task_id_t src_id)
@@ -253,6 +255,7 @@ static void osapp_gattc_cmp_evt_handler(ke_msg_id_t const msgid,struct gattc_cmp
     switch(param->operation)
     {
         case GATTC_NOTIFY:
+            app_uart_read(&uart0_inst.inst,&uart0_buf,sizeof(uart0_buf), uart0_rx_callback,NULL);
             if(param->status == ATT_ERR_NO_ERROR)
             {
                 LOG(LOG_LVL_INFO,"notification done\n");
@@ -298,27 +301,6 @@ static void osapp_gapc_get_dev_info_req_ind_handler(ke_msg_id_t const msgid, str
     }
 }
 
-
-static void osapp_gattc_read_req_ind_handler(ke_msg_id_t const msgid, struct gattc_read_req_ind const * param, ke_task_id_t const dest_id, ke_task_id_t const src_id)
-{
-	struct gattc_read_cfm *cfm;
-	cfm = AHI_MSG_ALLOC(GATTC_READ_CFM,src_id, gattc_read_cfm);
-	cfm->handle = param->handle;
-	if((cfm->handle - uart_server_env.start_hdl) == (UART_SVC_IDX_TX_NTF_CFG + 1))
-	{
-		cfm->length=0;
-		cfm->status = 0;
-		osapp_ahi_msg_send(cfm, sizeof(struct gattc_read_cfm),portMAX_DELAY);
-	}
-	else
-	{
-		LOG(3,"Handler=0x%x\n",param->handle);
-	}
-
-}
-
-
-
 static void osapp_reset()
 {
     struct gapm_reset_cmd *cmd = AHI_MSG_ALLOC(GAPM_RESET_CMD,TASK_ID_GAPM,gapm_reset_cmd);
@@ -328,7 +310,6 @@ static void osapp_reset()
 
 static void osapp_device_ready_ind_handler(ke_msg_id_t const msgid, void const * param, ke_task_id_t const dest_id, ke_task_id_t const src_id)
 {
-    pwm_ctrl_init();
     osapp_reset();
 }
 
@@ -343,13 +324,13 @@ static osapp_msg_handler_table_t const handler_table[]=
                 {GAPM_DEVICE_READY_IND,(osapp_msg_handler_t)osapp_device_ready_ind_handler},
                 {GAPM_CMP_EVT,(osapp_msg_handler_t)osapp_gapm_cmp_evt_handler},
                 {GAPC_PARAM_UPDATE_REQ_IND,(osapp_msg_handler_t)osapp_gapc_param_update_req_handler},
-                {GATTM_ADD_SVC_RSP,(osapp_msg_handler_t)osapp_gattm_add_svc_rsp_handler},
+                {GATTM_ADD_SVC_RSP,(osapp_msg_handler_t)osapp_add_svc_rsp_helper_handler},
                 {GAPC_CONNECTION_REQ_IND,(osapp_msg_handler_t)osapp_gapc_conn_req_ind_handler},
                 {GAPC_DISCONNECT_IND,(osapp_msg_handler_t)osapp_gapc_disconnect_ind_handler},
-                {GATTC_WRITE_REQ_IND,(osapp_msg_handler_t)osapp_gattc_write_req_ind_handler},
+                {GATTC_WRITE_REQ_IND,(osapp_msg_handler_t)osapp_write_req_ind_helper_handler},
                 {GATTC_CMP_EVT,(osapp_msg_handler_t)osapp_gattc_cmp_evt_handler},
-    			{GAPC_GET_DEV_INFO_REQ_IND,(osapp_msg_handler_t)osapp_gapc_get_dev_info_req_ind_handler},
-                {GATTC_READ_REQ_IND,(osapp_msg_handler_t)osapp_gattc_read_req_ind_handler}
+                {GAPC_GET_DEV_INFO_REQ_IND,(osapp_msg_handler_t)osapp_gapc_get_dev_info_req_ind_handler},
+                {GATTC_READ_REQ_IND,(osapp_msg_handler_t)osapp_read_req_ind_helper_handler}
 };
 osapp_msg_handler_info_t const handler_info = ARRAY_INFO(handler_table);
 #endif

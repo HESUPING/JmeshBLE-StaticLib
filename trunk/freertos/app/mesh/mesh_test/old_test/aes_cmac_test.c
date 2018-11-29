@@ -1,0 +1,167 @@
+/*
+ * aes_cmac_test.c
+ *
+ *  Created on: 2018-1-9
+ *      Author: jiachuang
+ */
+
+
+#include "osapp_config.h"
+#ifdef OSAPP_MESH
+#include "osapp_mesh.h"
+#include "security.h"
+#include "bx_ring_queue.h"
+#include "log.h"
+#include "mesh_test_config.h"
+#ifdef MESH_TEST_AES_CMAC
+
+
+//#define AES_CMAC_BASIC_TEST
+//#define AES_CMAC_SAMPLE_DATA_TEST
+#define AES_CMAC_K4_TEST
+
+#ifdef AES_CMAC_BASIC_TEST
+    //#define AES_CMAC_EXAMPLE2
+    //#define AES_CMAC_EXAMPLE3
+    //#define AES_CMAC_EXAMPLE4
+    #define AES_CMAC_BEACON_8_4_3
+#endif
+
+#ifdef AES_CMAC_SAMPLE_DATA_TEST
+//    #define CMAC_TEST_SECURITY_INIT
+//    #define CMAC_TEST_K1_DERIVATION
+    #define CMAC_TEST_K2_DERIVATION_MASTER
+//    #define CMAC_TEST_K2_DERIVATION_FRIENDSHIP
+#endif
+
+#ifdef AES_CMAC_K4_TEST
+    uint8_t cmac_test_k4_n[16] = {0x63,0x96,0x47,0x71,0x73,0x4f,0xbd,0x76,0xe3,0xb4,0x05,0x19,0xd1,0xd9,0x4a,0x48};
+    uint8_t cmac_test_aid = 0;
+#endif
+
+volatile uint32_t aes_cmac_ok = 0;
+
+
+
+void aes_cmac_callback(void)
+{
+    LOG(3,"ENCRIPTED OK\n");
+    aes_cmac_ok = 1;
+}
+
+
+#ifdef AES_CMAC_EXAMPLE2
+#define CMAC_KEY_LEN    16
+#define CMAC_M_LEN      16
+#define CMAC_RES_LEN    16
+
+uint8_t cmac_key[CMAC_KEY_LEN] = {0x2B,0x7E,0x15,0x16,0x28,0xAE,0xD2,0xA6,0xAB,0xF7,0x15,0x88,0x09,0xCF,0x4F,0x3C};
+uint8_t cmac_msg[CMAC_M_LEN  ] = {0x6B,0xC1,0xBE,0xE2,0x2E,0x40,0x9F,0x96,0xE9,0x3D,0x7E,0x11,0x73,0x93,0x17,0x2A};
+uint8_t cmac_res[CMAC_RES_LEN] = {0};
+#endif
+
+#ifdef AES_CMAC_EXAMPLE3
+#define CMAC_KEY_LEN    16
+#define CMAC_M_LEN      20
+#define CMAC_RES_LEN    16
+
+uint8_t cmac_key[CMAC_KEY_LEN] = {0x2B,0x7E,0x15,0x16,0x28,0xAE,0xD2,0xA6,0xAB,0xF7,0x15,0x88,0x09,0xCF,0x4F,0x3C};
+uint8_t cmac_msg[CMAC_M_LEN  ] = {0x6B,0xC1,0xBE,0xE2,0x2E,0x40,0x9F,0x96,0xE9,0x3D,0x7E,0x11,0x73,0x93,0x17,0x2A,0xAE,0x2D,0x8A,0x57};
+uint8_t cmac_res[CMAC_RES_LEN] = {0};
+#endif
+
+#ifdef AES_CMAC_EXAMPLE4
+#define CMAC_KEY_LEN    16
+#define CMAC_M_LEN      64
+#define CMAC_RES_LEN    16
+
+uint8_t cmac_key[CMAC_KEY_LEN] = {0x2B,0x7E,0x15,0x16,0x28,0xAE,0xD2,0xA6,0xAB,0xF7,0x15,0x88,0x09,0xCF,0x4F,0x3C};
+uint8_t cmac_msg[CMAC_M_LEN  ] = {
+0x6B,0xC1,0xBE,0xE2,0x2E,0x40,0x9F,0x96,0xE9,0x3D,0x7E,0x11,0x73,0x93,0x17,0x2A,
+0xAE,0x2D,0x8A,0x57,0x1E,0x03,0xAC,0x9C,0x9E,0xB7,0x6F,0xAC,0x45,0xAF,0x8E,0x51,
+0x30,0xC8,0x1C,0x46,0xA3,0x5C,0xE4,0x11,0xE5,0xFB,0xC1,0x19,0x1A,0x0A,0x52,0xEF,
+0xF6,0x9F,0x24,0x45,0xDF,0x4F,0x9B,0x17,0xAD,0x2B,0x41,0x7B,0xE6,0x6C,0x37,0x10,
+};
+uint8_t cmac_res[CMAC_RES_LEN] = {0};
+#endif
+
+#ifdef AES_CMAC_BEACON_8_4_3
+//Authentication Value = AES-CMACBeaconKey (Flags || Network ID || IV Index) [0¨C7]
+#define CMAC_KEY_LEN    16
+#define CMAC_M_LEN      13
+#define CMAC_RES_LEN    16
+
+uint8_t cmac_key[CMAC_KEY_LEN] = {0x54,0x23,0xd9,0x67,0xda,0x63,0x9a,0x99,0xcb,0x02,0x23,0x1a,0x83,0xf7,0xd2,0x54};
+uint8_t cmac_msg[CMAC_M_LEN  ] = {0x00,0x3e,0xca,0xff,0x67,0x2f,0x67,0x33,0x70,0x12,0x34,0x56,0x78};
+uint8_t cmac_res[CMAC_RES_LEN] = {0};
+#endif
+
+
+
+#ifdef CMAC_TEST_K1_DERIVATION
+#define CMAC_TEST_LEN   16
+uint8_t cmac_N      [CMAC_TEST_LEN] = {0x32,0x16,0xD1,0x50,0x98,0x84,0xB5,0x33,0x24,0x85,0x41,0x79,0x2B,0x87,0x7F,0x98};
+uint8_t cmac_SALT   [CMAC_TEST_LEN] = {0x2B,0xA1,0x4F,0xFA,0x0D,0xF8,0x4A,0x28,0x31,0x93,0x8D,0x57,0xD2,0x76,0xCA,0xB4};
+uint8_t cmac_P      [CMAC_TEST_LEN] = {0x5A,0x09,0xD6,0x07,0x97,0xEE,0xB4,0x47,0x8A,0xAD,0xA5,0x9D,0xB3,0x35,0x2A,0x0D};
+uint8_t cmac_RESULT [CMAC_TEST_LEN] = {0};
+#endif
+
+#ifdef CMAC_TEST_K2_DERIVATION_MASTER
+    uint8_t cmac_NetKey[16] = {0xF7,0xA2,0xA4,0x4F,0x8E,0x8A,0x80,0x29,0x06,0x4F,0x17,0x3D,0xDC,0x1E,0x2B,0x00};
+#endif
+
+#ifdef CMAC_TEST_K2_DERIVATION_FRIENDSHIP
+    uint8_t cmac_NetKey[16] = {0xF7,0xA2,0xA4,0x4F,0x8E,0x8A,0x80,0x29,0x06,0x4F,0x17,0x3D,0xDC,0x1E,0x2B,0x00};
+    #define TEST_LPN_ADDR       0x0203
+    #define TEST_FRIEND_ADDR    0x0405
+    #define TEST_LPN_CNT        0x0607
+    #define TEST_FRIEND_CNT     0x0809
+#endif
+
+
+void app_mesh_test_init(void)
+{
+    aes_cmac_ok = 0;
+#ifdef AES_CMAC_BASIC_TEST
+    aes_cmac(cmac_key , cmac_msg , CMAC_M_LEN , cmac_res , aes_cmac_callback);
+#endif
+
+#ifdef AES_CMAC_SAMPLE_DATA_TEST
+    //EXPORT
+    extern void security_init();
+    extern void k1_derivation(uint8_t *n,uint8_t n_len,uint8_t *salt,uint8_t *p,uint8_t p_len,uint8_t *result,void (*cb)());
+    extern void k2_derivation_master(uint8_t *n,void (*cb)(uint8_t *));
+    extern void k2_derivation_friendship(uint8_t * n,uint16_t lpn_addr,uint16_t friend_addr,uint16_t lpn_cnt,uint16_t friend_cnt, void(* cb)(uint8_t *));
+    //TEST
+    #ifdef CMAC_TEST_SECURITY_INIT
+        security_init();
+        //salt_for_k2 = 4f90480c1871bfbffd16971f4d8d10b1
+    #endif
+    #ifdef CMAC_TEST_K1_DERIVATION
+        k1_derivation(cmac_N , CMAC_TEST_LEN , cmac_SALT , cmac_P , CMAC_TEST_LEN , cmac_RESULT , aes_cmac_callback);
+        //cmac_RESULT = f6ed15a8934afbe7d83e8dcb57fcf5d7
+    #endif
+    #ifdef CMAC_TEST_K2_DERIVATION_MASTER
+        security_init();
+        k2_derivation_master(cmac_NetKey , aes_cmac_callback);
+        //k2_derivation_env:key_t=T/t1=T1/t2=T2/t3=T3
+    #endif
+    #ifdef CMAC_TEST_K2_DERIVATION_FRIENDSHIP
+        security_init();
+        k2_derivation_friendship(cmac_NetKey , TEST_LPN_ADDR,TEST_FRIEND_ADDR,TEST_LPN_CNT,TEST_FRIEND_CNT,aes_cmac_callback);
+        //k2_derivation_env:key_t=T/t1=T1/t2=T2/t3=T3
+    #endif
+    while(aes_cmac_ok == 0);
+#endif
+
+#ifdef AES_CMAC_K4_TEST
+    k4_derivation(cmac_test_k4_n , &cmac_test_aid , aes_cmac_callback);
+    while(aes_cmac_ok == 0);
+#endif
+}
+
+
+
+#endif
+
+#endif

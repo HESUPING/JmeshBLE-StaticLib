@@ -77,3 +77,10 @@ bool bx_ring_queue_empty(ring_queue_t *rq)
     return rq->count == 0;
 }
 
+void bx_ring_queue_flush_all(ring_queue_t *rq)
+{
+    rq->rd_idx = rq->wr_idx;
+    rq->count = 0;
+}
+
+

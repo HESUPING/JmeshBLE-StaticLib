@@ -16,5 +16,5 @@ int os_timer_is_flow(os_timer_t* t);
 void os_timer_reset(os_timer_t* t);
 void os_timer_restart(os_timer_t* t);
 void os_timer_trigger(os_timer_t* t);
-
+os_time_t os_timer_remain(os_timer_t* t);
 #endif // _OS_STIMER_H

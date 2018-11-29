@@ -29,5 +29,5 @@ bool bx_ring_queue_full(ring_queue_t *);
 bool bx_ring_queue_empty(ring_queue_t *);
 void *bx_ring_queue_glance(ring_queue_t *,uint16_t);
 uint16_t bx_ring_queue_amount(ring_queue_t *);
-
+void bx_ring_queue_flush_all(ring_queue_t *);
 #endif
